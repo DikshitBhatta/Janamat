@@ -7,6 +7,7 @@ import 'package:intl/intl.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:janamatfront/Geolocator/geolocation.dart';
+import 'package:janamatfront/issuesimg/issueimg.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 
@@ -23,14 +24,7 @@ class _IssueGenerateState extends State<IssueGenerate> {
   File? _image;
    Map<String, String> _locationDetails = {}; // Store location details
   DateTime _selectedDate = DateTime.now();
-  String _selectedIssue = 'General'; // Default issue type
-  final List<String> issueLabels = [
-    'General',
-    'Health',
-    'Education',
-    'Infrastructure',
-    // Add more issue types as needed
-  ];
+  String _selectedIssue = issueLabels[0]; // Default issue type
   @override
   void initState() {
     super.initState();
