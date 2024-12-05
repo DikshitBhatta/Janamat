@@ -10,6 +10,7 @@ class VotingProvider with ChangeNotifier {
   int _downvotes = 0;
   List<Map<String, dynamic>> _tagIssues = []; // Store issues for a specific tag
   List<Map<String, dynamic>> _leaderboard = []; // Store leaderboard data
+  List<Map<String, dynamic>> _notifications = []; // Store user activity notifications
 
   bool get isUpvoted => _isUpvoted;
   bool get isDownvoted => _isDownvoted;
@@ -17,6 +18,7 @@ class VotingProvider with ChangeNotifier {
   int get downvotes => _downvotes;
   List<Map<String, dynamic>> get tagIssues => _tagIssues;
   List<Map<String, dynamic>> get leaderboard => _leaderboard;
+  List<Map<String, dynamic>> get notifications => _notifications;
 
   void setInitialVotes(int upvotes, int downvotes) {
     _upvotes = upvotes;
@@ -230,4 +232,29 @@ class VotingProvider with ChangeNotifier {
       print('Error creating issue: $e');
     }
   }
+
+
+// Fetch user activity history from the backend
+  Future<void> fetchNotification() async {
+    final url = Uri.parse('http://192.168.1.74:8000/activityhistory/'); // Update with the correct endpoint
+
+    try {
+      final response = await http.post(
+        url,
+        headers: {'Content-Type': 'application/json'},
+      );
+
+      if (response.statusCode == 200) {
+        final responseData = json.decode(response.body);
+        _notifications = List<Map<String, dynamic>>.from(responseData['activities']);
+        notifyListeners(); // Notify listeners of state change
+        print("Notifications fetched successfully.");
+      } else {
+        print("Failed to fetch notifications: ${response.body}");
+      }
+    } catch (e) {
+      print('Error fetching notifications: $e');
+    }
+  }
+  
 }
