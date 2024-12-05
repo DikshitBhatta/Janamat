@@ -10,6 +10,8 @@ import 'package:provider/provider.dart';
 import 'package:janamatfront/providers/authenticationProvider.dart'; // Import AuthenticationProvider
 import 'package:provider/provider.dart';
 import 'package:janamatfront/providers/voting_provider.dart';
+import 'package:image_picker/image_picker.dart';
+import 'dart:io'; // Add this line
 
 class Home extends StatefulWidget {
   @override
@@ -19,15 +21,55 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>(); // Add this line
   int _selectedIndex = 0;
+  final ImagePicker _picker = ImagePicker();
+  XFile? _imageFile;
 
-void _onItemTapped(int index) async {
-  if (index == 1) { // If Leaderboard tab is selected
-    await Provider.of<VotingProvider>(context, listen: false).fetchLeaderboard();
+  Future<void> _pickImage(ImageSource source) async {
+    final pickedFile = await _picker.pickImage(source: source);
+    if (pickedFile != null) {
+      setState(() {
+        _imageFile = pickedFile;
+      });
+      await Provider.of<VotingProvider>(context, listen: false).uploadProfilePicture(File(_imageFile!.path));
+    }
   }
-  setState(() {
-    _selectedIndex = index;
-  });
-}
+
+  void _showImageSourceActionSheet(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      builder: (context) => SafeArea(
+        child: Wrap(
+          children: <Widget>[
+            ListTile(
+              leading: Icon(Icons.photo_library),
+              title: Text('Photo Library'),
+              onTap: () {
+                _pickImage(ImageSource.gallery);
+                Navigator.of(context).pop();
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.photo_camera),
+              title: Text('Camera'),
+              onTap: () {
+                _pickImage(ImageSource.camera);
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  void _onItemTapped(int index) async {
+    if (index == 1) { // If Leaderboard tab is selected
+      await Provider.of<VotingProvider>(context, listen: false).fetchLeaderboard();
+    }
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -66,8 +108,14 @@ void _onItemTapped(int index) async {
             UserAccountsDrawerHeader(
               accountName: Text("User Name"),
               accountEmail: Text("Id: Citizenship Number"),
-              currentAccountPicture: CircleAvatar(
-                backgroundImage: AssetImage("assets/issues/watersupply.jpg"), // Update this line
+              currentAccountPicture: GestureDetector(
+                onTap: () {
+                  _showImageSourceActionSheet(context);
+                },
+                child: CircleAvatar(
+                  backgroundImage: _imageFile != null ? FileImage(File(_imageFile!.path)) : null,
+                  child: _imageFile == null ? Icon(Icons.person, size: 50) : null, // Default icon
+                ),
               ),
               decoration: BoxDecoration(
                 color: Color(0xFF0E2544),

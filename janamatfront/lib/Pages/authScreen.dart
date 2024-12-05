@@ -84,6 +84,11 @@ class _AuthScreenState extends State<AuthScreen> {
                               _isOCRVerified = true;
                               _ocrErrorMessage = '';
                             });
+                          } else {
+                            setState(() {
+                              _isOCRVerified = false;
+                              _ocrErrorMessage = 'Citizenship verification failed';
+                            });
                           }
                         },
                         style: ElevatedButton.styleFrom(
