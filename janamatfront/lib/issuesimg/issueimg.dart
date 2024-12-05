@@ -1,5 +1,5 @@
 List<String> issueImages = [
-  'assets/issues/watersupply.jpg',
+  'assets/issues/Watersupply.jpg', // Updated filename
   'assets/issues/roadline.jpg',
   'assets/issues/health.png',
   'assets/issues/environment.png',
@@ -13,5 +13,16 @@ List<String> issueLabels = [
   'Health',
   'Environment',
   'Electricity',
+  'Education',
+  'Infrastructure',
+  'Agriculture',
+  'Sanitation',
+  'Public Transport',
+  'Safety',
+  'Housing',
+  'Corruption',
+  'Law and Order',
+  'Human Rights',
+  'Animal Rights',  
   'Others',
 ];
