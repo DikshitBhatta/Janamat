@@ -10,6 +10,7 @@ urlpatterns = [
     path("downvote/", DownVoteView.as_view(), name="downvote"),
     path("notupvote/", NotUpVoteView.as_view(), name="upvote"),
     path("notdownvote/", NotDownVoteView.as_view(), name="downvote"),
+    path("activityhistory/", ActivityHistoryView.as_view(), name="notifications"),
     
     
 ]

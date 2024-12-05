@@ -111,7 +111,8 @@ class LeaderboardView(APIView):
                 "location": issue.location,
                 "created_at": issue.created_at,
                 "updated_at": issue.updated_at,
-                "vote_count": issue.vote_count
+                "vote_count": issue.vote_count,
+                "image": issue.image.url if issue.image else None,
             }
             for issue in issues
         ]
@@ -370,46 +371,55 @@ class ShowTagWiseIssuesView(APIView):
         )
 
 
-class ActivityHistoryView(APIView):
-    authentication_classes = [AuthenticationView]
+from django.db.models import F, Value, CharField
+from itertools import chain
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
 
-    def get(self, request):
-        user = request.user
+
+class ActivityHistoryView(APIView):
+    # authentication_classes = [AuthenticationView]
+    authentication_classes = []
+
+    def post(self, request):
+        # user = request.user
+        user = User.objects.get(id=1)  # Replace with `request.user` in production
 
         # Fetch user's created issues
         user_issues = Issue.objects.filter(author=user).values(
-            'id',
-            'title',
-            'created_at'
+            "id",
+            "title",
+            "created_at"
         ).annotate(
-            activity_type=F('status'),  # Activity type for issue creation
-            activity="Created Issue"
+            activity_type=Value("Created Issue", output_field=CharField()),  # Use Value to annotate static strings
+            activity=Value("Created Issue", output_field=CharField())
         )
 
         # Fetch user's upvotes
-        user_upvotes = user.vote_set.all().select_related('issue').values(
-            id=F('issue__id'),
-            title=F('issue__title'),
-            created_at=F('issue__created_at')
+        user_upvotes = user.vote_set.all().select_related("issue").values(
+            id=F("issue__id"),
+            title=F("issue__title"),
+            created_at=F("issue__created_at")
         ).annotate(
-            activity_type="Upvoted",
-            activity="Upvoted an Issue"
+            activity_type=Value("Upvoted", output_field=CharField()),
+            activity=Value("Upvoted an Issue", output_field=CharField())
         )
 
         # Fetch user's comments
-        user_comments = Comment.objects.filter(user=user).select_related('issue').values(
-            id=F('issue__id'),
-            title=F('issue__title'),
-            created_at=F('created_at')
+        user_comments = Comment.objects.filter(user=user).select_related("issue").values(
+            id=F("issue__id"),
+            title=F("issue__title"),
+            created_at=F("created_at")
         ).annotate(
-            activity_type="Commented",
-            activity="Commented on Issue"
+            activity_type=Value("Commented", output_field=CharField()),
+            activity=Value("Commented on Issue", output_field=CharField())
         )
 
         # Combine all activities and sort by created_at timestamp
         activities = sorted(
             chain(user_issues, user_upvotes, user_comments),
-            key=lambda x: x['created_at'],
+            key=lambda x: x["created_at"],
             reverse=True  # Latest first
         )
 
@@ -418,17 +428,16 @@ class ActivityHistoryView(APIView):
                 "message": "User activity history retrieved successfully.",
                 "activities": [
                     {
-                        "issue_id": activity['id'],
-                        "issue_title": activity['title'],
-                        "activity": activity['activity'],
-                        "timestamp": activity['created_at']
+                        "issue_id": activity["id"],
+                        "issue_title": activity["title"],
+                        "activity": activity["activity"],
+                        "timestamp": activity["created_at"],
                     }
                     for activity in activities
                 ],
             },
             status=status.HTTP_200_OK,
         )
-        
 
    
         
