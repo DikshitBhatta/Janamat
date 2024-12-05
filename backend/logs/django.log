@@ -1,0 +1,1431 @@
+INFO 2024-12-05 12:14:47,479 autoreload Watching for file changes with StatReloader
+WARNING 2024-12-05 12:14:56,425 log Bad Request: /signup/
+WARNING 2024-12-05 12:14:56,426 basehttp "POST /signup/ HTTP/1.1" 400 47
+INFO 2024-12-05 12:15:28,005 autoreload D:\janamat\backend\authentication\views.py changed, reloading.
+INFO 2024-12-05 12:15:28,795 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 12:15:31,770 autoreload D:\janamat\backend\authentication\views.py changed, reloading.
+INFO 2024-12-05 12:15:32,528 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 12:15:36,561 autoreload D:\janamat\backend\authentication\views.py changed, reloading.
+INFO 2024-12-05 12:15:37,297 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 12:15:55,878 autoreload D:\janamat\backend\authentication\views.py changed, reloading.
+INFO 2024-12-05 12:15:56,708 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 12:15:58,632 autoreload D:\janamat\backend\authentication\views.py changed, reloading.
+INFO 2024-12-05 12:15:59,375 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 12:16:05,511 autoreload D:\janamat\backend\authentication\views.py changed, reloading.
+INFO 2024-12-05 12:16:06,328 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 12:16:17,690 autoreload D:\janamat\backend\authentication\views.py changed, reloading.
+INFO 2024-12-05 12:16:18,535 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 12:16:21,497 autoreload D:\janamat\backend\authentication\views.py changed, reloading.
+INFO 2024-12-05 12:16:22,322 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 12:16:26,269 autoreload D:\janamat\backend\authentication\views.py changed, reloading.
+INFO 2024-12-05 12:16:27,119 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 12:16:30,044 autoreload D:\janamat\backend\authentication\views.py changed, reloading.
+INFO 2024-12-05 12:16:30,898 autoreload Watching for file changes with StatReloader
+WARNING 2024-12-05 12:16:33,672 log Bad Request: /signup/
+WARNING 2024-12-05 12:16:33,672 basehttp "POST /signup/ HTTP/1.1" 400 47
+WARNING 2024-12-05 12:18:04,758 log Not Found: /authentication/
+WARNING 2024-12-05 12:18:04,758 basehttp "POST /authentication/ HTTP/1.1" 404 2917
+INFO 2024-12-05 12:18:27,086 autoreload D:\janamat\backend\authentication\urls.py changed, reloading.
+INFO 2024-12-05 12:18:27,939 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 12:18:33,329 basehttp "POST /authentication/ HTTP/1.1" 200 116
+INFO 2024-12-05 12:37:42,631 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 12:37:56,973 autoreload D:\janamat\backend\authentication\urls.py changed, reloading.
+INFO 2024-12-05 12:37:57,770 autoreload Watching for file changes with StatReloader
+WARNING 2024-12-05 12:38:27,074 log Not Found: /createissue/
+WARNING 2024-12-05 12:38:27,074 basehttp "POST /createissue/ HTTP/1.1" 404 2637
+INFO 2024-12-05 12:38:54,812 autoreload D:\janamat\backend\backend\settings.py changed, reloading.
+INFO 2024-12-05 12:38:55,628 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 12:38:57,910 autoreload D:\janamat\backend\backend\settings.py changed, reloading.
+INFO 2024-12-05 12:38:58,822 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 12:39:01,795 autoreload D:\janamat\backend\backend\settings.py changed, reloading.
+INFO 2024-12-05 12:39:02,567 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 12:39:04,850 autoreload D:\janamat\backend\backend\settings.py changed, reloading.
+INFO 2024-12-05 12:39:05,769 autoreload Watching for file changes with StatReloader
+WARNING 2024-12-05 12:39:24,919 log Not Found: /createissue/
+WARNING 2024-12-05 12:39:24,919 basehttp "POST /createissue/ HTTP/1.1" 404 2637
+INFO 2024-12-05 12:39:52,606 autoreload D:\janamat\backend\backend\settings.py changed, reloading.
+INFO 2024-12-05 12:39:53,539 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 12:40:10,014 autoreload D:\janamat\backend\backend\urls.py changed, reloading.
+INFO 2024-12-05 12:40:10,803 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 12:40:13,749 autoreload D:\janamat\backend\backend\urls.py changed, reloading.
+INFO 2024-12-05 12:40:14,557 autoreload Watching for file changes with StatReloader
+ERROR 2024-12-05 12:40:21,009 log Internal Server Error: /createissue/
+Traceback (most recent call last):
+  File "D:\janamat\backend\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "D:\janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+  File "D:\janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 332, in check_permissions
+    if not permission.has_permission(request, self):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\rest_framework\permissions.py", line 151, in has_permission
+    return bool(request.user and request.user.is_authenticated)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'User' object has no attribute 'is_authenticated'
+ERROR 2024-12-05 12:40:21,024 basehttp "POST /createissue/ HTTP/1.1" 500 101145
+INFO 2024-12-05 12:46:03,114 autoreload D:\janamat\backend\authentication\models.py changed, reloading.
+INFO 2024-12-05 12:46:04,095 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 12:49:42,040 autoreload D:\janamat\backend\authentication\models.py changed, reloading.
+INFO 2024-12-05 12:49:43,067 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 12:49:49,250 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 12:49:50,051 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 12:49:52,010 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 12:49:52,793 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 12:50:08,112 basehttp "POST /createissue/ HTTP/1.1" 200 116
+WARNING 2024-12-05 12:50:43,963 log Forbidden: /createissue/
+WARNING 2024-12-05 12:50:43,963 basehttp "POST /createissue/ HTTP/1.1" 403 55
+WARNING 2024-12-05 12:51:03,558 log Forbidden: /createissue/
+WARNING 2024-12-05 12:51:03,559 basehttp "POST /createissue/ HTTP/1.1" 403 55
+INFO 2024-12-05 12:51:16,600 basehttp "POST /createissue/ HTTP/1.1" 200 116
+INFO 2024-12-05 12:53:33,916 autoreload D:\janamat\backend\issue\models.py changed, reloading.
+INFO 2024-12-05 12:53:34,804 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 12:53:37,104 autoreload D:\janamat\backend\issue\models.py changed, reloading.
+INFO 2024-12-05 12:53:37,893 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 12:53:45,321 autoreload D:\janamat\backend\issue\models.py changed, reloading.
+INFO 2024-12-05 12:53:46,127 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 12:53:48,416 autoreload D:\janamat\backend\issue\models.py changed, reloading.
+INFO 2024-12-05 12:53:49,169 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:00:43,402 autoreload D:\janamat\backend\issue\models.py changed, reloading.
+INFO 2024-12-05 13:00:44,343 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:06:34,565 autoreload D:\janamat\backend\issue\models.py changed, reloading.
+INFO 2024-12-05 13:06:35,087 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:06:36,295 autoreload D:\janamat\backend\issue\models.py changed, reloading.
+INFO 2024-12-05 13:06:36,885 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:06:43,529 autoreload D:\janamat\backend\issue\models.py changed, reloading.
+INFO 2024-12-05 13:06:44,019 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:07:08,002 autoreload D:\janamat\backend\issue\models.py changed, reloading.
+INFO 2024-12-05 13:07:08,594 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:07:20,335 autoreload D:\janamat\backend\issue\models.py changed, reloading.
+INFO 2024-12-05 13:07:20,898 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:10:04,500 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:10:05,050 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:10:10,653 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:10:11,210 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:10:20,899 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:10:21,462 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:10:32,165 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:10:32,637 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:11:49,276 autoreload D:\janamat\backend\issue\models.py changed, reloading.
+INFO 2024-12-05 13:11:50,158 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:18:35,343 autoreload Watching for file changes with StatReloader
+WARNING 2024-12-05 13:18:37,067 log Not Found: /
+WARNING 2024-12-05 13:18:37,074 basehttp "GET / HTTP/1.1" 404 2848
+WARNING 2024-12-05 13:18:37,176 log Not Found: /favicon.ico
+WARNING 2024-12-05 13:18:37,176 basehttp "GET /favicon.ico HTTP/1.1" 404 2899
+INFO 2024-12-05 13:18:40,712 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-12-05 13:18:40,735 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4160
+INFO 2024-12-05 13:18:40,815 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2804
+INFO 2024-12-05 13:18:40,815 basehttp "GET /static/admin/css/base.css HTTP/1.1" 200 22092
+INFO 2024-12-05 13:18:40,815 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+INFO 2024-12-05 13:18:40,831 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 200 17972
+INFO 2024-12-05 13:18:40,831 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2024-12-05 13:18:40,831 basehttp "GET /static/admin/css/login.css HTTP/1.1" 200 951
+INFO 2024-12-05 13:18:40,831 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2024-12-05 13:18:53,076 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-12-05 13:18:53,092 basehttp "GET /admin/ HTTP/1.1" 200 5856
+INFO 2024-12-05 13:18:53,102 basehttp "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+INFO 2024-12-05 13:18:53,119 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2024-12-05 13:18:53,120 basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2024-12-05 13:18:57,892 basehttp "GET /admin/auth/user/ HTTP/1.1" 200 11089
+INFO 2024-12-05 13:18:57,909 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 200 6878
+INFO 2024-12-05 13:18:57,915 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2024-12-05 13:18:57,918 basehttp "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+INFO 2024-12-05 13:18:57,918 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 200 8076
+INFO 2024-12-05 13:18:57,921 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 13:18:57,923 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9097
+INFO 2024-12-05 13:18:57,924 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2024-12-05 13:18:57,925 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2024-12-05 13:18:57,926 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+INFO 2024-12-05 13:18:57,927 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+INFO 2024-12-05 13:18:57,930 basehttp "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+INFO 2024-12-05 13:18:57,930 basehttp "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+INFO 2024-12-05 13:18:57,936 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO 2024-12-05 13:18:57,958 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2024-12-05 13:18:57,958 basehttp "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+INFO 2024-12-05 13:18:57,959 basehttp "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+INFO 2024-12-05 13:19:00,238 basehttp "GET /admin/auth/group/ HTTP/1.1" 200 7490
+INFO 2024-12-05 13:19:00,258 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 13:19:01,970 basehttp "GET /admin/auth/user/ HTTP/1.1" 200 11089
+INFO 2024-12-05 13:19:01,982 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 13:20:00,897 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:20:01,366 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:20:10,016 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:20:10,480 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:20:12,049 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:20:12,555 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:20:14,139 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:20:14,620 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:20:16,216 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:20:16,796 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:20:18,369 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:20:18,942 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:20:20,540 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:20:20,993 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:20:22,564 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:20:23,068 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:20:30,769 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:20:31,250 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:21:43,299 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:21:43,866 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:21:50,598 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:21:51,134 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:21:56,806 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:21:57,378 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:22:14,308 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:22:14,753 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:22:17,284 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:22:17,771 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:22:49,936 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:22:50,467 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:29:12,136 autoreload D:\janamat\backend\issue\models.py changed, reloading.
+INFO 2024-12-05 13:29:12,740 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:29:20,540 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:29:21,036 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:29:25,692 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:29:26,141 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:29:28,744 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:29:29,233 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:29:32,787 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:29:33,299 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:29:34,862 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:29:35,428 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:41:31,875 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:41:32,451 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:41:34,936 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:41:35,492 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:41:37,957 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:41:38,516 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:41:43,161 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:41:43,647 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:41:48,171 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:41:48,695 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:43:00,612 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:43:01,141 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:43:10,711 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:43:11,288 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:43:20,847 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:43:21,383 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:43:22,781 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:43:23,309 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:43:32,883 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:43:33,349 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:44:18,498 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:44:18,971 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:44:20,384 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:44:20,811 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:44:24,253 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:44:24,841 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:44:27,316 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:44:27,869 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:44:31,318 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:44:31,881 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:44:34,328 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:44:34,964 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:44:51,724 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:44:52,299 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:44:53,753 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:44:54,300 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:46:46,590 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:46:47,128 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:46:57,688 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:46:58,215 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:47:44,407 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:47:44,828 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:47:59,429 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:47:59,922 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:48:02,494 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:48:03,009 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:48:09,620 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:48:10,181 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:50:50,631 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:50:51,096 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:50:52,655 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:50:53,154 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:50:55,727 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:50:56,210 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:50:59,796 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:51:00,394 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 13:51:16,082 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 13:51:16,576 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:01:39,825 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 14:01:40,348 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:01:45,036 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 14:01:45,555 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:01:54,240 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 14:01:54,774 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:02:01,395 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 14:02:01,882 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:02:12,618 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 14:02:13,179 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:02:16,788 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 14:02:17,286 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:02:22,849 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 14:02:23,413 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:02:24,917 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 14:02:25,382 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:04:11,979 autoreload D:\janamat\backend\issue\models.py changed, reloading.
+INFO 2024-12-05 14:04:12,498 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:15:23,789 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 14:15:24,276 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:15:29,940 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 14:15:30,462 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:15:33,018 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 14:15:33,518 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:15:37,041 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 14:15:37,548 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:15:39,080 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 14:15:39,663 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:15:42,175 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 14:15:42,707 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:15:45,294 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 14:15:45,847 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:15:49,389 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 14:15:49,872 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:15:54,444 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 14:15:54,987 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:15:56,503 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 14:15:56,997 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:16:02,626 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 14:16:03,082 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:16:04,623 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 14:16:05,083 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:16:22,900 autoreload D:\janamat\backend\issue\models.py changed, reloading.
+INFO 2024-12-05 14:16:23,354 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:16:36,726 autoreload D:\janamat\backend\issue\models.py changed, reloading.
+INFO 2024-12-05 14:16:37,330 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:16:38,533 autoreload D:\janamat\backend\issue\models.py changed, reloading.
+INFO 2024-12-05 14:16:38,984 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:16:41,212 autoreload D:\janamat\backend\issue\models.py changed, reloading.
+INFO 2024-12-05 14:16:41,798 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:16:48,055 autoreload D:\janamat\backend\issue\models.py changed, reloading.
+INFO 2024-12-05 14:16:48,591 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:16:50,098 autoreload D:\janamat\backend\issue\models.py changed, reloading.
+INFO 2024-12-05 14:16:50,540 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:16:54,066 autoreload D:\janamat\backend\issue\models.py changed, reloading.
+INFO 2024-12-05 14:16:54,633 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:16:58,193 autoreload D:\janamat\backend\issue\models.py changed, reloading.
+INFO 2024-12-05 14:16:58,749 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:16:59,968 autoreload D:\janamat\backend\issue\models.py changed, reloading.
+INFO 2024-12-05 14:17:00,517 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:17:10,823 autoreload D:\janamat\backend\issue\models.py changed, reloading.
+INFO 2024-12-05 14:17:11,318 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:20:22,712 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 14:20:23,300 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:20:30,996 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 14:20:31,474 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:20:42,030 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 14:20:42,575 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:20:52,119 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 14:20:52,661 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:20:54,096 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 14:20:54,632 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:20:56,063 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 14:20:56,512 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:20:57,886 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 14:20:58,370 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:21:07,969 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 14:21:08,549 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:21:09,978 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 14:21:10,579 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:21:12,133 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 14:21:12,693 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:21:20,367 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 14:21:20,824 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:21:30,519 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 14:21:31,002 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:21:40,688 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 14:21:41,215 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:21:42,744 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 14:21:43,271 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:21:44,836 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 14:21:45,310 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:22:53,151 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 14:22:53,678 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:22:58,289 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 14:22:58,812 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:23:00,350 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 14:23:00,834 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:23:03,436 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 14:23:03,905 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:23:12,600 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 14:23:13,128 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:23:26,920 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 14:23:27,469 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:23:31,959 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 14:23:32,516 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:23:35,969 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 14:23:36,435 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:26:13,117 autoreload D:\janamat\backend\issue\admin.py changed, reloading.
+INFO 2024-12-05 14:26:13,669 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:26:31,569 autoreload D:\janamat\backend\issue\admin.py changed, reloading.
+INFO 2024-12-05 14:26:32,071 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:26:37,670 autoreload D:\janamat\backend\issue\admin.py changed, reloading.
+INFO 2024-12-05 14:26:38,224 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:26:42,411 basehttp "GET /admin/auth/user/ HTTP/1.1" 200 12939
+INFO 2024-12-05 14:26:42,443 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2024-12-05 14:26:42,443 basehttp "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2024-12-05 14:26:42,448 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2024-12-05 14:26:42,448 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2024-12-05 14:26:42,448 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2024-12-05 14:26:42,448 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2024-12-05 14:26:42,448 basehttp "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2024-12-05 14:26:42,448 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2024-12-05 14:26:42,448 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2024-12-05 14:26:42,458 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2024-12-05 14:26:42,458 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2024-12-05 14:26:42,458 basehttp "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO 2024-12-05 14:26:42,458 basehttp "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2024-12-05 14:26:42,458 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2024-12-05 14:26:42,458 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2024-12-05 14:26:42,458 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2024-12-05 14:26:42,458 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:26:42,458 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2024-12-05 14:26:42,458 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+ERROR 2024-12-05 14:26:44,741 log Internal Server Error: /admin/issue/comment/
+Traceback (most recent call last):
+  File "D:\janamat\backend\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: issue_comment
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\janamat\backend\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\contrib\admin\options.py", line 718, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\contrib\admin\sites.py", line 241, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\contrib\admin\options.py", line 2001, in changelist_view
+    cl = self.get_changelist_instance(request)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\contrib\admin\options.py", line 866, in get_changelist_instance
+    return ChangeList(
+           ^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\contrib\admin\views\main.py", line 146, in __init__
+    self.get_results(request)
+  File "D:\janamat\backend\env\Lib\site-packages\django\contrib\admin\views\main.py", line 313, in get_results
+    result_count = paginator.count
+                   ^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\core\paginator.py", line 110, in count
+    return c()
+           ^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\db\models\query.py", line 620, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\db\models\sql\query.py", line 630, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\db\models\sql\query.py", line 616, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\janamat\backend\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\janamat\backend\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\janamat\backend\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: issue_comment
+ERROR 2024-12-05 14:26:44,763 basehttp "GET /admin/issue/comment/ HTTP/1.1" 500 196262
+INFO 2024-12-05 14:26:48,647 basehttp "GET /admin/auth/user/ HTTP/1.1" 200 12939
+ERROR 2024-12-05 14:26:50,600 log Internal Server Error: /admin/issue/tag/
+Traceback (most recent call last):
+  File "D:\janamat\backend\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: issue_tag
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\janamat\backend\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\contrib\admin\options.py", line 718, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\contrib\admin\sites.py", line 241, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\contrib\admin\options.py", line 2001, in changelist_view
+    cl = self.get_changelist_instance(request)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\contrib\admin\options.py", line 866, in get_changelist_instance
+    return ChangeList(
+           ^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\contrib\admin\views\main.py", line 146, in __init__
+    self.get_results(request)
+  File "D:\janamat\backend\env\Lib\site-packages\django\contrib\admin\views\main.py", line 313, in get_results
+    result_count = paginator.count
+                   ^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\core\paginator.py", line 110, in count
+    return c()
+           ^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\db\models\query.py", line 620, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\db\models\sql\query.py", line 630, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\db\models\sql\query.py", line 616, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\janamat\backend\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\janamat\backend\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\janamat\backend\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: issue_tag
+ERROR 2024-12-05 14:26:50,607 basehttp "GET /admin/issue/tag/ HTTP/1.1" 500 195688
+INFO 2024-12-05 14:26:54,233 basehttp "GET /admin/auth/user/ HTTP/1.1" 200 12939
+ERROR 2024-12-05 14:26:55,840 log Internal Server Error: /admin/issue/vote/
+Traceback (most recent call last):
+  File "D:\janamat\backend\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: issue_vote
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\janamat\backend\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\contrib\admin\options.py", line 718, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\contrib\admin\sites.py", line 241, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\contrib\admin\options.py", line 2001, in changelist_view
+    cl = self.get_changelist_instance(request)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\contrib\admin\options.py", line 866, in get_changelist_instance
+    return ChangeList(
+           ^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\contrib\admin\views\main.py", line 146, in __init__
+    self.get_results(request)
+  File "D:\janamat\backend\env\Lib\site-packages\django\contrib\admin\views\main.py", line 313, in get_results
+    result_count = paginator.count
+                   ^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\core\paginator.py", line 110, in count
+    return c()
+           ^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\db\models\query.py", line 620, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\db\models\sql\query.py", line 630, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\db\models\sql\query.py", line 616, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\janamat\backend\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\janamat\backend\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\janamat\backend\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: issue_vote
+ERROR 2024-12-05 14:26:55,852 basehttp "GET /admin/issue/vote/ HTTP/1.1" 500 195829
+INFO 2024-12-05 14:26:57,645 basehttp "GET /admin/auth/user/ HTTP/1.1" 200 12939
+INFO 2024-12-05 14:27:35,883 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:27:39,988 basehttp "GET /admin/auth/user/ HTTP/1.1" 200 12939
+INFO 2024-12-05 14:27:40,005 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:27:46,262 basehttp "GET /admin/auth/user/ HTTP/1.1" 200 12939
+INFO 2024-12-05 14:27:46,282 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:27:48,816 basehttp "GET /admin/issue/tag/ HTTP/1.1" 200 8977
+INFO 2024-12-05 14:27:48,837 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:27:51,247 basehttp "GET /admin/issue/issue/ HTTP/1.1" 200 10857
+INFO 2024-12-05 14:27:51,258 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:27:54,580 basehttp "GET /admin/issue/vote/ HTTP/1.1" 200 8984
+INFO 2024-12-05 14:27:54,596 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:27:59,438 basehttp "GET /admin/issue/issue/ HTTP/1.1" 200 10857
+INFO 2024-12-05 14:27:59,459 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:28:02,616 basehttp "GET /admin/auth/user/ HTTP/1.1" 200 12939
+INFO 2024-12-05 14:28:02,637 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:28:04,509 basehttp "GET /admin/issue/issue/ HTTP/1.1" 200 10857
+INFO 2024-12-05 14:29:23,824 autoreload D:\janamat\backend\authentication\admin.py changed, reloading.
+INFO 2024-12-05 14:29:24,407 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:29:29,031 autoreload D:\janamat\backend\authentication\admin.py changed, reloading.
+INFO 2024-12-05 14:29:29,522 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:29:31,061 autoreload D:\janamat\backend\authentication\admin.py changed, reloading.
+INFO 2024-12-05 14:29:31,558 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:29:40,203 autoreload D:\janamat\backend\authentication\admin.py changed, reloading.
+INFO 2024-12-05 14:29:40,760 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:29:53,441 autoreload D:\janamat\backend\authentication\admin.py changed, reloading.
+INFO 2024-12-05 14:29:53,971 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:29:59,553 autoreload D:\janamat\backend\authentication\admin.py changed, reloading.
+INFO 2024-12-05 14:30:00,085 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:30:02,617 autoreload D:\janamat\backend\authentication\admin.py changed, reloading.
+INFO 2024-12-05 14:30:03,170 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:30:05,694 autoreload D:\janamat\backend\authentication\admin.py changed, reloading.
+INFO 2024-12-05 14:30:06,199 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:30:09,765 autoreload D:\janamat\backend\authentication\admin.py changed, reloading.
+INFO 2024-12-05 14:30:10,322 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:30:13,907 autoreload D:\janamat\backend\authentication\admin.py changed, reloading.
+INFO 2024-12-05 14:30:14,332 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 14:30:17,227 basehttp "GET /admin/issue/issue/ HTTP/1.1" 200 11555
+INFO 2024-12-05 14:30:17,250 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:30:20,049 basehttp "GET /admin/authentication/user/ HTTP/1.1" 200 14319
+INFO 2024-12-05 14:30:20,066 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:30:27,425 basehttp "GET /admin/authentication/user/add/ HTTP/1.1" 200 11160
+INFO 2024-12-05 14:30:27,447 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:30:27,489 basehttp "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2024-12-05 14:30:27,489 basehttp "GET /static/admin/css/forms.css HTTP/1.1" 200 8794
+INFO 2024-12-05 14:30:27,489 basehttp "GET /static/admin/css/widgets.css HTTP/1.1" 200 11564
+INFO 2024-12-05 14:30:27,489 basehttp "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2024-12-05 14:31:38,906 basehttp "POST /admin/authentication/user/add/ HTTP/1.1" 302 0
+INFO 2024-12-05 14:31:38,916 basehttp "GET /admin/authentication/user/add/ HTTP/1.1" 200 11403
+INFO 2024-12-05 14:31:38,943 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:31:48,011 basehttp "POST /admin/authentication/user/add/ HTTP/1.1" 302 0
+INFO 2024-12-05 14:31:48,021 basehttp "GET /admin/authentication/user/add/ HTTP/1.1" 200 11403
+INFO 2024-12-05 14:31:48,041 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:31:59,199 basehttp "POST /admin/authentication/user/add/ HTTP/1.1" 302 0
+INFO 2024-12-05 14:31:59,211 basehttp "GET /admin/authentication/user/add/ HTTP/1.1" 200 11403
+INFO 2024-12-05 14:31:59,229 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:32:34,905 basehttp "POST /admin/authentication/user/add/ HTTP/1.1" 302 0
+INFO 2024-12-05 14:32:34,918 basehttp "GET /admin/authentication/user/add/ HTTP/1.1" 200 11403
+INFO 2024-12-05 14:32:34,942 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:32:49,888 basehttp "POST /admin/authentication/user/add/ HTTP/1.1" 302 0
+INFO 2024-12-05 14:32:49,896 basehttp "GET /admin/authentication/user/add/ HTTP/1.1" 200 11403
+INFO 2024-12-05 14:32:49,919 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:33:01,928 basehttp "POST /admin/authentication/user/add/ HTTP/1.1" 302 0
+INFO 2024-12-05 14:33:01,938 basehttp "GET /admin/authentication/user/add/ HTTP/1.1" 200 11403
+INFO 2024-12-05 14:33:01,961 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:33:14,669 basehttp "POST /admin/authentication/user/add/ HTTP/1.1" 302 0
+INFO 2024-12-05 14:33:14,681 basehttp "GET /admin/authentication/user/add/ HTTP/1.1" 200 11403
+INFO 2024-12-05 14:33:14,702 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:33:30,622 basehttp "POST /admin/authentication/user/add/ HTTP/1.1" 302 0
+INFO 2024-12-05 14:33:30,632 basehttp "GET /admin/authentication/user/add/ HTTP/1.1" 200 11403
+INFO 2024-12-05 14:33:30,654 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:33:33,345 basehttp "GET /admin/authentication/user/ HTTP/1.1" 200 18115
+INFO 2024-12-05 14:33:33,358 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:34:17,646 basehttp "GET /admin/issue/comment/ HTTP/1.1" 200 10028
+INFO 2024-12-05 14:34:17,666 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:34:19,473 basehttp "GET /admin/issue/issue/ HTTP/1.1" 200 11555
+INFO 2024-12-05 14:34:19,487 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:34:21,415 basehttp "GET /admin/issue/issue/add/ HTTP/1.1" 200 17035
+INFO 2024-12-05 14:34:21,432 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:34:21,432 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2024-12-05 14:34:21,437 basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2024-12-05 14:34:21,438 basehttp "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+INFO 2024-12-05 14:36:38,319 basehttp "GET /admin/authentication/user/7/change/?_to_field=id HTTP/1.1" 200 11489
+INFO 2024-12-05 14:36:38,339 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:36:41,212 basehttp "GET /admin/issue/issue/add/ HTTP/1.1" 200 17035
+INFO 2024-12-05 14:44:02,603 basehttp "POST /admin/issue/issue/add/ HTTP/1.1" 302 0
+INFO 2024-12-05 14:44:02,611 basehttp "GET /admin/issue/issue/ HTTP/1.1" 200 14286
+INFO 2024-12-05 14:44:02,631 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:44:05,153 basehttp "GET /admin/issue/tag/ HTTP/1.1" 200 9675
+INFO 2024-12-05 14:44:05,167 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:44:07,333 basehttp "GET /admin/issue/tag/add/ HTTP/1.1" 200 10438
+INFO 2024-12-05 14:44:07,350 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:44:18,740 basehttp "POST /admin/issue/tag/add/ HTTP/1.1" 302 0
+INFO 2024-12-05 14:44:18,749 basehttp "GET /admin/issue/tag/add/ HTTP/1.1" 200 10663
+INFO 2024-12-05 14:44:18,764 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:44:23,326 basehttp "POST /admin/issue/tag/add/ HTTP/1.1" 302 0
+INFO 2024-12-05 14:44:23,336 basehttp "GET /admin/issue/tag/add/ HTTP/1.1" 200 10665
+INFO 2024-12-05 14:44:23,358 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:44:26,663 basehttp "POST /admin/issue/tag/add/ HTTP/1.1" 302 0
+INFO 2024-12-05 14:44:26,671 basehttp "GET /admin/issue/tag/add/ HTTP/1.1" 200 10659
+INFO 2024-12-05 14:44:26,687 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:44:57,945 basehttp "POST /admin/issue/tag/add/ HTTP/1.1" 302 0
+INFO 2024-12-05 14:44:57,953 basehttp "GET /admin/issue/tag/add/ HTTP/1.1" 200 10665
+INFO 2024-12-05 14:44:57,975 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:45:01,740 basehttp "POST /admin/issue/tag/add/ HTTP/1.1" 302 0
+INFO 2024-12-05 14:45:01,751 basehttp "GET /admin/issue/tag/ HTTP/1.1" 200 12434
+INFO 2024-12-05 14:45:01,775 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:45:07,675 basehttp "GET /admin/issue/issue/ HTTP/1.1" 200 14597
+INFO 2024-12-05 14:45:07,691 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:45:27,301 basehttp "GET /admin/issue/issue/1/change/ HTTP/1.1" 200 18015
+INFO 2024-12-05 14:45:27,327 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:45:44,303 basehttp "GET /admin/issue/tag/add/?_to_field=id&_popup=1 HTTP/1.1" 200 4347
+INFO 2024-12-05 14:45:44,327 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:45:52,121 basehttp "POST /admin/issue/issue/1/change/ HTTP/1.1" 302 0
+INFO 2024-12-05 14:45:52,130 basehttp "GET /admin/issue/issue/ HTTP/1.1" 200 14828
+INFO 2024-12-05 14:45:52,154 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:45:57,142 basehttp "GET /admin/issue/issue/?o=6 HTTP/1.1" 200 14811
+INFO 2024-12-05 14:45:57,162 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:46:02,113 basehttp "GET /admin/issue/issue/1/change/?_changelist_filters=o%3D6 HTTP/1.1" 200 18112
+INFO 2024-12-05 14:46:02,132 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:46:42,149 basehttp "POST /admin/issue/issue/1/change/?_changelist_filters=o%3D6 HTTP/1.1" 302 0
+INFO 2024-12-05 14:46:42,156 basehttp "GET /admin/issue/issue/add/?_changelist_filters=o%3D6 HTTP/1.1" 200 17532
+INFO 2024-12-05 14:46:42,187 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:48:51,467 basehttp "POST /admin/issue/issue/add/?_changelist_filters=o%3D6 HTTP/1.1" 302 0
+INFO 2024-12-05 14:48:51,483 basehttp "GET /admin/issue/issue/add/?_changelist_filters=o%3D6 HTTP/1.1" 200 17524
+INFO 2024-12-05 14:48:51,510 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:49:44,157 basehttp "GET /admin/authentication/user/8/change/?_to_field=id HTTP/1.1" 200 11485
+INFO 2024-12-05 14:49:44,183 basehttp "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2024-12-05 14:49:44,186 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2024-12-05 14:49:44,190 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2024-12-05 14:49:44,191 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2024-12-05 14:49:44,193 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2024-12-05 14:49:44,195 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2024-12-05 14:49:44,196 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2024-12-05 14:49:44,197 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2024-12-05 14:49:44,197 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:49:44,197 basehttp "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2024-12-05 14:49:44,198 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2024-12-05 14:49:44,198 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2024-12-05 14:49:44,199 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2024-12-05 14:49:44,199 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2024-12-05 14:49:44,202 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2024-12-05 14:49:52,988 basehttp "POST /admin/authentication/user/8/change/?_to_field=id HTTP/1.1" 302 0
+INFO 2024-12-05 14:49:53,000 basehttp "GET /admin/authentication/user/ HTTP/1.1" 200 18328
+INFO 2024-12-05 14:49:53,028 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2024-12-05 14:49:53,034 basehttp "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO 2024-12-05 14:49:53,036 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:49:53,036 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2024-12-05 14:49:53,048 basehttp "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2024-12-05 14:49:56,672 basehttp "GET /admin/issue/issue/ HTTP/1.1" 200 15123
+INFO 2024-12-05 14:49:56,691 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:50:02,038 basehttp "GET /admin/issue/issue/add/ HTTP/1.1" 200 17232
+INFO 2024-12-05 14:50:02,056 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:51:38,771 basehttp "GET /admin/authentication/user/4/change/?_to_field=id HTTP/1.1" 200 11490
+INFO 2024-12-05 14:51:38,798 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:51:40,785 basehttp "GET /admin/issue/issue/add/ HTTP/1.1" 200 17232
+INFO 2024-12-05 14:51:46,973 basehttp "POST /admin/issue/issue/add/ HTTP/1.1" 302 0
+INFO 2024-12-05 14:51:46,990 basehttp "GET /admin/issue/issue/ HTTP/1.1" 200 15895
+INFO 2024-12-05 14:51:47,015 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:51:57,749 basehttp "GET /admin/issue/issue/add/ HTTP/1.1" 200 17232
+INFO 2024-12-05 14:51:57,770 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:53:07,671 basehttp "POST /admin/issue/issue/add/ HTTP/1.1" 302 0
+INFO 2024-12-05 14:53:07,690 basehttp "GET /admin/issue/issue/ HTTP/1.1" 200 16397
+INFO 2024-12-05 14:53:07,708 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:53:11,024 basehttp "GET /admin/issue/issue/ HTTP/1.1" 200 16179
+INFO 2024-12-05 14:53:11,038 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:53:12,775 basehttp "GET /admin/issue/tag/ HTTP/1.1" 200 12243
+INFO 2024-12-05 14:53:12,790 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:53:14,323 basehttp "GET /admin/issue/comment/ HTTP/1.1" 200 10028
+INFO 2024-12-05 14:53:14,342 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:53:17,093 basehttp "GET /admin/issue/tag/ HTTP/1.1" 200 12243
+INFO 2024-12-05 14:53:17,114 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:53:18,213 basehttp "GET /admin/issue/vote/ HTTP/1.1" 200 9682
+INFO 2024-12-05 14:53:18,233 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:53:26,024 basehttp "GET /admin/issue/vote/add/ HTTP/1.1" 200 13800
+INFO 2024-12-05 14:53:26,040 basehttp "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2024-12-05 14:53:26,046 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:53:26,047 basehttp "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2024-12-05 14:53:26,048 basehttp "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2024-12-05 14:53:26,050 basehttp "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2024-12-05 14:53:35,042 basehttp "GET /admin/authentication/user/4/change/?_to_field=id HTTP/1.1" 200 11490
+INFO 2024-12-05 14:53:35,069 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:53:37,683 basehttp "GET /admin/issue/vote/add/ HTTP/1.1" 200 13800
+INFO 2024-12-05 14:53:41,020 basehttp "GET /admin/authentication/user/6/change/?_to_field=id HTTP/1.1" 200 11490
+INFO 2024-12-05 14:53:41,043 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:53:42,706 basehttp "GET /admin/issue/vote/add/ HTTP/1.1" 200 13800
+INFO 2024-12-05 14:53:46,318 basehttp "POST /admin/issue/vote/add/ HTTP/1.1" 302 0
+INFO 2024-12-05 14:53:46,328 basehttp "GET /admin/issue/vote/add/ HTTP/1.1" 200 14034
+INFO 2024-12-05 14:53:46,352 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:54:01,217 basehttp "GET /admin/issue/issue/ HTTP/1.1" 200 16179
+INFO 2024-12-05 14:54:01,235 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:54:04,522 basehttp "GET /admin/issue/issue/4/change/ HTTP/1.1" 200 17979
+INFO 2024-12-05 14:54:04,535 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:54:11,393 basehttp "POST /admin/issue/issue/4/change/ HTTP/1.1" 302 0
+INFO 2024-12-05 14:54:11,416 basehttp "GET /admin/issue/issue/ HTTP/1.1" 200 16399
+INFO 2024-12-05 14:54:11,441 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:54:18,454 basehttp "GET /admin/issue/vote/ HTTP/1.1" 200 11331
+INFO 2024-12-05 14:54:18,470 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:54:20,170 basehttp "GET /admin/issue/tag/ HTTP/1.1" 200 12243
+INFO 2024-12-05 14:54:20,187 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:54:22,533 basehttp "GET /admin/issue/vote/ HTTP/1.1" 200 11331
+INFO 2024-12-05 14:54:22,547 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:54:24,420 basehttp "GET /admin/issue/issue/ HTTP/1.1" 200 16179
+INFO 2024-12-05 14:54:24,435 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:54:25,437 basehttp "GET /admin/issue/comment/ HTTP/1.1" 200 10028
+INFO 2024-12-05 14:54:25,453 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:54:36,012 basehttp "GET /admin/issue/comment/add/ HTTP/1.1" 200 14454
+INFO 2024-12-05 14:54:36,031 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:54:43,508 basehttp "GET /admin/authentication/user/7/change/?_to_field=id HTTP/1.1" 200 11489
+INFO 2024-12-05 14:54:43,524 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:54:46,832 basehttp "GET /admin/issue/comment/add/ HTTP/1.1" 200 14454
+INFO 2024-12-05 14:54:50,025 basehttp "GET /admin/authentication/user/8/change/?_to_field=id HTTP/1.1" 200 11485
+INFO 2024-12-05 14:54:50,050 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:54:51,580 basehttp "GET /admin/issue/comment/add/ HTTP/1.1" 200 14454
+INFO 2024-12-05 14:55:15,441 basehttp "POST /admin/issue/comment/add/ HTTP/1.1" 302 0
+INFO 2024-12-05 14:55:15,447 basehttp "GET /admin/issue/comment/ HTTP/1.1" 200 12610
+INFO 2024-12-05 14:55:15,479 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:55:17,876 basehttp "GET /admin/issue/comment/ HTTP/1.1" 200 12364
+INFO 2024-12-05 14:55:17,898 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:55:18,976 basehttp "GET /admin/issue/issue/ HTTP/1.1" 200 16179
+INFO 2024-12-05 14:55:18,995 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:55:19,929 basehttp "GET /admin/issue/tag/ HTTP/1.1" 200 12243
+INFO 2024-12-05 14:55:19,943 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:55:20,874 basehttp "GET /admin/issue/vote/ HTTP/1.1" 200 11331
+INFO 2024-12-05 14:55:20,900 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:55:41,933 basehttp "GET /admin/issue/comment/ HTTP/1.1" 200 12364
+INFO 2024-12-05 14:55:41,954 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:55:44,669 basehttp "GET /admin/issue/issue/ HTTP/1.1" 200 16179
+INFO 2024-12-05 14:55:44,689 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:55:56,617 basehttp "GET /admin/issue/vote/ HTTP/1.1" 200 11331
+INFO 2024-12-05 14:55:56,636 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 14:56:03,069 basehttp "GET /admin/issue/comment/ HTTP/1.1" 200 12364
+INFO 2024-12-05 14:56:03,087 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+WARNING 2024-12-05 14:57:02,535 log Not Found: /
+WARNING 2024-12-05 14:57:02,536 basehttp "GET / HTTP/1.1" 404 2848
+INFO 2024-12-05 14:57:06,141 basehttp "GET /admin/ HTTP/1.1" 200 12964
+INFO 2024-12-05 14:57:06,235 basehttp "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2024-12-05 14:57:25,762 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 14:57:26,210 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 15:01:46,202 autoreload D:\janamat\backend\issue\urls.py changed, reloading.
+INFO 2024-12-05 15:01:46,767 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 15:01:51,261 autoreload D:\janamat\backend\issue\urls.py changed, reloading.
+INFO 2024-12-05 15:01:51,740 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 15:01:53,193 autoreload D:\janamat\backend\issue\urls.py changed, reloading.
+INFO 2024-12-05 15:01:53,657 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 15:01:55,097 autoreload D:\janamat\backend\issue\urls.py changed, reloading.
+INFO 2024-12-05 15:01:55,642 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 15:01:57,047 autoreload D:\janamat\backend\issue\urls.py changed, reloading.
+INFO 2024-12-05 15:01:57,592 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 15:02:02,114 autoreload D:\janamat\backend\issue\urls.py changed, reloading.
+INFO 2024-12-05 15:02:02,613 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 15:02:09,213 autoreload D:\janamat\backend\issue\urls.py changed, reloading.
+INFO 2024-12-05 15:02:09,757 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 15:02:13,253 autoreload D:\janamat\backend\issue\urls.py changed, reloading.
+INFO 2024-12-05 15:02:13,732 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 15:02:15,261 autoreload D:\janamat\backend\issue\urls.py changed, reloading.
+INFO 2024-12-05 15:02:15,779 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 15:02:19,243 autoreload D:\janamat\backend\issue\urls.py changed, reloading.
+INFO 2024-12-05 15:02:19,806 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 15:02:23,399 autoreload D:\janamat\backend\issue\urls.py changed, reloading.
+INFO 2024-12-05 15:02:23,872 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 15:02:27,333 autoreload D:\janamat\backend\issue\urls.py changed, reloading.
+INFO 2024-12-05 15:02:27,884 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 15:02:32,537 autoreload D:\janamat\backend\issue\urls.py changed, reloading.
+INFO 2024-12-05 15:02:33,091 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 15:02:35,710 autoreload D:\janamat\backend\issue\urls.py changed, reloading.
+INFO 2024-12-05 15:02:36,216 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 15:02:38,763 autoreload D:\janamat\backend\issue\urls.py changed, reloading.
+INFO 2024-12-05 15:02:39,213 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 15:02:44,825 autoreload D:\janamat\backend\issue\urls.py changed, reloading.
+INFO 2024-12-05 15:02:45,275 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 15:02:46,853 autoreload D:\janamat\backend\issue\urls.py changed, reloading.
+INFO 2024-12-05 15:02:47,351 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 15:02:53,007 autoreload D:\janamat\backend\issue\urls.py changed, reloading.
+INFO 2024-12-05 15:02:53,607 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 15:02:56,210 autoreload D:\janamat\backend\issue\urls.py changed, reloading.
+INFO 2024-12-05 15:02:56,720 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 15:03:02,371 basehttp "GET /showissues HTTP/1.1" 301 0
+ERROR 2024-12-05 15:03:02,392 log Internal Server Error: /showissues/
+Traceback (most recent call last):
+  File "D:\janamat\backend\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: APIView.as_view() takes 1 positional argument but 2 were given
+ERROR 2024-12-05 15:03:02,392 basehttp "GET /showissues/ HTTP/1.1" 500 64329
+INFO 2024-12-05 15:03:48,337 autoreload D:\janamat\backend\issue\urls.py changed, reloading.
+INFO 2024-12-05 15:03:48,910 autoreload Watching for file changes with StatReloader
+ERROR 2024-12-05 15:03:49,578 log Internal Server Error: /showissues/
+Traceback (most recent call last):
+  File "D:\janamat\backend\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\rest_framework\response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\rest_framework\renderers.py", line 726, in render
+    template = loader.get_template(self.template)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+ERROR 2024-12-05 15:03:49,585 basehttp "GET /showissues/ HTTP/1.1" 500 83958
+INFO 2024-12-05 15:05:24,560 autoreload D:\janamat\backend\issue\urls.py changed, reloading.
+INFO 2024-12-05 15:05:25,075 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 15:05:26,611 autoreload D:\janamat\backend\issue\urls.py changed, reloading.
+INFO 2024-12-05 15:05:27,154 autoreload Watching for file changes with StatReloader
+ERROR 2024-12-05 15:05:29,719 log Internal Server Error: /showissues/
+Traceback (most recent call last):
+  File "D:\janamat\backend\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\rest_framework\response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\rest_framework\renderers.py", line 726, in render
+    template = loader.get_template(self.template)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\backend\env\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+ERROR 2024-12-05 15:05:29,732 basehttp "GET /showissues/ HTTP/1.1" 500 83958
+INFO 2024-12-05 15:06:24,487 autoreload D:\janamat\backend\issue\urls.py changed, reloading.
+INFO 2024-12-05 15:06:25,297 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 15:10:00,955 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 15:10:01,754 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 15:10:06,738 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 15:10:07,505 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 15:10:10,351 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 15:10:11,113 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 15:10:14,923 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 15:10:15,383 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 15:10:20,846 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 15:10:21,265 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 15:10:38,027 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 15:10:38,413 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 15:10:39,890 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 15:10:40,323 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 15:10:46,917 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 15:10:47,298 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 15:10:52,783 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 15:10:53,191 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 15:10:54,595 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 15:10:54,929 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 15:10:58,350 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 15:10:58,745 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 15:11:00,273 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 15:11:00,677 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 15:11:05,233 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 15:11:05,668 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 15:11:07,083 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 15:11:07,426 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 15:11:08,902 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 15:11:09,258 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 15:11:13,796 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 15:11:14,186 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 15:14:43,540 autoreload D:\janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 15:14:43,931 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 18:47:08,272 autoreload Watching for file changes with StatReloader
+ERROR 2024-12-05 18:47:37,518 log Internal Server Error: /issuewithtag/
+Traceback (most recent call last):
+  File "D:\janamat\Janamat\backend\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\backend\env\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\backend\env\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\backend\env\Lib\site-packages\rest_framework\response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\backend\env\Lib\site-packages\rest_framework\renderers.py", line 726, in render
+    template = loader.get_template(self.template)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\backend\env\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+ERROR 2024-12-05 18:47:37,528 basehttp "GET /issuewithtag/ HTTP/1.1" 500 84443
+WARNING 2024-12-05 18:47:37,670 log Not Found: /favicon.ico
+WARNING 2024-12-05 18:47:37,670 basehttp "GET /favicon.ico HTTP/1.1" 404 3438
+ERROR 2024-12-05 18:53:49,389 exception Invalid HTTP_HOST header: '10.0.2.2:8000'. You may need to add '10.0.2.2' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "D:\janamat\Janamat\backend\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\backend\env\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\backend\env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\backend\env\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '10.0.2.2:8000'. You may need to add '10.0.2.2' to ALLOWED_HOSTS.
+WARNING 2024-12-05 18:53:49,426 log Bad Request: /issuewithtag/
+WARNING 2024-12-05 18:53:49,426 basehttp "POST /issuewithtag/ HTTP/1.1" 400 70196
+INFO 2024-12-05 18:54:44,584 autoreload D:\janamat\Janamat\backend\backend\settings.py changed, reloading.
+INFO 2024-12-05 18:54:45,053 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 18:54:46,650 autoreload D:\janamat\Janamat\backend\backend\settings.py changed, reloading.
+INFO 2024-12-05 18:54:47,109 autoreload Watching for file changes with StatReloader
+WARNING 2024-12-05 18:54:54,690 log Forbidden: /issuewithtag/
+WARNING 2024-12-05 18:54:54,691 basehttp "POST /issuewithtag/ HTTP/1.1" 403 38
+INFO 2024-12-05 18:55:12,261 autoreload D:\janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 18:55:12,812 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 18:55:15,414 autoreload D:\janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 18:55:15,836 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 18:55:18,393 autoreload D:\janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 18:55:18,792 autoreload Watching for file changes with StatReloader
+WARNING 2024-12-05 18:55:22,874 log Forbidden: /issuewithtag/
+WARNING 2024-12-05 18:55:22,875 basehttp "POST /issuewithtag/ HTTP/1.1" 403 38
+INFO 2024-12-05 18:55:45,947 autoreload D:\janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 18:55:46,411 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 18:55:49,029 autoreload D:\janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 18:55:49,501 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 18:55:50,941 autoreload D:\janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 18:55:51,364 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 18:55:54,919 autoreload D:\janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 18:55:55,313 autoreload Watching for file changes with StatReloader
+WARNING 2024-12-05 18:56:00,893 log Not Found: /issuewithtag/
+WARNING 2024-12-05 18:56:00,894 basehttp "POST /issuewithtag/ HTTP/1.1" 404 41
+INFO 2024-12-05 18:56:12,271 autoreload D:\janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 18:56:12,665 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 18:56:14,095 autoreload D:\janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 18:56:14,760 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 18:56:17,241 autoreload D:\janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 18:56:17,636 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 18:56:21,230 autoreload D:\janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 18:56:21,680 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 18:56:24,259 autoreload D:\janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 18:56:24,673 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 18:56:26,272 autoreload D:\janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 18:56:26,718 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 18:57:10,052 autoreload D:\janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 18:57:10,468 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 18:57:18,165 autoreload D:\janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 18:57:18,614 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 18:57:21,217 autoreload D:\janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 18:57:21,617 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 18:57:23,081 autoreload D:\janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 18:57:23,566 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 18:57:25,016 autoreload D:\janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 18:57:25,456 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 18:57:32,015 autoreload D:\janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 18:57:32,433 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 18:57:34,895 autoreload D:\janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 18:57:35,331 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 18:57:36,817 autoreload D:\janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 18:57:37,237 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 18:57:38,673 autoreload D:\janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 18:57:39,078 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 18:57:43,577 autoreload D:\janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 18:57:43,958 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 18:57:45,396 autoreload D:\janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 18:57:45,837 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 18:58:10,670 autoreload D:\janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 18:58:11,082 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 18:58:25,469 basehttp "POST /issuewithtag/ HTTP/1.1" 200 72
+INFO 2024-12-05 18:59:35,220 autoreload D:\janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 18:59:35,610 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 18:59:41,261 autoreload D:\janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 18:59:41,685 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 18:59:43,902 basehttp "POST /issuewithtag/ HTTP/1.1" 200 72
+INFO 2024-12-05 19:00:11,925 autoreload D:\janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 19:00:12,350 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 19:00:13,921 autoreload D:\janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 19:00:14,350 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 19:00:16,404 basehttp "POST /issuewithtag/ HTTP/1.1" 200 72
+INFO 2024-12-05 19:00:37,091 basehttp "GET /admin/ HTTP/1.1" 200 12964
+INFO 2024-12-05 19:00:37,108 basehttp "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2024-12-05 19:00:37,108 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2024-12-05 19:00:37,109 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2024-12-05 19:00:37,129 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2024-12-05 19:00:37,130 basehttp "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2024-12-05 19:00:37,130 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2024-12-05 19:00:37,132 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2024-12-05 19:00:37,137 basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2024-12-05 19:00:37,137 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2024-12-05 19:00:53,262 basehttp "GET /admin/issue/issue/ HTTP/1.1" 200 16179
+INFO 2024-12-05 19:00:53,272 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2024-12-05 19:00:53,274 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2024-12-05 19:00:53,277 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2024-12-05 19:00:53,277 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2024-12-05 19:00:53,278 basehttp "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2024-12-05 19:00:53,280 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2024-12-05 19:00:53,281 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2024-12-05 19:00:53,281 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2024-12-05 19:00:53,282 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2024-12-05 19:00:53,282 basehttp "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO 2024-12-05 19:00:53,288 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2024-12-05 19:00:53,303 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 19:00:53,326 basehttp "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+INFO 2024-12-05 19:00:53,326 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2024-12-05 19:00:53,404 basehttp "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+INFO 2024-12-05 19:01:03,474 basehttp "GET /admin/issue/issue/4/change/ HTTP/1.1" 200 17979
+INFO 2024-12-05 19:01:03,482 basehttp "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2024-12-05 19:01:03,487 basehttp "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2024-12-05 19:01:03,488 basehttp "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2024-12-05 19:01:03,489 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 19:01:03,491 basehttp "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2024-12-05 19:01:11,364 basehttp "GET /admin/issue/issue/ HTTP/1.1" 200 16179
+INFO 2024-12-05 19:01:12,997 basehttp "GET /admin/issue/issue/3/change/ HTTP/1.1" 200 18028
+INFO 2024-12-05 19:01:13,009 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 19:01:15,284 basehttp "GET /admin/issue/issue/ HTTP/1.1" 200 16179
+INFO 2024-12-05 19:01:17,401 basehttp "GET /admin/issue/issue/1/change/ HTTP/1.1" 200 18024
+INFO 2024-12-05 19:01:17,414 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 19:01:19,655 basehttp "GET /admin/issue/issue/ HTTP/1.1" 200 16179
+INFO 2024-12-05 19:01:22,062 basehttp "GET /admin/issue/issue/2/change/ HTTP/1.1" 200 17978
+INFO 2024-12-05 19:01:22,073 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 19:01:25,059 basehttp "GET /admin/issue/issue/ HTTP/1.1" 200 16179
+ERROR 2024-12-05 19:01:32,030 log Internal Server Error: /issuewithtag/
+Traceback (most recent call last):
+  File "D:\janamat\Janamat\backend\env\Lib\site-packages\django\db\models\fields\__init__.py", line 2123, in get_prep_value
+    return int(value)
+           ^^^^^^^^^^
+  File "D:\janamat\Janamat\backend\env\Lib\site-packages\django\contrib\auth\models.py", line 438, in __int__
+    raise TypeError(
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\janamat\Janamat\backend\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\backend\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\backend\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\backend\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\backend\issue\views.py", line 212, in post
+    "voted": issue.vote_set.filter(user=user).exists(),  # Check if the user has voted
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\backend\env\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\backend\env\Lib\site-packages\django\db\models\query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\backend\env\Lib\site-packages\django\db\models\query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "D:\janamat\Janamat\backend\env\Lib\site-packages\django\db\models\query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "D:\janamat\Janamat\backend\env\Lib\site-packages\django\db\models\sql\query.py", line 1609, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\backend\env\Lib\site-packages\django\db\models\sql\query.py", line 1641, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\backend\env\Lib\site-packages\django\db\models\sql\query.py", line 1555, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\backend\env\Lib\site-packages\django\db\models\sql\query.py", line 1385, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\backend\env\Lib\site-packages\django\db\models\lookups.py", line 30, in __init__
+    self.rhs = self.get_prep_lookup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\backend\env\Lib\site-packages\django\db\models\fields\related_lookups.py", line 156, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\backend\env\Lib\site-packages\django\db\models\fields\__init__.py", line 2125, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x000001D438E09FA0>.
+ERROR 2024-12-05 19:01:32,043 basehttp "POST /issuewithtag/ HTTP/1.1" 500 157102
+INFO 2024-12-05 19:02:38,989 basehttp "GET /admin/issue/issue/4/change/ HTTP/1.1" 200 17979
+INFO 2024-12-05 19:02:39,007 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-05 19:05:02,636 autoreload D:\janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 19:05:03,037 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 19:05:04,564 autoreload D:\janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 19:05:05,052 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 19:05:11,196 basehttp "POST /issuewithtag/ HTTP/1.1" 200 405
+INFO 2024-12-05 19:06:29,592 basehttp "POST /issuewithtag/ HTTP/1.1" 200 405
+INFO 2024-12-05 19:08:18,194 basehttp "POST /issuewithtag/ HTTP/1.1" 200 405
+INFO 2024-12-05 19:09:07,902 autoreload D:\janamat\Janamat\backend\issue\urls.py changed, reloading.
+INFO 2024-12-05 19:09:08,298 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 19:09:09,732 autoreload D:\janamat\Janamat\backend\issue\urls.py changed, reloading.
+INFO 2024-12-05 19:09:10,109 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 19:09:13,584 autoreload D:\janamat\Janamat\backend\issue\urls.py changed, reloading.
+INFO 2024-12-05 19:09:13,961 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 19:09:15,397 autoreload D:\janamat\Janamat\backend\issue\urls.py changed, reloading.
+INFO 2024-12-05 19:09:15,790 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 19:17:39,398 basehttp "GET /leaderboard/ HTTP/1.1" 200 1461
+INFO 2024-12-05 19:17:51,792 basehttp "GET /leaderboard/ HTTP/1.1" 200 1461
+INFO 2024-12-05 19:19:17,520 basehttp "GET /leaderboard/ HTTP/1.1" 200 1461
+INFO 2024-12-05 19:20:48,958 basehttp "GET /leaderboard/ HTTP/1.1" 200 1461
+INFO 2024-12-05 19:22:47,643 autoreload D:\janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 19:22:48,049 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 19:28:13,681 autoreload D:\janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 19:28:14,161 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 19:28:15,713 autoreload D:\janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 19:28:16,149 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 19:28:29,919 autoreload D:\janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 19:28:30,316 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 19:45:27,333 basehttp "POST /createissue/ HTTP/1.1" 201 270
+INFO 2024-12-05 19:45:50,260 basehttp "POST /createissue/ HTTP/1.1" 201 179
+INFO 2024-12-05 19:54:12,041 basehttp "POST /issuewithtag/ HTTP/1.1" 200 405
+INFO 2024-12-05 19:54:18,370 basehttp "POST /issuewithtag/ HTTP/1.1" 200 405
+INFO 2024-12-05 19:54:50,358 basehttp "GET /leaderboard/ HTTP/1.1" 200 1968
+INFO 2024-12-05 19:54:50,399 basehttp "GET /leaderboard/ HTTP/1.1" 200 1968
+INFO 2024-12-05 19:55:35,169 basehttp "POST /createissue/ HTTP/1.1" 201 197
+INFO 2024-12-05 19:55:37,448 basehttp "GET /leaderboard/ HTTP/1.1" 200 2194
+INFO 2024-12-05 19:55:37,487 basehttp "GET /leaderboard/ HTTP/1.1" 200 2194
+INFO 2024-12-05 21:16:39,256 basehttp "POST /issuewithtag/ HTTP/1.1" 200 405
+INFO 2024-12-05 21:16:42,798 basehttp "POST /issuewithtag/ HTTP/1.1" 200 72
+INFO 2024-12-05 21:16:46,668 basehttp "GET /leaderboard/ HTTP/1.1" 200 2194
+INFO 2024-12-05 21:16:46,713 basehttp "GET /leaderboard/ HTTP/1.1" 200 2194
+INFO 2024-12-05 21:16:50,649 basehttp "GET /leaderboard/ HTTP/1.1" 200 2194
+INFO 2024-12-05 21:16:50,690 basehttp "GET /leaderboard/ HTTP/1.1" 200 2194
+INFO 2024-12-05 21:16:52,018 basehttp "GET /leaderboard/ HTTP/1.1" 200 2194
+INFO 2024-12-05 21:16:52,064 basehttp "GET /leaderboard/ HTTP/1.1" 200 2194
+INFO 2024-12-05 21:16:57,966 basehttp "POST /issuewithtag/ HTTP/1.1" 200 405
+INFO 2024-12-05 21:17:34,535 basehttp "GET /leaderboard/ HTTP/1.1" 200 2194
+INFO 2024-12-05 21:17:34,641 basehttp "GET /leaderboard/ HTTP/1.1" 200 2194
+INFO 2024-12-05 21:20:22,103 basehttp "POST /issuewithtag/ HTTP/1.1" 200 405
+INFO 2024-12-05 21:20:26,059 basehttp "POST /issuewithtag/ HTTP/1.1" 200 72
+INFO 2024-12-05 21:20:32,220 basehttp "POST /issuewithtag/ HTTP/1.1" 200 405
+INFO 2024-12-05 21:20:38,219 basehttp "POST /issuewithtag/ HTTP/1.1" 200 412
+INFO 2024-12-05 21:20:52,030 basehttp "GET /leaderboard/ HTTP/1.1" 200 2194
+INFO 2024-12-05 21:20:52,085 basehttp "GET /leaderboard/ HTTP/1.1" 200 2194
+INFO 2024-12-05 21:22:45,023 basehttp "POST /createissue/ HTTP/1.1" 201 224
+INFO 2024-12-05 21:22:49,947 basehttp "GET /leaderboard/ HTTP/1.1" 200 2447
+INFO 2024-12-05 21:22:49,987 basehttp "GET /leaderboard/ HTTP/1.1" 200 2447
+INFO 2024-12-05 21:23:08,096 basehttp "GET /leaderboard/ HTTP/1.1" 200 2447
+INFO 2024-12-05 21:23:08,140 basehttp "GET /leaderboard/ HTTP/1.1" 200 2447
+INFO 2024-12-05 21:25:58,794 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 21:26:03,924 basehttp "GET /leaderboard/ HTTP/1.1" 200 2447
+INFO 2024-12-05 21:27:11,829 basehttp "GET /leaderboard/ HTTP/1.1" 200 2447
+INFO 2024-12-05 21:27:11,881 basehttp "GET /leaderboard/ HTTP/1.1" 200 2447
+INFO 2024-12-05 21:29:24,065 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 21:30:05,682 basehttp "GET /leaderboard/ HTTP/1.1" 200 2447
+INFO 2024-12-05 21:30:19,596 basehttp "GET /leaderboard/ HTTP/1.1" 200 2447
+INFO 2024-12-05 21:30:19,644 basehttp "GET /leaderboard/ HTTP/1.1" 200 2447
+INFO 2024-12-05 21:30:22,510 basehttp "GET /leaderboard/ HTTP/1.1" 200 2447
+INFO 2024-12-05 21:30:22,555 basehttp "GET /leaderboard/ HTTP/1.1" 200 2447
+INFO 2024-12-05 21:30:39,795 basehttp "GET /leaderboard/ HTTP/1.1" 200 2447
+INFO 2024-12-05 21:30:39,838 basehttp "GET /leaderboard/ HTTP/1.1" 200 2447
+INFO 2024-12-05 21:30:42,622 basehttp "POST /issuewithtag/ HTTP/1.1" 200 405
+INFO 2024-12-05 21:30:47,418 basehttp "GET /leaderboard/ HTTP/1.1" 200 2447
+INFO 2024-12-05 21:30:47,453 basehttp "GET /leaderboard/ HTTP/1.1" 200 2447
+INFO 2024-12-05 21:31:37,319 basehttp "GET /leaderboard/ HTTP/1.1" 200 2447
+INFO 2024-12-05 21:31:51,520 basehttp "POST /createissue/ HTTP/1.1" 201 184
+INFO 2024-12-05 21:31:53,700 basehttp "GET /leaderboard/ HTTP/1.1" 200 2660
+INFO 2024-12-05 21:31:53,740 basehttp "GET /leaderboard/ HTTP/1.1" 200 2660
+INFO 2024-12-05 21:41:22,436 basehttp "POST /createissue/ HTTP/1.1" 201 196
+INFO 2024-12-05 21:41:47,299 basehttp "POST /createissue/ HTTP/1.1" 201 243
+ERROR 2024-12-05 21:42:19,881 log Internal Server Error: /issuewithtag/
+Traceback (most recent call last):
+  File "D:\janamat\Janamat\backend\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\backend\env\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\backend\env\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\backend\env\Lib\site-packages\rest_framework\response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\backend\env\Lib\site-packages\rest_framework\renderers.py", line 726, in render
+    template = loader.get_template(self.template)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\backend\env\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+ERROR 2024-12-05 21:42:19,889 basehttp "GET /issuewithtag/ HTTP/1.1" 500 82636
+WARNING 2024-12-05 21:42:20,038 log Not Found: /favicon.ico
+WARNING 2024-12-05 21:42:20,039 basehttp "GET /favicon.ico HTTP/1.1" 404 3706
+WARNING 2024-12-05 21:42:45,272 log Not Found: /issue_images/Screenshot_2024-12-05_145254.png/
+WARNING 2024-12-05 21:42:45,273 basehttp "GET /issue_images/Screenshot_2024-12-05_145254.png/ HTTP/1.1" 404 3811
+INFO 2024-12-05 21:42:57,293 basehttp "GET /media/issue_images/Screenshot_2024-12-05_145254.png/ HTTP/1.1" 200 93004
+INFO 2024-12-05 21:43:15,155 basehttp "GET /media/issue_images/1000038623.jpg/ HTTP/1.1" 200 1936359
+INFO 2024-12-05 21:43:30,439 basehttp "POST /issuewithtag/ HTTP/1.1" 200 405
+INFO 2024-12-05 21:48:21,596 basehttp "POST /createissue/ HTTP/1.1" 201 184
+WARNING 2024-12-05 21:49:41,136 log Not Found: /issuewithtag/
+WARNING 2024-12-05 21:49:41,136 basehttp "POST /issuewithtag/ HTTP/1.1" 404 35
+INFO 2024-12-05 22:02:27,523 basehttp "POST /issuewithtag/ HTTP/1.1" 200 405
+INFO 2024-12-05 22:02:59,710 basehttp "POST /issuewithtag/ HTTP/1.1" 200 405
+INFO 2024-12-05 22:07:46,677 basehttp "POST /issuewithtag/ HTTP/1.1" 200 405
+INFO 2024-12-05 22:11:39,224 basehttp "POST /issuewithtag/ HTTP/1.1" 200 72
+WARNING 2024-12-05 22:11:42,476 log Not Found: /issuewithtag/
+WARNING 2024-12-05 22:11:42,477 basehttp "POST /issuewithtag/ HTTP/1.1" 404 38
+WARNING 2024-12-05 22:11:44,391 log Not Found: /issuewithtag/
+WARNING 2024-12-05 22:11:44,391 basehttp "POST /issuewithtag/ HTTP/1.1" 404 35
+INFO 2024-12-05 22:11:48,873 basehttp "POST /issuewithtag/ HTTP/1.1" 200 72
+INFO 2024-12-05 22:11:51,314 basehttp "POST /issuewithtag/ HTTP/1.1" 200 400
+INFO 2024-12-05 22:11:58,165 basehttp "POST /issuewithtag/ HTTP/1.1" 200 405
+INFO 2024-12-05 22:12:01,913 basehttp "POST /issuewithtag/ HTTP/1.1" 200 412
+WARNING 2024-12-05 22:12:05,156 log Not Found: /issuewithtag/
+WARNING 2024-12-05 22:12:05,157 basehttp "POST /issuewithtag/ HTTP/1.1" 404 38
+WARNING 2024-12-05 22:14:42,904 log Not Found: /issuewithtag/
+WARNING 2024-12-05 22:14:42,905 basehttp "POST /issuewithtag/ HTTP/1.1" 404 38
+INFO 2024-12-05 22:14:46,627 basehttp "POST /issuewithtag/ HTTP/1.1" 200 72
+WARNING 2024-12-05 22:14:51,288 log Not Found: /issuewithtag/
+WARNING 2024-12-05 22:14:51,289 basehttp "POST /issuewithtag/ HTTP/1.1" 404 38
+WARNING 2024-12-05 22:14:56,117 log Not Found: /issuewithtag/
+WARNING 2024-12-05 22:14:56,118 basehttp "POST /issuewithtag/ HTTP/1.1" 404 35
+INFO 2024-12-05 22:14:58,952 basehttp "POST /issuewithtag/ HTTP/1.1" 200 405
+INFO 2024-12-05 22:15:04,409 basehttp "POST /issuewithtag/ HTTP/1.1" 200 405
+INFO 2024-12-05 22:15:09,141 basehttp "POST /issuewithtag/ HTTP/1.1" 200 412
+INFO 2024-12-05 22:15:16,878 basehttp "POST /issuewithtag/ HTTP/1.1" 200 400
+INFO 2024-12-05 22:15:20,871 basehttp "POST /issuewithtag/ HTTP/1.1" 200 72
+WARNING 2024-12-05 22:15:23,269 log Not Found: /issuewithtag/
+WARNING 2024-12-05 22:15:23,270 basehttp "POST /issuewithtag/ HTTP/1.1" 404 35
+WARNING 2024-12-05 22:15:26,299 log Not Found: /issuewithtag/
+WARNING 2024-12-05 22:15:26,300 basehttp "POST /issuewithtag/ HTTP/1.1" 404 35
+INFO 2024-12-05 22:15:40,921 basehttp "POST /issuewithtag/ HTTP/1.1" 200 405
+INFO 2024-12-05 22:19:41,754 basehttp "POST /issuewithtag/ HTTP/1.1" 200 72
+INFO 2024-12-05 22:19:43,638 basehttp "POST /issuewithtag/ HTTP/1.1" 200 400
+INFO 2024-12-05 22:19:47,635 basehttp "POST /issuewithtag/ HTTP/1.1" 200 405
+INFO 2024-12-05 22:21:13,026 basehttp "POST /issuewithtag/ HTTP/1.1" 200 405
+INFO 2024-12-05 22:21:59,535 basehttp "POST /issuewithtag/ HTTP/1.1" 200 405
+INFO 2024-12-05 22:24:00,208 basehttp "POST /issuewithtag/ HTTP/1.1" 200 405
+INFO 2024-12-05 22:43:21,930 basehttp "POST /issuewithtag/ HTTP/1.1" 200 400
+INFO 2024-12-05 22:43:26,165 basehttp "POST /issuewithtag/ HTTP/1.1" 200 412
+INFO 2024-12-05 22:43:33,514 basehttp "POST /issuewithtag/ HTTP/1.1" 200 400
+INFO 2024-12-05 22:43:42,295 basehttp "GET /leaderboard/ HTTP/1.1" 200 3370
+INFO 2024-12-05 22:43:42,416 basehttp "GET /leaderboard/ HTTP/1.1" 200 3370
+WARNING 2024-12-05 22:44:10,410 log Not Found: /issuewithtag/
+WARNING 2024-12-05 22:44:10,411 basehttp "POST /issuewithtag/ HTTP/1.1" 404 35
+INFO 2024-12-05 22:51:57,405 basehttp "GET /admin/issue/issue/4/change/ HTTP/1.1" 200 18343

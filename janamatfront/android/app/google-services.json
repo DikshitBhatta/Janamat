@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1091720911812",
+    "project_id": "janamat-e5f80",
+    "storage_bucket": "janamat-e5f80.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1091720911812:android:fd745074f1802fe9e42291",
+        "android_client_info": {
+          "package_name": "com.example.janamatfront"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaLwjR-kbskJP0qP3X0exwT2SrfzmjGYg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
