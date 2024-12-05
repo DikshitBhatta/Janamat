@@ -1,22 +1,25 @@
+// Updated IssueDisplayPage
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:janamatfront/providers/voting_provider.dart';
 
 class IssueDisplayPage extends StatefulWidget {
+  final String issueId;
   final String date;
   final String location;
   final String title;
   final String imageUrl;
   final String description;
-  final int vote_count;
+  final int initialVoteCount;
 
   IssueDisplayPage({
+    required this.issueId,
     required this.date,
     required this.location,
     required this.title,
     required this.imageUrl,
     required this.description,
-    required this.vote_count,
+    required this.initialVoteCount,
   });
 
   @override
@@ -24,6 +27,19 @@ class IssueDisplayPage extends StatefulWidget {
 }
 
 class _IssueDisplayPageState extends State<IssueDisplayPage> {
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      final votingProvider =
+          Provider.of<VotingProvider>(context, listen: false);
+      votingProvider.setInitialVotes(
+          widget.initialVoteCount, 0); // Assuming no initial downvotes
+      votingProvider
+          .fetchInitialVoteStatus(widget.issueId); // Fetch initial vote status
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,21 +66,11 @@ class _IssueDisplayPageState extends State<IssueDisplayPage> {
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 16),
-            Image.asset('assets/issues/watersupply.jpg'),
+            Image.network(widget.imageUrl),
             SizedBox(height: 16),
             Text(
               widget.description,
               style: TextStyle(fontSize: 16),
-            ),
-            SizedBox(height: 16),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Text(
-                  '_authoname',
-                  style: TextStyle(fontSize: 10),
-                ),
-              ],
             ),
           ],
         ),
@@ -80,17 +86,31 @@ class _IssueDisplayPageState extends State<IssueDisplayPage> {
                 IconButton(
                   icon: Icon(
                     Icons.thumb_up,
-                    color: votingProvider.isUpvoted ? Colors.green : Colors.grey,
+                    color:
+                        votingProvider.isUpvoted ? Colors.green : Colors.grey,
                   ),
-                  onPressed: votingProvider.toggleUpvote,
+                  onPressed: () {
+                    if (votingProvider.isUpvoted) {
+                      votingProvider.notUpvoteIssue(widget.issueId);
+                    } else {
+                      votingProvider.upvoteIssue(widget.issueId);
+                    }
+                  },
                 ),
                 Text('${votingProvider.upvotes}'),
                 IconButton(
                   icon: Icon(
                     Icons.thumb_down,
-                    color: votingProvider.isDownvoted ? Colors.red : Colors.grey,
+                    color:
+                        votingProvider.isDownvoted ? Colors.red : Colors.grey,
                   ),
-                  onPressed: votingProvider.toggleDownvote,
+                  onPressed: () {
+                    if(votingProvider.isDownvoted) {
+                      votingProvider.notDownvoteIssue(widget.issueId);
+                    } else {
+                      votingProvider.downvoteIssue(widget.issueId);
+                    }
+                  },
                 ),
                 Text('${votingProvider.downvotes}'),
               ],

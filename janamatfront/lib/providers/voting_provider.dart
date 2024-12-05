@@ -18,38 +18,136 @@ class VotingProvider with ChangeNotifier {
   List<Map<String, dynamic>> get tagIssues => _tagIssues;
   List<Map<String, dynamic>> get leaderboard => _leaderboard;
 
-  // Toggling votes
-  void toggleUpvote() {
-    if (_isUpvoted) {
-      _upvotes--;
-    } else {
-      _upvotes++;
-      if (_isDownvoted) {
-        _downvotes--;
-        _isDownvoted = false;
-      }
-    }
-    _isUpvoted = !_isUpvoted;
+  void setInitialVotes(int upvotes, int downvotes) {
+    _upvotes = upvotes;
+    _downvotes = downvotes;
     notifyListeners();
   }
 
-  void toggleDownvote() {
-    if (_isDownvoted) {
-      _downvotes--;
-    } else {
-      _downvotes++;
-      if (_isUpvoted) {
-        _upvotes--;
-        _isUpvoted = false;
+  // Upvote method connecting to the backend
+  Future<void> upvoteIssue(String issueId) async {
+    final url = Uri.parse('http://192.168.1.74:8000/upvote/');
+
+    try {
+      final response = await http.post(
+        url,
+        headers: {'Content-Type': 'application/json'},
+        body: json.encode({'issue_id': issueId}),
+      );
+
+      if (response.statusCode == 200) {
+        final responseData = json.decode(response.body);
+        _upvotes = responseData['new_vote_count'];
+        _isUpvoted = true;
+        _isDownvoted = false; 
+        notifyListeners();
+      } else {
+        print("Failed to upvote: ${response.body}");
       }
+    } catch (e) {
+      print("Error during upvote: $e");
     }
-    _isDownvoted = !_isDownvoted;
-    notifyListeners();
+  }
+
+    // Remove upvote method (NotUpvote)
+  Future<void> notUpvoteIssue(String issueId) async {
+    final url = Uri.parse('http://192.168.1.74:8000/notupvote/');
+
+    try {
+      final response = await http.post(
+        url,
+        headers: {'Content-Type': 'application/json'},
+        body: json.encode({'issue_id': issueId}),
+      );
+
+      if (response.statusCode == 200) {
+        final responseData = json.decode(response.body);
+        _upvotes = responseData['new_vote_count'];
+        _isUpvoted = false;
+        notifyListeners();
+      } else {
+        print("Failed to remove upvote: ${response.body}");
+      }
+    } catch (e) {
+      print("Error during removing upvote: $e");
+    }
+  }
+
+  // Downvote method connecting to the backend
+  Future<void> downvoteIssue(String issueId) async {
+    final url = Uri.parse(
+        'http://192.168.1.74:8000/downvote/'); // Adjust this if needed
+
+    try {
+      final response = await http.post(
+        url,
+        headers: {'Content-Type': 'application/json'},
+        body: json.encode({'issue_id': issueId}),
+      );
+      if (response.statusCode == 200) {
+        final responseData = json.decode(response.body);
+        _downvotes = responseData['new_vote_count'];
+        _isDownvoted = true;
+        _isUpvoted = false; // Reset upvote
+        notifyListeners();
+      } else {
+        print("Failed to downvote: ${response.body}");
+      }
+    } catch (e) {
+      print("Error during downvote: $e");
+    }
+  }
+
+  // Remove downvote method (NotDownvote)
+  Future<void> notDownvoteIssue(String issueId) async {
+    final url = Uri.parse('http://192.168.1.74:8000/notdownvote/');
+
+    try {
+      final response = await http.post(
+        url,
+        headers: {'Content-Type': 'application/json'},
+        body: json.encode({'issue_id': issueId}),
+      );
+
+      if (response.statusCode == 200) {
+        final responseData = json.decode(response.body);
+        _downvotes = responseData['new_vote_count'];
+        _isDownvoted = false;
+        notifyListeners();
+      } else {
+        print("Failed to remove downvote: ${response.body}");
+      }
+    } catch (e) {
+      print("Error during removing downvote: $e");
+    }
+  }
+
+  // Fetch initial vote status from the backend
+  Future<void> fetchInitialVoteStatus(String issueId) async {
+    final url = Uri.parse('http://192.168.1.74:8000/votestatus/$issueId/');
+
+    try {
+      final response = await http.get(
+        url,
+        headers: {'Content-Type': 'application/json'},
+      );
+
+      if (response.statusCode == 200) {
+        final responseData = json.decode(response.body);
+        _isUpvoted = responseData['is_upvoted'];
+        _isDownvoted = responseData['is_downvoted'];
+        notifyListeners();
+      } else {
+        print("Failed to fetch vote status: ${response.body}");
+      }
+    } catch (e) {
+      print("Error fetching vote status: $e");
+    }
   }
 
   // Fetch issues for a specific tag
   Future<void> fetchIssuesByTag(String tagName) async {
-    final url = Uri.parse('http://10.0.2.2:8000/issuewithtag/');
+    final url = Uri.parse('http://192.168.1.74:8000/issuewithtag/');
 
     try {
       final response = await http.post(
@@ -60,7 +158,8 @@ class VotingProvider with ChangeNotifier {
 
       if (response.statusCode == 200) {
         final responseData = json.decode(response.body);
-        _tagIssues = List<Map<String, dynamic>>.from(responseData['issues']); // Decode JSON response
+        _tagIssues = List<Map<String, dynamic>>.from(
+            responseData['issues']); // Decode JSON response
         notifyListeners(); // Notify listeners of state change
       } else {
         throw Exception('Failed to load issues for tag');
@@ -72,7 +171,8 @@ class VotingProvider with ChangeNotifier {
 
   // Fetch issues for leaderboard
   Future<void> fetchLeaderboard() async {
-    final url = Uri.parse('http://10.0.2.2:8000/leaderboard/'); // Update with the correct endpoint
+    final url = Uri.parse(
+        'http://192.168.1.74:8000/leaderboard/'); // Update with the correct endpoint
 
     try {
       final response = await http.get(
@@ -82,7 +182,8 @@ class VotingProvider with ChangeNotifier {
 
       if (response.statusCode == 200) {
         final responseData = json.decode(response.body);
-        _leaderboard = List<Map<String, dynamic>>.from(responseData['leaderboard']);
+        _leaderboard =
+            List<Map<String, dynamic>>.from(responseData['leaderboard']);
         notifyListeners(); // Notify listeners of state change
       } else {
         throw Exception('Failed to load leaderboard');
@@ -113,7 +214,8 @@ class VotingProvider with ChangeNotifier {
         request.fields['location'] = location;
       }
       if (image != null) {
-        request.files.add(await http.MultipartFile.fromPath('image', image.path));
+        request.files
+            .add(await http.MultipartFile.fromPath('image', image.path));
       }
 
       final response = await request.send();
@@ -128,6 +230,4 @@ class VotingProvider with ChangeNotifier {
       print('Error creating issue: $e');
     }
   }
-
-
 }

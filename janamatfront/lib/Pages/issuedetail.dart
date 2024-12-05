@@ -13,6 +13,14 @@ class Issuedetail extends StatelessWidget {
   Widget build(BuildContext context) {
     final votingProvider = Provider.of<VotingProvider>(context);
     final tagIssues = votingProvider.tagIssues;
+    if (tagIssues == null || tagIssues is! List) {
+      return Scaffold(
+        appBar: AppBar(
+          title: Text('Issues for $tagName'),
+        ),
+        body: Center(child: Text('No issues found for $tagName.')),
+      );
+    }
     print(tagIssues);
     return Scaffold(
       appBar: AppBar(
@@ -71,12 +79,14 @@ class Issuedetail extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                           builder: (context) => IssueDisplayPage(
+                            issueId: issue['id']?.toString() ?? 'Unknown ID',
                             date: issue['date'] ?? 'Unknown Date',
                             location: issue['location'] ?? 'Unknown Location',
                             title: issue['title'] ?? 'No Title',
                             imageUrl: issue['imageUrl'] ?? 'https://via.placeholder.com/150',
                             description: issue['description'] ?? 'No Description',
-                            vote_count: votecount,
+                            initialVoteCount: votecount,
+                            // Add any other required parameters here
                           ),
                         ),
                       );

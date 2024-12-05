@@ -45,6 +45,13 @@ class Vote(models.Model):
         unique_together = ("issue","user")
         
 
+class DownVote(models.Model):
+    issue = models.ForeignKey(Issue, on_delete=models.CASCADE, related_name="downvote_set")
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="user_downvotes")
+    
+    class Meta:
+        unique_together = ("issue","user")
+
 
 
 

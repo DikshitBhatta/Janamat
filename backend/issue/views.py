@@ -126,10 +126,12 @@ class LeaderboardView(APIView):
         
 
 class UpVoteView(APIView):
-    authentication_classes = [AuthenticationView]
-
+    #authentication_classes = [AuthenticationView]
+    authentication_classes = []
+    
     def post(self, request):
-        user = request.user
+        #user = request.user
+        user = User.objects.get(id=1) 
         issue_id = request.data.get("issue_id")
 
         if not issue_id:
@@ -147,22 +149,164 @@ class UpVoteView(APIView):
             )
 
         if issue.vote_set.filter(user=user).exists():
+            print("already upvoted")
             return Response(
                 {"error": "You have already upvoted this issue."},
                 status=status.HTTP_400_BAD_REQUEST,
             )
 
         with transaction.atomic():
+            print("upvoting")
             issue.vote_count = F("vote_count") + 1
             issue.save()
 
             issue.vote_set.create(user=user)
 
         issue.refresh_from_db()
+        print("upvoted")
 
         return Response(
             {
                 "message": "Upvote successful.",
+                "issue_id": issue.id,
+                "new_vote_count": issue.vote_count,
+            },
+            status=status.HTTP_200_OK,
+        )
+
+class NotUpVoteView(APIView):
+    authentication_classes = []
+
+    def post(self, request):
+        user = User.objects.get(id=1)  # Replace with `request.user` in production
+        issue_id = request.data.get("issue_id")
+
+        if not issue_id:
+            return Response(
+                {"error": "Issue ID is required."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        try:
+            issue = Issue.objects.get(id=issue_id)
+        except Issue.DoesNotExist:
+            return Response(
+                {"error": "Issue not found."},
+                status=status.HTTP_404_NOT_FOUND,
+            )
+
+        vote = issue.vote_set.filter(user=user).first()
+        if not vote:
+            return Response(
+                {"error": "You have not upvoted this issue."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        with transaction.atomic():
+            issue.vote_count = F("vote_count") - 1
+            issue.save()
+            vote.delete()
+
+        issue.refresh_from_db()
+
+        return Response(
+            {
+                "message": "Upvote removed successfully.",
+                "issue_id": issue.id,
+                "new_vote_count": issue.vote_count,
+            },
+            status=status.HTTP_200_OK,
+        )
+
+class DownVoteView(APIView):
+    authentication_classes = []
+
+    def post(self, request):
+        user = User.objects.get(id=1)  # Replace with `request.user` in production
+        issue_id = request.data.get("issue_id")
+
+        if not issue_id:
+            return Response(
+                {"error": "Issue ID is required."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        try:
+            issue = Issue.objects.get(id=issue_id)
+        except Issue.DoesNotExist:
+            return Response(
+                {"error": "Issue not found."},
+                status=status.HTTP_404_NOT_FOUND,
+            )
+
+        if issue.downvote_set.filter(user=user).exists():
+            return Response(
+                {"error": "You have already downvoted this issue."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        # Remove upvote if it exists
+        existing_upvote = issue.vote_set.filter(user=user).first()
+        if existing_upvote:
+            with transaction.atomic():
+                issue.vote_count = F("vote_count") + 1
+                issue.save()
+                existing_upvote.delete()
+
+        with transaction.atomic():
+            issue.vote_count = F("vote_count") + 1
+            issue.save()
+            issue.downvote_set.create(user=user)
+
+        issue.refresh_from_db()
+
+        return Response(
+            {
+                "message": "Downvote successful.",
+                "issue_id": issue.id,
+                "new_vote_count": issue.vote_count,
+            },
+            status=status.HTTP_200_OK,
+        )
+
+class NotDownVoteView(APIView):
+    authentication_classes = []
+
+    def post(self, request):
+        user = User.objects.get(id=1)  # Replace with `request.user` in production
+        issue_id = request.data.get("issue_id")
+
+        if not issue_id:
+            return Response(
+                {"error": "Issue ID is required."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        try:
+            issue = Issue.objects.get(id=issue_id)
+        except Issue.DoesNotExist:
+            return Response(
+                {"error": "Issue not found."},
+                status=status.HTTP_404_NOT_FOUND,
+            )
+
+        downvote = issue.downvote_set.filter(user=user).first()
+        if not downvote:
+            return Response(
+                {"error": "You have not downvoted this issue."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        with transaction.atomic():
+            issue.vote_count = F("vote_count") - 1
+            issue.save()
+            downvote.delete()
+
+        issue.refresh_from_db()
+
+        return Response(
+            {
+                "message": "Downvote removed successfully.",
                 "issue_id": issue.id,
                 "new_vote_count": issue.vote_count,
             },
@@ -175,7 +319,8 @@ class ShowTagWiseIssuesView(APIView):
     authentication_classes = []
 
     def post(self, request):
-        user = request.user
+        #user = request.user
+        user = User.objects.get(id=1) 
         tag_name = request.data.get("tag")
         if tag_name == "Water Supply":
             tag_name = "Water"
@@ -211,7 +356,7 @@ class ShowTagWiseIssuesView(APIView):
                 "location": issue.location,
                 "created_at": issue.created_at,
                 "updated_at": issue.updated_at,
-                #"voted": issue.vote_set.filter(user=user).exists(),  # Check if the user has voted
+                "voted": issue.vote_set.filter(user=user).exists(),  # Check if the user has voted
             }
             for issue in tag_issues
         ]

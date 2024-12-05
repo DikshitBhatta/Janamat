@@ -6,5 +6,10 @@ urlpatterns = [
     path("showissues/", ShowUserIssuesView.as_view(), name="show-issues"),
     path("issuewithtag/", ShowTagWiseIssuesView.as_view(), name="show-issues-with-tag"),
     path("leaderboard/", LeaderboardView.as_view(), name="leaderboard"),
+    path("upvote/", UpVoteView.as_view(), name="upvote"),
+    path("downvote/", DownVoteView.as_view(), name="downvote"),
+    path("notupvote/", NotUpVoteView.as_view(), name="upvote"),
+    path("notdownvote/", NotDownVoteView.as_view(), name="downvote"),
+    
     
 ]

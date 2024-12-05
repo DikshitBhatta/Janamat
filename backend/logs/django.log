@@ -1429,3 +1429,138 @@ INFO 2024-12-05 22:43:42,416 basehttp "GET /leaderboard/ HTTP/1.1" 200 3370
 WARNING 2024-12-05 22:44:10,410 log Not Found: /issuewithtag/
 WARNING 2024-12-05 22:44:10,411 basehttp "POST /issuewithtag/ HTTP/1.1" 404 35
 INFO 2024-12-05 22:51:57,405 basehttp "GET /admin/issue/issue/4/change/ HTTP/1.1" 200 18343
+INFO 2024-12-05 23:00:52,095 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 23:03:20,020 basehttp "POST /issuewithtag/ HTTP/1.1" 200 72
+INFO 2024-12-05 23:03:23,262 basehttp "POST /issuewithtag/ HTTP/1.1" 200 405
+INFO 2024-12-05 23:15:52,290 autoreload D:\janamat\Janamat\Janamat\backend\issue\urls.py changed, reloading.
+INFO 2024-12-05 23:15:53,364 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 23:15:56,502 autoreload D:\janamat\Janamat\Janamat\backend\issue\urls.py changed, reloading.
+INFO 2024-12-05 23:15:57,326 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 23:16:03,485 autoreload D:\janamat\Janamat\Janamat\backend\issue\urls.py changed, reloading.
+INFO 2024-12-05 23:16:04,322 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 23:16:20,950 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 23:16:21,836 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 23:16:28,096 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 23:16:29,012 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 23:16:33,984 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 23:16:35,063 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 23:17:08,425 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 23:17:09,201 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 23:19:17,636 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 23:19:18,604 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 23:19:23,921 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-05 23:19:24,766 autoreload Watching for file changes with StatReloader
+INFO 2024-12-05 23:43:54,750 basehttp "POST /issuewithtag/ HTTP/1.1" 200 414
+INFO 2024-12-05 23:45:28,305 basehttp "POST /issuewithtag/ HTTP/1.1" 200 414
+INFO 2024-12-05 23:46:10,769 basehttp "POST /issuewithtag/ HTTP/1.1" 200 419
+INFO 2024-12-05 23:46:15,801 basehttp "POST /issuewithtag/ HTTP/1.1" 200 426
+INFO 2024-12-05 23:46:22,821 basehttp "POST /issuewithtag/ HTTP/1.1" 200 426
+INFO 2024-12-05 23:46:54,712 basehttp "GET /media/issue_images/Screenshot_2024-12-05_145254.png HTTP/1.1" 200 93004
+INFO 2024-12-05 23:48:09,751 basehttp "POST /issuewithtag/ HTTP/1.1" 200 414
+INFO 2024-12-05 23:48:15,698 basehttp "POST /issuewithtag/ HTTP/1.1" 200 426
+INFO 2024-12-05 23:53:58,447 basehttp "POST /issuewithtag/ HTTP/1.1" 200 414
+WARNING 2024-12-05 23:54:01,016 log Not Found: /votestatus/3/
+WARNING 2024-12-05 23:54:01,017 basehttp "GET /votestatus/3/ HTTP/1.1" 404 3967
+INFO 2024-12-05 23:54:08,411 basehttp "POST /upvote/ HTTP/1.1" 200 64
+INFO 2024-12-06 00:20:57,234 autoreload D:\janamat\Janamat\Janamat\backend\issue\models.py changed, reloading.
+INFO 2024-12-06 00:20:58,268 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 00:21:05,490 autoreload D:\janamat\Janamat\Janamat\backend\issue\models.py changed, reloading.
+INFO 2024-12-06 00:21:06,462 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 00:21:09,835 autoreload D:\janamat\Janamat\Janamat\backend\issue\models.py changed, reloading.
+INFO 2024-12-06 00:21:10,717 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 00:21:16,131 autoreload D:\janamat\Janamat\Janamat\backend\issue\models.py changed, reloading.
+INFO 2024-12-06 00:21:16,960 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 00:23:47,277 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 00:23:48,177 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 00:24:28,013 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 00:24:29,042 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 00:24:42,645 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 00:24:43,695 autoreload Watching for file changes with StatReloader
+WARNING 2024-12-06 00:26:24,629 log Bad Request: /upvote/
+WARNING 2024-12-06 00:26:24,630 basehttp "POST /upvote/ HTTP/1.1" 400 48
+WARNING 2024-12-06 00:36:28,327 log Bad Request: /upvote/
+WARNING 2024-12-06 00:36:28,327 basehttp "POST /upvote/ HTTP/1.1" 400 48
+WARNING 2024-12-06 00:36:36,990 log Not Found: /notupvote/
+WARNING 2024-12-06 00:36:36,990 basehttp "POST /notupvote/ HTTP/1.1" 404 3959
+WARNING 2024-12-06 00:36:39,371 log Not Found: /notupvote/
+WARNING 2024-12-06 00:36:39,372 basehttp "POST /notupvote/ HTTP/1.1" 404 3959
+WARNING 2024-12-06 00:36:41,313 log Not Found: /downvote/
+WARNING 2024-12-06 00:36:41,314 basehttp "POST /downvote/ HTTP/1.1" 404 3956
+WARNING 2024-12-06 00:38:26,088 log Not Found: /notupvote/
+WARNING 2024-12-06 00:38:26,088 basehttp "POST /notupvote/ HTTP/1.1" 404 3959
+WARNING 2024-12-06 00:38:30,719 log Not Found: /votestatus/3/
+WARNING 2024-12-06 00:38:30,719 basehttp "GET /votestatus/3/ HTTP/1.1" 404 3967
+WARNING 2024-12-06 00:38:32,952 log Not Found: /notupvote/
+WARNING 2024-12-06 00:38:32,952 basehttp "POST /notupvote/ HTTP/1.1" 404 3959
+WARNING 2024-12-06 00:38:34,799 log Not Found: /notupvote/
+WARNING 2024-12-06 00:38:34,799 basehttp "POST /notupvote/ HTTP/1.1" 404 3959
+WARNING 2024-12-06 00:38:38,704 log Not Found: /votestatus/3/
+WARNING 2024-12-06 00:38:38,704 basehttp "GET /votestatus/3/ HTTP/1.1" 404 3967
+WARNING 2024-12-06 00:38:40,132 log Not Found: /notupvote/
+WARNING 2024-12-06 00:38:40,132 basehttp "POST /notupvote/ HTTP/1.1" 404 3959
+WARNING 2024-12-06 00:38:43,052 log Not Found: /votestatus/3/
+WARNING 2024-12-06 00:38:43,053 basehttp "GET /votestatus/3/ HTTP/1.1" 404 3967
+INFO 2024-12-06 00:38:49,339 basehttp "POST /issuewithtag/ HTTP/1.1" 200 419
+WARNING 2024-12-06 00:38:51,280 log Not Found: /votestatus/4/
+WARNING 2024-12-06 00:38:51,280 basehttp "GET /votestatus/4/ HTTP/1.1" 404 3967
+WARNING 2024-12-06 00:38:54,099 log Not Found: /notupvote/
+WARNING 2024-12-06 00:38:54,104 basehttp "POST /notupvote/ HTTP/1.1" 404 3959
+WARNING 2024-12-06 00:38:55,801 log Not Found: /downvote/
+WARNING 2024-12-06 00:38:55,802 basehttp "POST /downvote/ HTTP/1.1" 404 3956
+WARNING 2024-12-06 00:39:14,600 log Not Found: /votestatus/4/
+WARNING 2024-12-06 00:39:14,600 basehttp "GET /votestatus/4/ HTTP/1.1" 404 3967
+WARNING 2024-12-06 00:39:24,642 log Not Found: /notupvote/
+WARNING 2024-12-06 00:39:24,643 basehttp "POST /notupvote/ HTTP/1.1" 404 3959
+INFO 2024-12-06 00:39:58,095 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 00:39:59,103 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 00:40:01,222 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 00:40:02,171 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 00:40:04,195 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 00:40:05,104 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 00:40:09,160 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 00:40:10,083 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 00:40:12,127 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 00:40:13,013 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 00:40:24,352 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 00:40:25,264 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 00:40:28,282 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 00:40:29,122 autoreload Watching for file changes with StatReloader
+WARNING 2024-12-06 00:40:31,661 log Not Found: /notupvote/
+WARNING 2024-12-06 00:40:31,661 basehttp "POST /notupvote/ HTTP/1.1" 404 3959
+INFO 2024-12-06 00:40:52,085 autoreload D:\janamat\Janamat\Janamat\backend\issue\urls.py changed, reloading.
+INFO 2024-12-06 00:40:52,979 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 00:40:57,091 autoreload D:\janamat\Janamat\Janamat\backend\issue\urls.py changed, reloading.
+INFO 2024-12-06 00:40:57,996 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 00:41:12,431 autoreload D:\janamat\Janamat\Janamat\backend\issue\urls.py changed, reloading.
+INFO 2024-12-06 00:41:13,404 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 00:41:15,425 autoreload D:\janamat\Janamat\Janamat\backend\issue\urls.py changed, reloading.
+INFO 2024-12-06 00:41:16,310 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 00:41:21,429 autoreload D:\janamat\Janamat\Janamat\backend\issue\urls.py changed, reloading.
+INFO 2024-12-06 00:41:22,318 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 00:41:24,429 autoreload D:\janamat\Janamat\Janamat\backend\issue\urls.py changed, reloading.
+INFO 2024-12-06 00:41:25,377 autoreload Watching for file changes with StatReloader
+WARNING 2024-12-06 00:41:29,956 log Bad Request: /notupvote/
+WARNING 2024-12-06 00:41:29,957 basehttp "POST /notupvote/ HTTP/1.1" 400 44
+WARNING 2024-12-06 00:41:31,044 log Bad Request: /notupvote/
+WARNING 2024-12-06 00:41:31,044 basehttp "POST /notupvote/ HTTP/1.1" 400 44
+INFO 2024-12-06 00:43:13,476 basehttp "GET /leaderboard/ HTTP/1.1" 200 3370
+INFO 2024-12-06 00:43:13,619 basehttp "GET /leaderboard/ HTTP/1.1" 200 3370
+INFO 2024-12-06 00:43:52,663 basehttp "POST /issuewithtag/ HTTP/1.1" 200 413
+WARNING 2024-12-06 00:43:56,046 log Not Found: /votestatus/3/
+WARNING 2024-12-06 00:43:56,047 basehttp "GET /votestatus/3/ HTTP/1.1" 404 4746
+WARNING 2024-12-06 00:45:12,835 log Not Found: /votestatus/3/
+WARNING 2024-12-06 00:45:12,835 basehttp "GET /votestatus/3/ HTTP/1.1" 404 4746
+INFO 2024-12-06 00:45:14,869 basehttp "POST /notupvote/ HTTP/1.1" 200 74
+INFO 2024-12-06 00:45:15,797 basehttp "POST /upvote/ HTTP/1.1" 200 64
+INFO 2024-12-06 00:45:17,689 basehttp "POST /notupvote/ HTTP/1.1" 200 74
+INFO 2024-12-06 00:45:18,875 basehttp "POST /upvote/ HTTP/1.1" 200 64
+INFO 2024-12-06 00:45:20,432 basehttp "POST /downvote/ HTTP/1.1" 200 67
+INFO 2024-12-06 00:45:21,302 basehttp "POST /notdownvote/ HTTP/1.1" 200 76
+INFO 2024-12-06 00:45:43,517 basehttp "POST /downvote/ HTTP/1.1" 200 67
+INFO 2024-12-06 00:45:44,391 basehttp "POST /notdownvote/ HTTP/1.1" 200 76
+INFO 2024-12-06 00:46:19,647 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 00:46:20,615 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 00:46:22,721 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 00:46:23,624 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 00:48:49,718 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 00:48:50,654 autoreload Watching for file changes with StatReloader
