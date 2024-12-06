@@ -9,6 +9,7 @@ import 'package:geocoding/geocoding.dart';
 import 'package:janamatfront/Geolocator/geolocation.dart';
 import 'package:janamatfront/issuesimg/issueimg.dart';
 import 'package:permission_handler/permission_handler.dart';
+import 'package:janamatfront/providers/authenticationProvider.dart';
 
 
 class IssueGenerate extends StatefulWidget {
@@ -133,6 +134,7 @@ Future<void> requestLocationPermission() async {
     final provider = Provider.of<VotingProvider>(context, listen: false);
 
     await provider.createIssue(
+      context: context, // Pass the context here
       title: _titleController.text,
       description: _descriptionController.text,
       tags: [_selectedIssue], // Send selected issue type as a tag
