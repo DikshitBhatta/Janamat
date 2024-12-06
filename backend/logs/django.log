@@ -3057,3 +3057,8 @@ INFO 2024-12-06 08:39:48,755 basehttp "GET /leaderboard/ HTTP/1.1" 200 6320
 INFO 2024-12-06 08:39:48,773 basehttp "GET /leaderboard/ HTTP/1.1" 200 6320
 INFO 2024-12-06 08:39:48,896 basehttp "GET /leaderboard/ HTTP/1.1" 200 6320
 INFO 2024-12-06 08:49:08,916 basehttp "GET /leaderboard/ HTTP/1.1" 200 6320
+INFO 2024-12-06 08:51:24,827 basehttp "GET /leaderboard/ HTTP/1.1" 200 6320
+INFO 2024-12-06 08:51:51,808 basehttp "GET /media/issue_images/67613749-c267-43e6-a3ab-81635ee0a20a3278435126227702643.jpg HTTP/1.1" 200 1975066
+INFO 2024-12-06 08:51:52,052 basehttp "GET /leaderboard/ HTTP/1.1" 200 6320
+INFO 2024-12-06 08:51:52,690 basehttp "GET /leaderboard/ HTTP/1.1" 200 6320
+INFO 2024-12-06 08:52:04,596 basehttp "GET /media/issue_images/1000010180.jpg HTTP/1.1" 200 76111
