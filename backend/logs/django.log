@@ -2946,3 +2946,48 @@ INFO 2024-12-06 06:33:24,805 autoreload D:\janamat\Janamat\Janamat\backend\issue
 INFO 2024-12-06 06:33:25,807 autoreload Watching for file changes with StatReloader
 INFO 2024-12-06 06:34:15,752 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
 INFO 2024-12-06 06:34:16,488 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 06:34:55,202 basehttp "GET /leaderboard/ HTTP/1.1" 200 6320
+INFO 2024-12-06 06:34:55,307 basehttp "GET /leaderboard/ HTTP/1.1" 200 6320
+INFO 2024-12-06 06:35:19,536 basehttp "POST /issuewithtag/ HTTP/1.1" 200 492
+INFO 2024-12-06 06:35:24,877 basehttp "GET /activityhistory/ HTTP/1.1" 200 3343
+INFO 2024-12-06 06:42:09,913 basehttp "POST /issuewithtag/ HTTP/1.1" 200 512
+INFO 2024-12-06 06:42:10,977 basehttp "GET /media/issue_images/Screenshot_2024-12-05_145254.png HTTP/1.1" 200 93004
+INFO 2024-12-06 06:42:14,352 basehttp "POST /issuewithtag/ HTTP/1.1" 200 520
+INFO 2024-12-06 06:42:15,293 basehttp "GET /media/issue_images/Screenshot_2024-12-05_144340.png HTTP/1.1" 200 430364
+INFO 2024-12-06 06:45:15,674 basehttp "GET /activityhistory/ HTTP/1.1" 200 3343
+INFO 2024-12-06 06:48:06,418 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 06:48:07,304 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 06:48:13,463 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 06:48:14,261 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 06:48:17,306 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 06:48:18,210 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 06:48:30,650 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 06:48:31,442 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 06:48:37,743 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 06:48:38,614 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 06:48:40,619 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 06:48:41,370 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 06:48:51,844 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 06:48:52,787 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 06:48:55,892 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 06:48:56,742 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 06:48:58,785 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 06:48:59,725 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 06:49:10,145 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 06:49:11,003 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 06:49:21,423 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 06:49:22,264 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 06:49:25,352 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 06:49:26,194 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 06:49:36,617 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 06:49:37,659 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 06:49:48,130 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 06:49:48,946 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 06:49:59,320 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 06:50:00,240 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 06:50:07,504 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 06:50:08,338 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 06:50:13,540 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 06:50:14,413 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 06:50:20,675 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 06:50:21,584 autoreload Watching for file changes with StatReloader

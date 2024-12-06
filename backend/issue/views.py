@@ -6,7 +6,6 @@ from .models import *
 from .models import Issue, Tag
 from django.db import transaction
 from django.db.models import F
-from itertools import chain
 
 
 class ShowUserIssuesView(APIView):
@@ -113,8 +112,8 @@ class LeaderboardView(APIView):
                 "id": issue.id,
                 "title": issue.title,
                 "description": issue.description,
-                "upvote_count": Vote.objects.filter(issue=issue).count(),  # Calculate upvotes dynamically
-                "downvote_count": DownVote.objects.filter(issue=issue).count(),  # Calculate downvotes dynamically
+                "upvote_count": Vote.objects.filter(issue=issue).count(), 
+                "downvote_count": DownVote.objects.filter(issue=issue).count(), 
                 "status": issue.status,
                 "tags": [tag.name for tag in issue.tags.all()],
                 "author": issue.author.username,
@@ -137,11 +136,6 @@ class LeaderboardView(APIView):
             status=status.HTTP_200_OK,
         )
       
-from django.db import transaction
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from rest_framework import status
-from .models import User, Issue, Vote, DownVote
 
 class UpVoteView(APIView):
     authentication_classes = []
@@ -149,7 +143,7 @@ class UpVoteView(APIView):
     def post(self, request):
         user = User.objects.get(id=1)  # Replace with request.user in real scenario
         issue_id = request.data.get("issue_id")
-        upvoted = request.data.get("upvoted")  # Boolean value from the frontend
+        upvoted = request.data.get("upvoted")  # Boolean 
 
         if not issue_id:
             return Response(
@@ -172,7 +166,6 @@ class UpVoteView(APIView):
             )
 
         with transaction.atomic():
-            # Handle upvote logic
             if upvoted:
                 if not Vote.objects.filter(issue=issue, user=user).exists():
                     Vote.objects.create(issue=issue, user=user)
@@ -180,7 +173,6 @@ class UpVoteView(APIView):
             else:
                 Vote.objects.filter(issue=issue, user=user).delete()
 
-        # Calculate new vote counts
         upvote_count = Vote.objects.filter(issue=issue).count()
         downvote_count = DownVote.objects.filter(issue=issue).count()
 
@@ -195,12 +187,7 @@ class UpVoteView(APIView):
         )
 
 
-from django.db import transaction
-from django.db.models import F
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from rest_framework import status
-from .models import User, Issue
+
 
 class DownVoteView(APIView):
     authentication_classes = []
@@ -208,7 +195,7 @@ class DownVoteView(APIView):
     def post(self, request):
         user = User.objects.get(id=1)  # Replace with request.user in real scenario
         issue_id = request.data.get("issue_id")
-        downvoted = request.data.get("downvoted")  # Boolean value from the frontend
+        downvoted = request.data.get("downvoted") 
 
         if not issue_id:
             return Response(
@@ -231,7 +218,6 @@ class DownVoteView(APIView):
             )
 
         with transaction.atomic():
-            # Handle downvote logic
             if downvoted:
                 if not DownVote.objects.filter(issue=issue, user=user).exists():
                     DownVote.objects.create(issue=issue, user=user)
@@ -239,7 +225,6 @@ class DownVoteView(APIView):
             else:
                 DownVote.objects.filter(issue=issue, user=user).delete()
 
-        # Calculate new vote counts
         upvote_count = Vote.objects.filter(issue=issue).count()
         downvote_count = DownVote.objects.filter(issue=issue).count()
 
@@ -257,7 +242,7 @@ class NotDownVoteView(APIView):
     authentication_classes = []
 
     def post(self, request):
-        user = User.objects.get(id=1)  # Replace with `request.user` in production
+        user = User.objects.get(id=1)  # Replace 
         issue_id = request.data.get("issue_id")
 
         if not issue_id:
@@ -297,12 +282,6 @@ class NotDownVoteView(APIView):
             status=status.HTTP_200_OK,
         )
 
-
-from django.db.models import Count
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from rest_framework import status
-from .models import User, Tag, Vote, DownVote
 
 class ShowTagWiseIssuesView(APIView):
     # authentication_classes = [AuthenticationView]
@@ -365,21 +344,12 @@ class ShowTagWiseIssuesView(APIView):
         )
 
 
-from django.db.models import Q
-from itertools import chain
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from rest_framework import status
-from .models import Issue, Comment, Vote, DownVote
-
-
 class ActivityHistoryView(APIView):
-    authentication_classes = []  # Replace with actual authentication in production
+    authentication_classes = []  
 
     def get(self, request):
-        user = User.objects.get(id=1)  # Replace with `request.user` in production
+        user = User.objects.get(id=1) 
         print("xx")
-        # Query all activities
         user_issues = Issue.objects.filter(author=user).values(
             "id", "title", "created_at", "updated_at", "description", "vote_count", "status"
         )
@@ -444,7 +414,6 @@ class ActivityHistoryView(APIView):
                 },
             })
 
-        # Sort all activities by timestamp (latest first)
         activities = sorted(activities, key=lambda x: x["details"]["timestamp"], reverse=True)
         print(activities)
 
