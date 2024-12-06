@@ -32,14 +32,20 @@ class Issuedetail extends StatelessWidget {
               itemCount: tagIssues.length,
               itemBuilder: (context, index) {
                 final issue = tagIssues[index];
-                final int votecount = issue['vote_count'] ?? 0;
+                final int votecount = issue['upvote_count'] ?? 0;
+                final int downvote_count = issue['downvote_count'] ?? 0;
+                print(issue);
                 return Card(
                   margin: EdgeInsets.all(10.0),
                   child: ListTile(
                     title: Text(issue['title'] ?? 'No Title'),
-                    subtitle: Text(issue['description'] ?? 'No Description',maxLines: 2,overflow: TextOverflow.ellipsis,),
+                    subtitle: Text(
+                      issue['description'] ?? 'No Description',
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                    ),
                     trailing: SizedBox(
-                      width: 50.00, // Increased width to avoid overflow
+                      width: 50.00, 
                       child: Column(
                         children: <Widget>[
                           Row(
@@ -53,7 +59,11 @@ class Issuedetail extends StatelessWidget {
                                 ),
                               ),
                               SizedBox(width: 5.0),
-                              Icon(Icons.thumb_up, color: Colors.green,size: 15.00,),
+                              Icon(
+                                Icons.thumb_up,
+                                color: Colors.green,
+                                size: 15.00,
+                              ),
                             ],
                           ),
                           Row(
@@ -61,32 +71,47 @@ class Issuedetail extends StatelessWidget {
                             children: <Widget>[
                               Expanded(
                                 child: Text(
-                                  '$votecount',
+                                  '$downvote_count',
                                   style: TextStyle(fontSize: 15.0),
                                   textAlign: TextAlign.right,
                                 ),
                               ),
                               SizedBox(width: 5.0),
-                              Icon(Icons.thumb_down, color: Colors.red,size: 15.00,),
+                              Icon(
+                                Icons.thumb_down,
+                                color: Colors.red,
+                                size: 15.00,
+                              ),
                             ],
                           ),
                         ],
                       ),
                     ),
                     onTap: () {
-                      // Navigate to Issue Display Page
                       Navigator.push(
                         context,
-                        MaterialPageRoute(
+                                              MaterialPageRoute(
                           builder: (context) => IssueDisplayPage(
-                            issueId: issue['id']?.toString() ?? 'Unknown ID',
-                            date: issue['date'] ?? 'Unknown Date',
-                            location: issue['location'] ?? 'Unknown Location',
-                            title: issue['title'] ?? 'No Title',
-                            imageUrl: issue['imageUrl'] ?? 'https://via.placeholder.com/150',
-                            description: issue['description'] ?? 'No Description',
-                            initialVoteCount: votecount,
-                            // Add any other required parameters here
+                            issueId: issue['id']
+                                .toString(), 
+                            date: issue['created_at']?.toString() ??
+                                'Unknown Date', 
+                            location: issue['location']?.toString() ??
+                                'Unknown Location', 
+                            title: issue['title']?.toString() ??
+                                'No Title', 
+                            imageUrl: "http://192.168.1.74:8000${issue['imageUrl']}"  ??
+                                'https://via.placeholder.com/150', 
+                            description: issue['description']?.toString() ??
+                                'No Description', 
+                            upvote_count: issue['upvote_count'] ??
+                                0, 
+                            downvote_count: issue['downvote_count'] ??
+                                0, 
+                            isUpvoted: issue['voted'] ??
+                                false, 
+                            isDownvoted: issue['downvoted'] ??
+                                false, 
                           ),
                         ),
                       );

@@ -1,7 +1,8 @@
-// Updated IssueDisplayPage
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:janamatfront/providers/voting_provider.dart';
+import 'dart:convert';
+import 'package:http/http.dart' as http;
+import 'dart:io';
+
 
 class IssueDisplayPage extends StatefulWidget {
   final String issueId;
@@ -10,7 +11,10 @@ class IssueDisplayPage extends StatefulWidget {
   final String title;
   final String imageUrl;
   final String description;
-  final int initialVoteCount;
+  final int upvote_count;
+  final int downvote_count;
+  final bool isUpvoted;
+  final bool isDownvoted;
 
   IssueDisplayPage({
     required this.issueId,
@@ -19,7 +23,10 @@ class IssueDisplayPage extends StatefulWidget {
     required this.title,
     required this.imageUrl,
     required this.description,
-    required this.initialVoteCount,
+    required this.upvote_count,
+    required this.downvote_count,
+    required this.isUpvoted,
+    required this.isDownvoted,
   });
 
   @override
@@ -27,17 +34,54 @@ class IssueDisplayPage extends StatefulWidget {
 }
 
 class _IssueDisplayPageState extends State<IssueDisplayPage> {
+  late int upvotes;
+  late int downvotes;
+  late bool isUpvoted;
+  late bool isDownvoted;
+
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      final votingProvider =
-          Provider.of<VotingProvider>(context, listen: false);
-      votingProvider.setInitialVotes(
-          widget.initialVoteCount, 0); // Assuming no initial downvotes
-      votingProvider
-          .fetchInitialVoteStatus(widget.issueId); // Fetch initial vote status
+    upvotes = widget.upvote_count;
+    downvotes = widget.downvote_count;
+    isUpvoted = widget.isUpvoted;
+    isDownvoted = widget.isDownvoted;
+  }
+
+  void toggleUpvote() {
+    setState(() {
+      if (isUpvoted) {
+        upvotes--;
+        isUpvoted = false;
+      } else {
+        upvotes++;
+        isUpvoted = true;
+        if (isDownvoted) {
+          downvotes--;
+          isDownvoted = false;
+        }
+      }
     });
+
+    performUpvoteApiCall(widget.issueId, isUpvoted);
+  }
+
+  void toggleDownvote() {
+    setState(() {
+      if (isDownvoted) {
+        downvotes--;
+        isDownvoted = false;
+      } else {
+        downvotes++;
+        isDownvoted = true;
+        if (isUpvoted) {
+          upvotes--;
+          isUpvoted = false;
+        }
+      }
+    });
+
+    performDownvoteApiCall(widget.issueId, isDownvoted);
   }
 
   @override
@@ -78,46 +122,84 @@ class _IssueDisplayPageState extends State<IssueDisplayPage> {
       bottomNavigationBar: BottomAppBar(
         shape: CircularNotchedRectangle(),
         notchMargin: 10.0,
-        child: Consumer<VotingProvider>(
-          builder: (context, votingProvider, child) {
-            return Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: <Widget>[
-                IconButton(
-                  icon: Icon(
-                    Icons.thumb_up,
-                    color:
-                        votingProvider.isUpvoted ? Colors.green : Colors.grey,
-                  ),
-                  onPressed: () {
-                    if (votingProvider.isUpvoted) {
-                      votingProvider.notUpvoteIssue(widget.issueId);
-                    } else {
-                      votingProvider.upvoteIssue(widget.issueId);
-                    }
-                  },
-                ),
-                Text('${votingProvider.upvotes}'),
-                IconButton(
-                  icon: Icon(
-                    Icons.thumb_down,
-                    color:
-                        votingProvider.isDownvoted ? Colors.red : Colors.grey,
-                  ),
-                  onPressed: () {
-                    if(votingProvider.isDownvoted) {
-                      votingProvider.notDownvoteIssue(widget.issueId);
-                    } else {
-                      votingProvider.downvoteIssue(widget.issueId);
-                    }
-                  },
-                ),
-                Text('${votingProvider.downvotes}'),
-              ],
-            );
-          },
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: <Widget>[
+            IconButton(
+              icon: Icon(
+                Icons.thumb_up,
+                color: isUpvoted ? Colors.green : Colors.grey,
+              ),
+              onPressed: toggleUpvote,
+            ),
+            Text('$upvotes'),
+            IconButton(
+              icon: Icon(
+                Icons.thumb_down,
+                color: isDownvoted ? Colors.red : Colors.grey,
+              ),
+              onPressed: toggleDownvote,
+            ),
+            Text('$downvotes'),
+          ],
         ),
       ),
     );
   }
+
+Future<void> performUpvoteApiCall(String issueId, bool upvoted) async {
+  final url = Uri.parse('http://192.168.1.74:8000/upvote/');
+  try {
+    final response = await http.post(
+      url,
+      headers: {'Content-Type': 'application/json'},
+      body: json.encode({
+        'issue_id': issueId,
+        'upvoted': upvoted,
+      }),
+    );
+
+    if (response.statusCode == 200) {
+      final responseData = json.decode(response.body);
+      setState(() {
+        upvotes = responseData['upvote_count'];
+        downvotes = responseData['downvote_count'];
+        isUpvoted = responseData['voted'];
+        isDownvoted = responseData['downvoted'];
+      });
+    } else {
+      print('Failed to upvote: ${response.body}');
+    }
+  } catch (e) {
+    print('Error during upvote: $e');
+  }
+}
+
+Future<void> performDownvoteApiCall(String issueId, bool downvoted) async {
+  final url = Uri.parse('http://192.168.1.74:8000/downvote/');
+  try {
+    final response = await http.post(
+      url,
+      headers: {'Content-Type': 'application/json'},
+      body: json.encode({
+        'issue_id': issueId,
+        'downvoted': downvoted,
+      }),
+    );
+
+    if (response.statusCode == 200) {
+      final responseData = json.decode(response.body);
+      setState(() {
+        upvotes = responseData['upvote_count'];
+        downvotes = responseData['downvote_count'];
+        isUpvoted = responseData['voted'];
+        isDownvoted = responseData['downvoted'];
+      });
+    } else {
+      print('Failed to downvote: ${response.body}');
+    }
+  } catch (e) {
+    print('Error during downvote: $e');
+  }
+}
 }

@@ -48,12 +48,21 @@ class CreateIssueView(APIView):
     def post(self, request):
         #user = request.user
         user = User.objects.get(id=1) 
+        uid = request.POST.get('uid')
+        print(uid)
 
-        title = request.data.get('title')
-        description = request.data.get('description')
-        tags = request.data.get('tags', []) 
-        location = request.data.get('location', None)
+        title = request.POST.get('title')  # Changed from `request.data.get`
+        description = request.POST.get('description')  # Changed from `request.data.get`
+        tags = request.POST.get('tags', '[]')  # Changed from `request.data.get`
+        location = request.POST.get('location', None)  # Changed from `request.data.get`
         image = request.FILES.get('image', None)
+        
+        print(title)
+        print(description)
+        print(tags)
+        print(location)
+        print(image)
+        
 
         if not title or not description:
             return Response(
@@ -97,25 +106,28 @@ class CreateIssueView(APIView):
 class LeaderboardView(APIView):
 
     def get(self, request):
-        issues = Issue.objects.all().order_by('-vote_count')
+        issues = Issue.objects.all()
 
         leaderboard_data = [
             {
                 "id": issue.id,
                 "title": issue.title,
                 "description": issue.description,
-                "vote_count": issue.vote_count,
+                "upvote_count": Vote.objects.filter(issue=issue).count(),  # Calculate upvotes dynamically
+                "downvote_count": DownVote.objects.filter(issue=issue).count(),  # Calculate downvotes dynamically
                 "status": issue.status,
                 "tags": [tag.name for tag in issue.tags.all()],
                 "author": issue.author.username,
                 "location": issue.location,
-                "created_at": issue.created_at,
+                "created_at": issue.created_at.strftime('%Y-%m-%d %H:%M'),
                 "updated_at": issue.updated_at,
-                "vote_count": issue.vote_count,
-                "image": issue.image.url if issue.image else None,
+                "imageUrl": issue.image.url if issue.image else None,
             }
             for issue in issues
         ]
+
+        # Sort by upvote_count in descending order
+        leaderboard_data = sorted(leaderboard_data, key=lambda x: x["upvote_count"], reverse=True)
 
         return Response(
             {
@@ -124,20 +136,30 @@ class LeaderboardView(APIView):
             },
             status=status.HTTP_200_OK,
         )
-        
+      
+from django.db import transaction
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
+from .models import User, Issue, Vote, DownVote
 
 class UpVoteView(APIView):
-    #authentication_classes = [AuthenticationView]
     authentication_classes = []
-    
+
     def post(self, request):
-        #user = request.user
-        user = User.objects.get(id=1) 
+        user = User.objects.get(id=1)  # Replace with request.user in real scenario
         issue_id = request.data.get("issue_id")
+        upvoted = request.data.get("upvoted")  # Boolean value from the frontend
 
         if not issue_id:
             return Response(
                 {"error": "Issue ID is required."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        if upvoted is None:
+            return Response(
+                {"error": "Upvoted flag is required."},
                 status=status.HTTP_400_BAD_REQUEST,
             )
 
@@ -149,86 +171,54 @@ class UpVoteView(APIView):
                 status=status.HTTP_404_NOT_FOUND,
             )
 
-        if issue.vote_set.filter(user=user).exists():
-            print("already upvoted")
-            return Response(
-                {"error": "You have already upvoted this issue."},
-                status=status.HTTP_400_BAD_REQUEST,
-            )
-
         with transaction.atomic():
-            print("upvoting")
-            issue.vote_count = F("vote_count") + 1
-            issue.save()
+            # Handle upvote logic
+            if upvoted:
+                if not Vote.objects.filter(issue=issue, user=user).exists():
+                    Vote.objects.create(issue=issue, user=user)
+                    DownVote.objects.filter(issue=issue, user=user).delete()
+            else:
+                Vote.objects.filter(issue=issue, user=user).delete()
 
-            issue.vote_set.create(user=user)
-
-        issue.refresh_from_db()
-        print("upvoted")
+        # Calculate new vote counts
+        upvote_count = Vote.objects.filter(issue=issue).count()
+        downvote_count = DownVote.objects.filter(issue=issue).count()
 
         return Response(
             {
-                "message": "Upvote successful.",
+                "message": "Vote updated successfully.",
                 "issue_id": issue.id,
-                "new_vote_count": issue.vote_count,
+                "upvote_count": upvote_count,
+                "downvote_count": downvote_count,
             },
             status=status.HTTP_200_OK,
         )
 
-class NotUpVoteView(APIView):
-    authentication_classes = []
 
-    def post(self, request):
-        user = User.objects.get(id=1)  # Replace with `request.user` in production
-        issue_id = request.data.get("issue_id")
-
-        if not issue_id:
-            return Response(
-                {"error": "Issue ID is required."},
-                status=status.HTTP_400_BAD_REQUEST,
-            )
-
-        try:
-            issue = Issue.objects.get(id=issue_id)
-        except Issue.DoesNotExist:
-            return Response(
-                {"error": "Issue not found."},
-                status=status.HTTP_404_NOT_FOUND,
-            )
-
-        vote = issue.vote_set.filter(user=user).first()
-        if not vote:
-            return Response(
-                {"error": "You have not upvoted this issue."},
-                status=status.HTTP_400_BAD_REQUEST,
-            )
-
-        with transaction.atomic():
-            issue.vote_count = F("vote_count") - 1
-            issue.save()
-            vote.delete()
-
-        issue.refresh_from_db()
-
-        return Response(
-            {
-                "message": "Upvote removed successfully.",
-                "issue_id": issue.id,
-                "new_vote_count": issue.vote_count,
-            },
-            status=status.HTTP_200_OK,
-        )
+from django.db import transaction
+from django.db.models import F
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
+from .models import User, Issue
 
 class DownVoteView(APIView):
     authentication_classes = []
 
     def post(self, request):
-        user = User.objects.get(id=1)  # Replace with `request.user` in production
+        user = User.objects.get(id=1)  # Replace with request.user in real scenario
         issue_id = request.data.get("issue_id")
+        downvoted = request.data.get("downvoted")  # Boolean value from the frontend
 
         if not issue_id:
             return Response(
                 {"error": "Issue ID is required."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        if downvoted is None:
+            return Response(
+                {"error": "Downvoted flag is required."},
                 status=status.HTTP_400_BAD_REQUEST,
             )
 
@@ -240,32 +230,25 @@ class DownVoteView(APIView):
                 status=status.HTTP_404_NOT_FOUND,
             )
 
-        if issue.downvote_set.filter(user=user).exists():
-            return Response(
-                {"error": "You have already downvoted this issue."},
-                status=status.HTTP_400_BAD_REQUEST,
-            )
-
-        # Remove upvote if it exists
-        existing_upvote = issue.vote_set.filter(user=user).first()
-        if existing_upvote:
-            with transaction.atomic():
-                issue.vote_count = F("vote_count") + 1
-                issue.save()
-                existing_upvote.delete()
-
         with transaction.atomic():
-            issue.vote_count = F("vote_count") + 1
-            issue.save()
-            issue.downvote_set.create(user=user)
+            # Handle downvote logic
+            if downvoted:
+                if not DownVote.objects.filter(issue=issue, user=user).exists():
+                    DownVote.objects.create(issue=issue, user=user)
+                    Vote.objects.filter(issue=issue, user=user).delete()
+            else:
+                DownVote.objects.filter(issue=issue, user=user).delete()
 
-        issue.refresh_from_db()
+        # Calculate new vote counts
+        upvote_count = Vote.objects.filter(issue=issue).count()
+        downvote_count = DownVote.objects.filter(issue=issue).count()
 
         return Response(
             {
-                "message": "Downvote successful.",
+                "message": "Vote updated successfully.",
                 "issue_id": issue.id,
-                "new_vote_count": issue.vote_count,
+                "upvote_count": upvote_count,
+                "downvote_count": downvote_count,
             },
             status=status.HTTP_200_OK,
         )
@@ -315,17 +298,24 @@ class NotDownVoteView(APIView):
         )
 
 
+from django.db.models import Count
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
+from .models import User, Tag, Vote, DownVote
+
 class ShowTagWiseIssuesView(APIView):
-    #authentication_classes = [AuthenticationView]
+    # authentication_classes = [AuthenticationView]
     authentication_classes = []
 
     def post(self, request):
-        #user = request.user
-        user = User.objects.get(id=1) 
+        # user = request.user
+        user = User.objects.get(id=1)  # Replace with authenticated user in production
         tag_name = request.data.get("tag")
+
         if tag_name == "Water Supply":
             tag_name = "Water"
-            
+        
         print(tag_name)
 
         if not tag_name:
@@ -344,7 +334,6 @@ class ShowTagWiseIssuesView(APIView):
             )
 
         tag_issues = tag.issue_tag.all()  # Using related_name
-        print(tag_issues)
 
         issues_data = [
             {
@@ -353,14 +342,19 @@ class ShowTagWiseIssuesView(APIView):
                 "description": issue.description,
                 "status": issue.status,
                 "tags": [t.name for t in issue.tags.all()],
-                "vote_count": issue.vote_count,
+                "upvote_count": Vote.objects.filter(issue=issue).count(),  # Count unique upvotes
+                "downvote_count": DownVote.objects.filter(issue=issue).count(),  # Count unique downvotes
                 "location": issue.location,
-                "created_at": issue.created_at,
+                "created_at": issue.created_at.strftime('%Y-%m-%d %H:%M'),
                 "updated_at": issue.updated_at,
-                "voted": issue.vote_set.filter(user=user).exists(),  # Check if the user has voted
+                "voted": Vote.objects.filter(issue=issue, user=user).exists(),  # Check if the user has voted
+                "downvoted": DownVote.objects.filter(issue=issue, user=user).exists(),  # Check if the user has downvoted
+                "imageUrl": issue.image.url if issue.image else None,
             }
             for issue in tag_issues
         ]
+
+        print(issues_data)
 
         return Response(
             {
@@ -371,73 +365,93 @@ class ShowTagWiseIssuesView(APIView):
         )
 
 
-from django.db.models import F, Value, CharField
+from django.db.models import Q
 from itertools import chain
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
+from .models import Issue, Comment, Vote, DownVote
 
 
 class ActivityHistoryView(APIView):
-    # authentication_classes = [AuthenticationView]
-    authentication_classes = []
+    authentication_classes = []  # Replace with actual authentication in production
 
-    def post(self, request):
-        # user = request.user
+    def get(self, request):
         user = User.objects.get(id=1)  # Replace with `request.user` in production
-
-        # Fetch user's created issues
+        print("xx")
+        # Query all activities
         user_issues = Issue.objects.filter(author=user).values(
-            "id",
-            "title",
-            "created_at"
-        ).annotate(
-            activity_type=Value("Created Issue", output_field=CharField()),  # Use Value to annotate static strings
-            activity=Value("Created Issue", output_field=CharField())
+            "id", "title", "created_at", "updated_at", "description", "vote_count", "status"
+        )
+        user_comments = Comment.objects.filter(user=user).values(
+            "id", "issue_id", "text", "created_at"
+        )
+        user_upvotes = Vote.objects.filter(user=user).values(
+            "id", "issue_id", "issue__title", "issue__author__username", "issue__created_at"
+        )
+        user_downvotes = DownVote.objects.filter(user=user).values(
+            "id", "issue_id", "issue__title", "issue__author__username", "issue__created_at"
         )
 
-        # Fetch user's upvotes
-        user_upvotes = user.vote_set.all().select_related("issue").values(
-            id=F("issue__id"),
-            title=F("issue__title"),
-            created_at=F("issue__created_at")
-        ).annotate(
-            activity_type=Value("Upvoted", output_field=CharField()),
-            activity=Value("Upvoted an Issue", output_field=CharField())
-        )
+        # Prepare activities with a common structure for sorting
+        activities = []
 
-        # Fetch user's comments
-        user_comments = Comment.objects.filter(user=user).select_related("issue").values(
-            id=F("issue__id"),
-            title=F("issue__title"),
-            created_at=F("created_at")
-        ).annotate(
-            activity_type=Value("Commented", output_field=CharField()),
-            activity=Value("Commented on Issue", output_field=CharField())
-        )
+        for issue in user_issues:
+            activities.append({
+                "type": "Issue Raised",
+                "details": {
+                    "id": issue["id"],
+                    "title": issue["title"],
+                    "description": issue["description"],
+                    "status": issue["status"],
+                    "vote_count": issue["vote_count"],
+                    "timestamp": issue["created_at"],
+                },
+            })
 
-        # Combine all activities and sort by created_at timestamp
-        activities = sorted(
-            chain(user_issues, user_upvotes, user_comments),
-            key=lambda x: x["created_at"],
-            reverse=True  # Latest first
-        )
+        for comment in user_comments:
+            activities.append({
+                "type": "Comment",
+                "details": {
+                    "id": comment["id"],
+                    "issue_id": comment["issue_id"],
+                    "text": comment["text"],
+                    "timestamp": comment["created_at"],
+                },
+            })
+
+        for upvote in user_upvotes:
+            activities.append({
+                "type": "Upvote",
+                "details": {
+                    "id": upvote["id"],
+                    "issue_id": upvote["issue_id"],
+                    "issue_title": upvote["issue__title"],
+                    "author": upvote["issue__author__username"],
+                    "timestamp": upvote["issue__created_at"],
+                },
+            })
+
+        for downvote in user_downvotes:
+            activities.append({
+                "type": "Downvote",
+                "details": {
+                    "id": downvote["id"],
+                    "issue_id": downvote["issue_id"],
+                    "issue_title": downvote["issue__title"],
+                    "author": downvote["issue__author__username"],
+                    "timestamp": downvote["issue__created_at"],
+                },
+            })
+
+        # Sort all activities by timestamp (latest first)
+        activities = sorted(activities, key=lambda x: x["details"]["timestamp"], reverse=True)
+        print(activities)
 
         return Response(
             {
-                "message": "User activity history retrieved successfully.",
-                "activities": [
-                    {
-                        "issue_id": activity["id"],
-                        "issue_title": activity["title"],
-                        "activity": activity["activity"],
-                        "timestamp": activity["created_at"],
-                    }
-                    for activity in activities
-                ],
+                "message": "Activity history retrieved successfully.",
+                "activities": activities,
             },
             status=status.HTTP_200_OK,
         )
-
-   
-        

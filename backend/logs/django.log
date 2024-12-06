@@ -1917,3 +1917,1032 @@ INFO 2024-12-06 02:25:13,280 autoreload D:\janamat\Janamat\Janamat\backend\issue
 INFO 2024-12-06 02:25:13,824 autoreload Watching for file changes with StatReloader
 INFO 2024-12-06 02:27:12,211 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
 INFO 2024-12-06 02:27:12,773 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 02:27:13,678 basehttp "POST /downvote/ HTTP/1.1" 200 66
+WARNING 2024-12-06 02:27:18,138 log Not Found: /votestatus/1/
+WARNING 2024-12-06 02:27:18,138 basehttp "GET /votestatus/1/ HTTP/1.1" 404 5017
+INFO 2024-12-06 02:27:19,707 basehttp "POST /upvote/ HTTP/1.1" 200 64
+INFO 2024-12-06 02:27:27,621 basehttp "POST /issuewithtag/ HTTP/1.1" 200 419
+WARNING 2024-12-06 02:27:29,171 log Not Found: /votestatus/4/
+WARNING 2024-12-06 02:27:29,171 basehttp "GET /votestatus/4/ HTTP/1.1" 404 5017
+INFO 2024-12-06 02:27:31,841 basehttp "POST /downvote/ HTTP/1.1" 200 66
+INFO 2024-12-06 02:27:33,743 basehttp "POST /upvote/ HTTP/1.1" 200 64
+WARNING 2024-12-06 02:27:36,584 log Bad Request: /downvote/
+WARNING 2024-12-06 02:27:36,584 basehttp "POST /downvote/ HTTP/1.1" 400 50
+INFO 2024-12-06 02:27:45,867 basehttp "POST /notupvote/ HTTP/1.1" 200 74
+WARNING 2024-12-06 02:27:53,833 log Not Found: /votestatus/4/
+WARNING 2024-12-06 02:27:53,834 basehttp "GET /votestatus/4/ HTTP/1.1" 404 5017
+INFO 2024-12-06 02:27:56,811 basehttp "POST /upvote/ HTTP/1.1" 200 64
+WARNING 2024-12-06 02:27:59,374 log Bad Request: /downvote/
+WARNING 2024-12-06 02:27:59,375 basehttp "POST /downvote/ HTTP/1.1" 400 50
+INFO 2024-12-06 02:28:03,488 basehttp "POST /notupvote/ HTTP/1.1" 200 74
+WARNING 2024-12-06 02:28:05,000 log Bad Request: /downvote/
+WARNING 2024-12-06 02:28:05,000 basehttp "POST /downvote/ HTTP/1.1" 400 50
+INFO 2024-12-06 02:28:10,303 basehttp "POST /issuewithtag/ HTTP/1.1" 200 399
+WARNING 2024-12-06 02:28:12,216 log Not Found: /votestatus/2/
+WARNING 2024-12-06 02:28:12,217 basehttp "GET /votestatus/2/ HTTP/1.1" 404 5017
+INFO 2024-12-06 02:28:13,772 basehttp "POST /upvote/ HTTP/1.1" 200 64
+INFO 2024-12-06 02:28:17,029 basehttp "GET /leaderboard/ HTTP/1.1" 200 4631
+INFO 2024-12-06 02:28:17,177 basehttp "GET /leaderboard/ HTTP/1.1" 200 4631
+WARNING 2024-12-06 02:28:24,608 log Not Found: /votestatus/15/
+WARNING 2024-12-06 02:28:24,608 basehttp "GET /votestatus/15/ HTTP/1.1" 404 5020
+INFO 2024-12-06 02:32:46,270 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 02:32:46,775 autoreload Watching for file changes with StatReloader
+ERROR 2024-12-06 02:33:00,630 log Internal Server Error: /activityhistory/
+Traceback (most recent call last):
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\issue\views.py", line 400, in post
+    user_upvotes = Vote.objects.filter(user=user).select_related("issue").values(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\db\models\query.py", line 1360, in values
+    clone = self._values(*fields, **expressions)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\db\models\query.py", line 1353, in _values
+    clone = clone.annotate(**expressions)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\db\models\query.py", line 1630, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\db\models\query.py", line 1673, in _annotate
+    raise ValueError(
+ValueError: The annotation 'id' conflicts with a field on the model.
+ERROR 2024-12-06 02:33:00,643 basehttp "POST /activityhistory/ HTTP/1.1" 500 115463
+ERROR 2024-12-06 02:33:08,858 log Internal Server Error: /activityhistory/
+Traceback (most recent call last):
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\issue\views.py", line 400, in post
+    user_upvotes = Vote.objects.filter(user=user).select_related("issue").values(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\db\models\query.py", line 1360, in values
+    clone = self._values(*fields, **expressions)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\db\models\query.py", line 1353, in _values
+    clone = clone.annotate(**expressions)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\db\models\query.py", line 1630, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\db\models\query.py", line 1673, in _annotate
+    raise ValueError(
+ValueError: The annotation 'id' conflicts with a field on the model.
+ERROR 2024-12-06 02:33:08,865 basehttp "POST /activityhistory/ HTTP/1.1" 500 115463
+ERROR 2024-12-06 02:33:14,215 log Internal Server Error: /activityhistory/
+Traceback (most recent call last):
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\issue\views.py", line 400, in post
+    user_upvotes = Vote.objects.filter(user=user).select_related("issue").values(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\db\models\query.py", line 1360, in values
+    clone = self._values(*fields, **expressions)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\db\models\query.py", line 1353, in _values
+    clone = clone.annotate(**expressions)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\db\models\query.py", line 1630, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\db\models\query.py", line 1673, in _annotate
+    raise ValueError(
+ValueError: The annotation 'id' conflicts with a field on the model.
+ERROR 2024-12-06 02:33:14,223 basehttp "POST /activityhistory/ HTTP/1.1" 500 115463
+INFO 2024-12-06 02:33:30,606 basehttp "GET /leaderboard/ HTTP/1.1" 200 4631
+INFO 2024-12-06 02:33:31,325 basehttp "GET /leaderboard/ HTTP/1.1" 200 4631
+WARNING 2024-12-06 02:33:37,483 log Not Found: /votestatus/1/
+WARNING 2024-12-06 02:33:37,484 basehttp "GET /votestatus/1/ HTTP/1.1" 404 5017
+WARNING 2024-12-06 02:33:49,706 log Not Found: /votestatus/15/
+WARNING 2024-12-06 02:33:49,707 basehttp "GET /votestatus/15/ HTTP/1.1" 404 5020
+WARNING 2024-12-06 02:33:53,491 log Not Found: /votestatus/14/
+WARNING 2024-12-06 02:33:53,491 basehttp "GET /votestatus/14/ HTTP/1.1" 404 5020
+WARNING 2024-12-06 02:33:56,302 log Not Found: /votestatus/12/
+WARNING 2024-12-06 02:33:56,302 basehttp "GET /votestatus/12/ HTTP/1.1" 404 5020
+WARNING 2024-12-06 02:33:59,065 log Not Found: /votestatus/3/
+WARNING 2024-12-06 02:33:59,066 basehttp "GET /votestatus/3/ HTTP/1.1" 404 5017
+WARNING 2024-12-06 02:34:01,994 log Not Found: /votestatus/8/
+WARNING 2024-12-06 02:34:01,995 basehttp "GET /votestatus/8/ HTTP/1.1" 404 5017
+WARNING 2024-12-06 02:34:05,751 log Not Found: /votestatus/15/
+WARNING 2024-12-06 02:34:05,752 basehttp "GET /votestatus/15/ HTTP/1.1" 404 5020
+WARNING 2024-12-06 02:34:08,412 log Not Found: /votestatus/15/
+WARNING 2024-12-06 02:34:08,412 basehttp "GET /votestatus/15/ HTTP/1.1" 404 5020
+INFO 2024-12-06 02:35:51,282 basehttp "GET /leaderboard/ HTTP/1.1" 200 4631
+INFO 2024-12-06 02:35:51,701 basehttp "GET /leaderboard/ HTTP/1.1" 200 4631
+WARNING 2024-12-06 02:35:53,390 log Not Found: /votestatus/2/
+WARNING 2024-12-06 02:35:53,390 basehttp "GET /votestatus/2/ HTTP/1.1" 404 5017
+WARNING 2024-12-06 02:35:55,565 log Not Found: /votestatus/8/
+WARNING 2024-12-06 02:35:55,565 basehttp "GET /votestatus/8/ HTTP/1.1" 404 5017
+WARNING 2024-12-06 02:35:57,010 log Not Found: /votestatus/5/
+WARNING 2024-12-06 02:35:57,010 basehttp "GET /votestatus/5/ HTTP/1.1" 404 5017
+INFO 2024-12-06 02:37:02,577 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 02:37:03,168 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 02:37:06,814 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 02:37:07,287 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 02:37:10,919 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 02:37:11,465 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 02:37:20,554 basehttp "POST /createissue/ HTTP/1.1" 201 195
+INFO 2024-12-06 02:39:35,121 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 02:39:35,591 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 02:40:06,915 basehttp "POST /createissue/ HTTP/1.1" 201 201
+INFO 2024-12-06 02:40:15,894 basehttp "GET /leaderboard/ HTTP/1.1" 200 5265
+INFO 2024-12-06 02:40:16,134 basehttp "GET /leaderboard/ HTTP/1.1" 200 5265
+WARNING 2024-12-06 02:40:19,103 log Not Found: /votestatus/17/
+WARNING 2024-12-06 02:40:19,103 basehttp "GET /votestatus/17/ HTTP/1.1" 404 5020
+INFO 2024-12-06 02:41:09,056 basehttp "GET /leaderboard/ HTTP/1.1" 200 5265
+INFO 2024-12-06 02:41:34,143 basehttp "POST /createissue/ HTTP/1.1" 201 286
+INFO 2024-12-06 02:41:40,567 basehttp "GET /leaderboard/ HTTP/1.1" 200 5670
+INFO 2024-12-06 02:41:40,856 basehttp "GET /leaderboard/ HTTP/1.1" 200 5670
+INFO 2024-12-06 02:42:10,301 basehttp "GET /leaderboard/ HTTP/1.1" 200 5670
+INFO 2024-12-06 02:42:10,527 basehttp "GET /leaderboard/ HTTP/1.1" 200 5670
+WARNING 2024-12-06 02:44:33,113 log Not Found: /votestatus/1/
+WARNING 2024-12-06 02:44:33,113 basehttp "GET /votestatus/1/ HTTP/1.1" 404 5017
+WARNING 2024-12-06 02:44:43,971 log Not Found: /votestatus/18/
+WARNING 2024-12-06 02:44:43,972 basehttp "GET /votestatus/18/ HTTP/1.1" 404 5020
+INFO 2024-12-06 02:46:10,317 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 02:46:10,979 autoreload Watching for file changes with StatReloader
+ERROR 2024-12-06 02:46:24,034 log Internal Server Error: /activityhistory/
+ERROR 2024-12-06 02:46:24,034 basehttp "POST /activityhistory/ HTTP/1.1" 500 117
+INFO 2024-12-06 02:47:18,084 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 02:47:18,646 autoreload Watching for file changes with StatReloader
+ERROR 2024-12-06 02:47:22,594 log Internal Server Error: /activityhistory/
+Traceback (most recent call last):
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\issue\views.py", line 407, in post
+    user_upvotes = Vote.objects.filter(user=user).select_related("issue").values(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\db\models\query.py", line 1360, in values
+    clone = self._values(*fields, **expressions)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\db\models\query.py", line 1353, in _values
+    clone = clone.annotate(**expressions)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\db\models\query.py", line 1630, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\db\models\query.py", line 1673, in _annotate
+    raise ValueError(
+ValueError: The annotation 'id' conflicts with a field on the model.
+ERROR 2024-12-06 02:47:22,601 basehttp "POST /activityhistory/ HTTP/1.1" 500 116276
+INFO 2024-12-06 02:48:37,033 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 02:48:37,590 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 02:48:44,309 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 02:48:44,888 autoreload Watching for file changes with StatReloader
+ERROR 2024-12-06 02:48:47,665 log Internal Server Error: /activityhistory/
+Traceback (most recent call last):
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\issue\views.py", line 394, in post
+    activity_type=Value("Created Issue", output_field=CharField()),
+                  ^^^^^
+NameError: name 'Value' is not defined. Did you mean: 'False'?
+ERROR 2024-12-06 02:48:47,665 basehttp "POST /activityhistory/ HTTP/1.1" 500 93417
+INFO 2024-12-06 02:49:17,147 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 02:49:17,731 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 02:49:30,566 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 02:49:31,114 autoreload Watching for file changes with StatReloader
+ERROR 2024-12-06 02:49:35,206 log Internal Server Error: /activityhistory/
+Traceback (most recent call last):
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\issue\views.py", line 407, in post
+    user_upvotes = Vote.objects.filter(user=user).select_related("issue").values(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\db\models\query.py", line 1360, in values
+    clone = self._values(*fields, **expressions)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\db\models\query.py", line 1353, in _values
+    clone = clone.annotate(**expressions)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\db\models\query.py", line 1630, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\db\models\query.py", line 1673, in _annotate
+    raise ValueError(
+ValueError: The annotation 'issue_id' conflicts with a field on the model.
+ERROR 2024-12-06 02:49:35,206 basehttp "POST /activityhistory/ HTTP/1.1" 500 116420
+INFO 2024-12-06 02:50:41,313 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 02:50:41,818 autoreload Watching for file changes with StatReloader
+ERROR 2024-12-06 02:50:49,822 log Internal Server Error: /activityhistory/
+Traceback (most recent call last):
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\issue\views.py", line 416, in post
+    user_comments = Comment.objects.filter(user=user).select_related("issue").values(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\db\models\query.py", line 1360, in values
+    clone = self._values(*fields, **expressions)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\db\models\query.py", line 1353, in _values
+    clone = clone.annotate(**expressions)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\db\models\query.py", line 1630, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\db\models\query.py", line 1673, in _annotate
+    raise ValueError(
+ValueError: The annotation 'created_at' conflicts with a field on the model.
+ERROR 2024-12-06 02:50:49,827 basehttp "POST /activityhistory/ HTTP/1.1" 500 116853
+INFO 2024-12-06 02:51:48,940 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 02:51:49,521 autoreload Watching for file changes with StatReloader
+ERROR 2024-12-06 02:51:53,459 log Internal Server Error: /activityhistory/
+Traceback (most recent call last):
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\issue\views.py", line 437, in post
+    "issue_id": activity.get("issue_ref", activity["id"]),  # Handle both "id" and "issue_ref"
+                                          ~~~~~~~~^^^^^^
+KeyError: 'id'
+ERROR 2024-12-06 02:51:53,464 basehttp "POST /activityhistory/ HTTP/1.1" 500 103727
+INFO 2024-12-06 02:53:12,817 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 02:53:13,335 autoreload Watching for file changes with StatReloader
+ERROR 2024-12-06 02:53:17,082 log Internal Server Error: /activityhistory/
+Traceback (most recent call last):
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\issue\views.py", line 396, in post
+    user_issues = Issue.objects.filter(author=user).values(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\db\models\query.py", line 1360, in values
+    clone = self._values(*fields, **expressions)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\db\models\query.py", line 1353, in _values
+    clone = clone.annotate(**expressions)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\db\models\query.py", line 1630, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\db\models\query.py", line 1673, in _annotate
+    raise ValueError(
+ValueError: The annotation 'title' conflicts with a field on the model.
+ERROR 2024-12-06 02:53:17,090 basehttp "POST /activityhistory/ HTTP/1.1" 500 114330
+INFO 2024-12-06 02:54:19,495 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 02:54:20,116 autoreload Watching for file changes with StatReloader
+ERROR 2024-12-06 02:54:22,879 log Internal Server Error: /activityhistory/
+Traceback (most recent call last):
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\issue\views.py", line 405, in post
+    user_upvotes = Vote.objects.filter(user=user).select_related("issue").values(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\db\models\query.py", line 1360, in values
+    clone = self._values(*fields, **expressions)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\db\models\query.py", line 1353, in _values
+    clone = clone.annotate(**expressions)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\db\models\query.py", line 1630, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\db\models\query.py", line 1673, in _annotate
+    raise ValueError(
+ValueError: The annotation 'issue_id' conflicts with a field on the model.
+ERROR 2024-12-06 02:54:22,883 basehttp "POST /activityhistory/ HTTP/1.1" 500 116805
+INFO 2024-12-06 02:54:31,944 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 02:54:32,473 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 02:54:46,257 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 02:54:46,739 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 02:55:56,671 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 02:55:57,175 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 02:56:02,826 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 02:56:03,306 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 02:56:16,110 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 02:56:16,619 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 02:56:24,285 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 02:56:24,859 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 02:56:48,918 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 02:56:49,476 autoreload Watching for file changes with StatReloader
+ERROR 2024-12-06 02:56:51,351 log Internal Server Error: /activityhistory/
+Traceback (most recent call last):
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\issue\views.py", line 426, in post
+    activities = sorted(
+                 ^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\issue\views.py", line 428, in <lambda>
+    key=lambda x: x["timestamp"],  # Consistently use "timestamp"
+                  ~^^^^^^^^^^^^^
+KeyError: 'timestamp'
+ERROR 2024-12-06 02:56:51,358 basehttp "POST /activityhistory/ HTTP/1.1" 500 102750
+INFO 2024-12-06 02:57:16,657 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 02:57:17,216 autoreload Watching for file changes with StatReloader
+ERROR 2024-12-06 02:57:22,195 log Internal Server Error: /activityhistory/
+Traceback (most recent call last):
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\issue\views.py", line 426, in post
+    activities = sorted(
+                 ^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\issue\views.py", line 428, in <lambda>
+    key=lambda x: x["issue_timestamp"],  # Consistently use "timestamp"
+                  ~^^^^^^^^^^^^^^^^^^^
+KeyError: 'issue_timestamp'
+ERROR 2024-12-06 02:57:22,195 basehttp "POST /activityhistory/ HTTP/1.1" 500 102843
+INFO 2024-12-06 02:58:40,663 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 02:58:41,163 autoreload Watching for file changes with StatReloader
+ERROR 2024-12-06 02:58:44,000 log Internal Server Error: /activityhistory/
+Traceback (most recent call last):
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\issue\views.py", line 406, in post
+    user_upvotes = Vote.objects.filter(user=user).select_related("issue").values(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\db\models\query.py", line 1360, in values
+    clone = self._values(*fields, **expressions)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\db\models\query.py", line 1353, in _values
+    clone = clone.annotate(**expressions)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\db\models\query.py", line 1630, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\db\models\query.py", line 1673, in _annotate
+    raise ValueError(
+ValueError: The annotation 'issue_id' conflicts with a field on the model.
+ERROR 2024-12-06 02:58:44,010 basehttp "POST /activityhistory/ HTTP/1.1" 500 116805
+INFO 2024-12-06 03:01:33,669 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 03:01:34,223 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 03:02:37,890 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 03:02:38,407 autoreload Watching for file changes with StatReloader
+WARNING 2024-12-06 03:02:42,803 log Method Not Allowed: /activityhistory/
+WARNING 2024-12-06 03:02:42,803 basehttp "POST /activityhistory/ HTTP/1.1" 405 41
+INFO 2024-12-06 03:02:58,415 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 03:02:59,000 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 03:03:01,647 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 03:03:02,168 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 03:03:03,757 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 03:03:04,271 autoreload Watching for file changes with StatReloader
+WARNING 2024-12-06 03:03:08,496 log Method Not Allowed: /activityhistory/
+WARNING 2024-12-06 03:03:08,496 basehttp "POST /activityhistory/ HTTP/1.1" 405 41
+INFO 2024-12-06 03:03:49,777 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 03:03:50,301 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 03:03:54,915 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 03:03:55,470 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 03:03:57,054 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 03:03:57,491 autoreload Watching for file changes with StatReloader
+WARNING 2024-12-06 03:03:59,556 log Method Not Allowed: /activityhistory/
+WARNING 2024-12-06 03:03:59,556 basehttp "POST /activityhistory/ HTTP/1.1" 405 41
+INFO 2024-12-06 03:07:27,344 basehttp "GET /activityhistory/ HTTP/1.1" 200 3353
+INFO 2024-12-06 03:11:40,345 basehttp "GET /activityhistory/ HTTP/1.1" 200 3353
+INFO 2024-12-06 03:11:45,253 basehttp "GET /activityhistory/ HTTP/1.1" 200 3353
+INFO 2024-12-06 03:19:20,013 basehttp "GET /activityhistory/ HTTP/1.1" 200 3353
+INFO 2024-12-06 03:21:59,071 basehttp "POST /issuewithtag/ HTTP/1.1" 200 419
+WARNING 2024-12-06 03:22:00,254 log Not Found: /votestatus/4/
+WARNING 2024-12-06 03:22:00,255 basehttp "GET /votestatus/4/ HTTP/1.1" 404 5017
+INFO 2024-12-06 03:22:04,290 basehttp "GET /leaderboard/ HTTP/1.1" 200 5670
+INFO 2024-12-06 03:22:04,378 basehttp "GET /leaderboard/ HTTP/1.1" 200 5670
+WARNING 2024-12-06 03:22:05,582 log Not Found: /votestatus/1/
+WARNING 2024-12-06 03:22:05,582 basehttp "GET /votestatus/1/ HTTP/1.1" 404 5017
+INFO 2024-12-06 03:22:34,626 basehttp "POST /issuewithtag/ HTTP/1.1" 200 419
+WARNING 2024-12-06 03:22:35,496 log Not Found: /votestatus/4/
+WARNING 2024-12-06 03:22:35,496 basehttp "GET /votestatus/4/ HTTP/1.1" 404 5017
+INFO 2024-12-06 03:23:42,000 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 03:23:42,583 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 03:24:05,593 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 03:24:06,177 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 03:24:12,881 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 03:24:13,466 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 03:26:30,787 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 03:26:31,352 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 03:26:37,022 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 03:26:37,671 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 03:26:39,304 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 03:26:39,760 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 03:26:43,422 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 03:26:43,894 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 03:26:52,622 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 03:26:53,135 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 03:27:07,017 basehttp "POST /issuewithtag/ HTTP/1.1" 200 485
+WARNING 2024-12-06 03:27:08,111 log Not Found: /votestatus/4/
+WARNING 2024-12-06 03:27:08,111 basehttp "GET /votestatus/4/ HTTP/1.1" 404 5017
+INFO 2024-12-06 03:30:40,657 basehttp "POST /issuewithtag/ HTTP/1.1" 200 485
+WARNING 2024-12-06 03:30:41,600 log Not Found: /votestatus/4/
+WARNING 2024-12-06 03:30:41,600 basehttp "GET /votestatus/4/ HTTP/1.1" 404 5017
+INFO 2024-12-06 03:30:59,611 basehttp "POST /issuewithtag/ HTTP/1.1" 200 485
+WARNING 2024-12-06 03:31:00,811 log Not Found: /votestatus/4/
+WARNING 2024-12-06 03:31:00,811 basehttp "GET /votestatus/4/ HTTP/1.1" 404 5017
+INFO 2024-12-06 03:31:00,888 basehttp "GET /media/issue_images/Screenshot_2024-12-05_145254.png HTTP/1.1" 200 93004
+INFO 2024-12-06 03:51:30,367 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 03:51:30,878 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 03:51:34,494 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 03:51:35,007 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 03:51:36,544 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 03:51:37,073 autoreload Watching for file changes with StatReloader
+WARNING 2024-12-06 03:55:08,415 log Not Found: /votestatus/4/
+WARNING 2024-12-06 03:55:08,415 basehttp "GET /votestatus/4/ HTTP/1.1" 404 5017
+INFO 2024-12-06 03:55:09,485 basehttp "GET /media/issue_images/Screenshot_2024-12-05_145254.png HTTP/1.1" 200 93004
+ERROR 2024-12-06 03:55:22,008 log Internal Server Error: /issuewithtag/
+Traceback (most recent call last):
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\issue\views.py", line 365, in post
+    "created_at": issue.created_at.to_iso8601_string(),
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'datetime.datetime' object has no attribute 'to_iso8601_string'
+ERROR 2024-12-06 03:55:22,017 basehttp "POST /issuewithtag/ HTTP/1.1" 500 94407
+WARNING 2024-12-06 03:55:22,823 log Not Found: /votestatus/4/
+WARNING 2024-12-06 03:55:22,823 basehttp "GET /votestatus/4/ HTTP/1.1" 404 5017
+INFO 2024-12-06 03:57:34,245 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 03:57:34,858 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 03:57:36,452 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 03:57:36,888 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 03:57:48,597 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 03:57:49,062 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 03:57:57,569 basehttp "POST /issuewithtag/ HTTP/1.1" 200 474
+WARNING 2024-12-06 03:57:58,296 log Not Found: /votestatus/4/
+WARNING 2024-12-06 03:57:58,296 basehttp "GET /votestatus/4/ HTTP/1.1" 404 5017
+INFO 2024-12-06 03:58:21,444 basehttp "POST /issuewithtag/ HTTP/1.1" 200 480
+WARNING 2024-12-06 03:58:22,851 log Not Found: /votestatus/1/
+WARNING 2024-12-06 03:58:22,851 basehttp "GET /votestatus/1/ HTTP/1.1" 404 5017
+INFO 2024-12-06 03:58:22,999 basehttp "GET /media/issue_images/Screenshot_2024-12-05_144340.png HTTP/1.1" 200 430364
+WARNING 2024-12-06 03:58:26,396 log Bad Request: /upvote/
+WARNING 2024-12-06 03:58:26,396 basehttp "POST /upvote/ HTTP/1.1" 400 48
+INFO 2024-12-06 03:58:35,467 basehttp "GET /activityhistory/ HTTP/1.1" 200 3353
+INFO 2024-12-06 03:59:23,184 basehttp "POST /issuewithtag/ HTTP/1.1" 200 474
+WARNING 2024-12-06 03:59:24,769 log Not Found: /votestatus/4/
+WARNING 2024-12-06 03:59:24,769 basehttp "GET /votestatus/4/ HTTP/1.1" 404 5017
+INFO 2024-12-06 03:59:27,933 basehttp "POST /issuewithtag/ HTTP/1.1" 200 474
+WARNING 2024-12-06 03:59:29,319 log Not Found: /votestatus/4/
+WARNING 2024-12-06 03:59:29,319 basehttp "GET /votestatus/4/ HTTP/1.1" 404 5017
+INFO 2024-12-06 03:59:34,280 basehttp "GET /leaderboard/ HTTP/1.1" 200 5670
+INFO 2024-12-06 03:59:34,363 basehttp "GET /leaderboard/ HTTP/1.1" 200 5670
+INFO 2024-12-06 03:59:39,261 basehttp "GET /activityhistory/ HTTP/1.1" 200 3353
+INFO 2024-12-06 04:00:00,489 basehttp "POST /issuewithtag/ HTTP/1.1" 200 474
+WARNING 2024-12-06 04:00:01,376 log Not Found: /votestatus/4/
+WARNING 2024-12-06 04:00:01,376 basehttp "GET /votestatus/4/ HTTP/1.1" 404 5017
+INFO 2024-12-06 04:01:03,715 basehttp "POST /issuewithtag/ HTTP/1.1" 200 474
+WARNING 2024-12-06 04:01:06,647 log Not Found: /votestatus/4/
+WARNING 2024-12-06 04:01:06,647 basehttp "GET /votestatus/4/ HTTP/1.1" 404 5017
+INFO 2024-12-06 04:01:17,975 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 04:01:18,546 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 04:01:20,115 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 04:01:20,627 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 04:01:30,387 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 04:01:30,856 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 04:01:34,413 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 04:01:34,976 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 04:01:37,561 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 04:01:38,177 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 04:01:43,942 basehttp "POST /issuewithtag/ HTTP/1.1" 200 474
+WARNING 2024-12-06 04:02:56,994 log Not Found: /votestatus/4/
+WARNING 2024-12-06 04:02:56,994 basehttp "GET /votestatus/4/ HTTP/1.1" 404 5017
+INFO 2024-12-06 04:02:58,336 basehttp "POST /upvote/ HTTP/1.1" 200 64
+INFO 2024-12-06 04:05:37,984 basehttp "POST /notupvote/ HTTP/1.1" 200 74
+INFO 2024-12-06 04:07:59,872 basehttp "POST /issuewithtag/ HTTP/1.1" 200 480
+WARNING 2024-12-06 04:08:01,318 log Not Found: /votestatus/1/
+WARNING 2024-12-06 04:08:01,318 basehttp "GET /votestatus/1/ HTTP/1.1" 404 5017
+WARNING 2024-12-06 04:08:03,465 log Bad Request: /upvote/
+WARNING 2024-12-06 04:08:03,465 basehttp "POST /upvote/ HTTP/1.1" 400 48
+INFO 2024-12-06 04:41:11,616 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 04:41:12,177 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 04:41:13,788 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 04:41:14,374 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 04:41:15,956 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 04:41:16,470 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 04:43:07,393 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 04:43:07,948 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 04:43:09,544 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 04:43:10,105 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 04:43:16,389 basehttp "POST /createissue/ HTTP/1.1" 201 329
+INFO 2024-12-06 04:43:34,678 basehttp "GET /leaderboard/ HTTP/1.1" 200 6073
+INFO 2024-12-06 04:43:35,093 basehttp "GET /leaderboard/ HTTP/1.1" 200 6073
+WARNING 2024-12-06 04:43:37,982 log Not Found: /votestatus/19/
+WARNING 2024-12-06 04:43:37,982 basehttp "GET /votestatus/19/ HTTP/1.1" 404 5020
+INFO 2024-12-06 04:44:57,798 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 04:44:58,303 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 04:46:36,987 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 04:46:37,550 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 04:46:41,197 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 04:46:41,734 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 04:46:54,539 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 04:46:55,124 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 04:47:10,004 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 04:47:10,568 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 04:51:26,861 basehttp "POST /upvote/ HTTP/1.1" 200 65
+INFO 2024-12-06 04:51:31,087 basehttp "POST /notupvote/ HTTP/1.1" 200 75
+INFO 2024-12-06 04:51:33,011 basehttp "POST /upvote/ HTTP/1.1" 200 65
+WARNING 2024-12-06 04:51:33,041 log Bad Request: /upvote/
+WARNING 2024-12-06 04:51:33,041 basehttp "POST /upvote/ HTTP/1.1" 400 48
+INFO 2024-12-06 04:51:34,118 basehttp "POST /notupvote/ HTTP/1.1" 200 75
+WARNING 2024-12-06 04:51:35,606 log Not Found: /votestatus/18/
+WARNING 2024-12-06 04:51:35,606 basehttp "GET /votestatus/18/ HTTP/1.1" 404 5020
+INFO 2024-12-06 05:06:50,222 basehttp "POST /downvote/ HTTP/1.1" 200 67
+INFO 2024-12-06 05:14:59,034 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 05:14:59,944 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 05:17:46,937 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 05:17:47,856 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 05:17:58,244 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 05:17:59,118 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 05:18:06,396 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 05:18:07,149 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 05:18:10,234 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 05:18:11,045 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 05:18:15,128 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 05:18:15,959 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 05:18:17,774 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 05:18:18,577 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 05:18:53,006 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 05:18:53,768 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 05:29:24,175 basehttp "POST /issuewithtag/ HTTP/1.1" 200 510
+INFO 2024-12-06 05:31:10,247 basehttp "POST /issuewithtag/ HTTP/1.1" 200 510
+INFO 2024-12-06 05:31:15,458 basehttp "POST /upvote/ HTTP/1.1" 200 72
+INFO 2024-12-06 05:31:17,423 basehttp "POST /upvote/ HTTP/1.1" 200 72
+INFO 2024-12-06 05:31:20,698 basehttp "POST /upvote/ HTTP/1.1" 200 72
+INFO 2024-12-06 05:31:23,814 basehttp "POST /issuewithtag/ HTTP/1.1" 200 509
+INFO 2024-12-06 05:31:26,755 basehttp "POST /downvote/ HTTP/1.1" 200 72
+WARNING 2024-12-06 05:31:27,587 log Bad Request: /downvote/
+WARNING 2024-12-06 05:31:27,587 basehttp "POST /downvote/ HTTP/1.1" 400 46
+INFO 2024-12-06 05:31:32,725 basehttp "POST /issuewithtag/ HTTP/1.1" 200 510
+INFO 2024-12-06 05:31:35,968 basehttp "POST /downvote/ HTTP/1.1" 200 72
+INFO 2024-12-06 05:31:39,017 basehttp "POST /issuewithtag/ HTTP/1.1" 200 510
+INFO 2024-12-06 05:33:22,106 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 05:33:23,046 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 05:33:29,269 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 05:33:30,135 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 05:33:35,294 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 05:33:36,158 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 05:33:45,874 basehttp "POST /issuewithtag/ HTTP/1.1" 200 512
+INFO 2024-12-06 05:34:48,502 basehttp "POST /issuewithtag/ HTTP/1.1" 200 512
+INFO 2024-12-06 05:34:53,696 basehttp "POST /upvote/ HTTP/1.1" 200 72
+INFO 2024-12-06 05:34:56,598 basehttp "POST /upvote/ HTTP/1.1" 200 72
+INFO 2024-12-06 05:34:57,556 basehttp "POST /downvote/ HTTP/1.1" 200 72
+WARNING 2024-12-06 05:34:58,463 log Bad Request: /downvote/
+WARNING 2024-12-06 05:34:58,464 basehttp "POST /downvote/ HTTP/1.1" 400 46
+INFO 2024-12-06 05:35:02,624 basehttp "POST /issuewithtag/ HTTP/1.1" 200 513
+INFO 2024-12-06 05:35:08,339 basehttp "POST /upvote/ HTTP/1.1" 200 72
+INFO 2024-12-06 05:35:10,370 basehttp "POST /issuewithtag/ HTTP/1.1" 200 512
+INFO 2024-12-06 05:35:13,795 basehttp "POST /downvote/ HTTP/1.1" 200 72
+INFO 2024-12-06 05:35:16,575 basehttp "POST /issuewithtag/ HTTP/1.1" 200 512
+INFO 2024-12-06 05:35:24,936 basehttp "POST /downvote/ HTTP/1.1" 200 72
+INFO 2024-12-06 05:35:30,623 basehttp "POST /issuewithtag/ HTTP/1.1" 200 513
+INFO 2024-12-06 05:35:44,094 basehttp "POST /upvote/ HTTP/1.1" 200 72
+INFO 2024-12-06 05:35:47,257 basehttp "POST /issuewithtag/ HTTP/1.1" 200 512
+INFO 2024-12-06 05:35:50,201 basehttp "POST /upvote/ HTTP/1.1" 200 72
+INFO 2024-12-06 05:35:52,647 basehttp "POST /issuewithtag/ HTTP/1.1" 200 513
+INFO 2024-12-06 05:39:14,051 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 05:39:14,960 autoreload Watching for file changes with StatReloader
+ERROR 2024-12-06 05:39:21,304 log Internal Server Error: /issuewithtag/
+Traceback (most recent call last):
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\renderers.py", line 100, in render
+    ret = json.dumps(
+          ^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\utils\json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\utils\encoders.py", line 67, in default
+    return super().default(obj)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type RelatedManager is not JSON serializable
+ERROR 2024-12-06 05:39:21,311 basehttp "POST /issuewithtag/ HTTP/1.1" 500 112301
+ERROR 2024-12-06 05:42:20,741 log Internal Server Error: /issuewithtag/
+Traceback (most recent call last):
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\renderers.py", line 100, in render
+    ret = json.dumps(
+          ^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\utils\json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\utils\encoders.py", line 67, in default
+    return super().default(obj)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type RelatedManager is not JSON serializable
+ERROR 2024-12-06 05:42:20,748 basehttp "POST /issuewithtag/ HTTP/1.1" 500 112301
+INFO 2024-12-06 05:44:54,450 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 05:44:55,364 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 05:45:28,372 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 05:45:29,104 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 05:45:33,551 basehttp "POST /issuewithtag/ HTTP/1.1" 200 513
+INFO 2024-12-06 05:53:25,662 basehttp "POST /issuewithtag/ HTTP/1.1" 200 513
+INFO 2024-12-06 05:53:27,562 basehttp "POST /issuewithtag/ HTTP/1.1" 200 518
+INFO 2024-12-06 05:53:29,580 basehttp "POST /issuewithtag/ HTTP/1.1" 200 492
+INFO 2024-12-06 05:53:31,465 basehttp "POST /issuewithtag/ HTTP/1.1" 200 513
+INFO 2024-12-06 05:53:38,099 basehttp "POST /issuewithtag/ HTTP/1.1" 200 518
+INFO 2024-12-06 05:55:09,371 basehttp "GET /admin/ HTTP/1.1" 200 12964
+INFO 2024-12-06 05:55:09,428 basehttp "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2024-12-06 05:55:09,441 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2024-12-06 05:55:09,442 basehttp "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2024-12-06 05:55:09,442 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2024-12-06 05:55:09,442 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2024-12-06 05:55:09,444 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2024-12-06 05:55:09,448 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2024-12-06 05:55:09,454 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2024-12-06 05:55:09,455 basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2024-12-06 05:55:14,255 basehttp "GET /admin/issue/vote/ HTTP/1.1" 200 12092
+INFO 2024-12-06 05:55:14,275 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2024-12-06 05:55:14,289 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2024-12-06 05:55:14,291 basehttp "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2024-12-06 05:55:14,293 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2024-12-06 05:55:14,293 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2024-12-06 05:55:14,293 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2024-12-06 05:55:14,298 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2024-12-06 05:55:14,298 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2024-12-06 05:55:14,299 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2024-12-06 05:55:14,309 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2024-12-06 05:55:14,331 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-06 05:55:14,376 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2024-12-06 05:55:17,987 basehttp "GET /admin/issue/vote/5/change/ HTTP/1.1" 200 14657
+INFO 2024-12-06 05:55:18,012 basehttp "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2024-12-06 05:55:18,025 basehttp "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2024-12-06 05:55:18,025 basehttp "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2024-12-06 05:55:18,027 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-06 05:55:18,031 basehttp "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+INFO 2024-12-06 05:55:18,033 basehttp "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2024-12-06 05:55:23,854 basehttp "POST /admin/issue/vote/5/change/ HTTP/1.1" 302 0
+INFO 2024-12-06 05:55:23,888 basehttp "GET /admin/issue/vote/ HTTP/1.1" 200 12296
+INFO 2024-12-06 05:55:23,917 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-06 05:55:23,930 basehttp "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2024-12-06 05:55:33,695 basehttp "POST /issuewithtag/ HTTP/1.1" 200 519
+INFO 2024-12-06 05:56:57,858 basehttp "GET /admin/issue/vote/5/change/ HTTP/1.1" 200 14657
+INFO 2024-12-06 05:56:57,883 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-06 05:57:02,944 basehttp "POST /admin/issue/vote/5/change/ HTTP/1.1" 302 0
+INFO 2024-12-06 05:57:02,974 basehttp "GET /admin/issue/vote/add/ HTTP/1.1" 200 14663
+INFO 2024-12-06 05:57:03,007 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-06 05:57:11,666 basehttp "POST /admin/issue/vote/add/ HTTP/1.1" 302 0
+INFO 2024-12-06 05:57:11,708 basehttp "GET /admin/issue/vote/add/ HTTP/1.1" 200 14663
+INFO 2024-12-06 05:57:11,736 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-06 05:57:16,180 basehttp "POST /issuewithtag/ HTTP/1.1" 200 519
+INFO 2024-12-06 05:58:20,161 basehttp "GET /admin/authentication/user/9/change/?_to_field=id HTTP/1.1" 200 11485
+INFO 2024-12-06 05:58:20,194 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-06 05:58:22,208 basehttp "GET /admin/issue/vote/add/ HTTP/1.1" 200 14427
+INFO 2024-12-06 05:58:24,228 basehttp "POST /admin/issue/vote/add/ HTTP/1.1" 200 14594
+INFO 2024-12-06 05:58:24,256 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-06 05:58:56,251 basehttp "POST /issuewithtag/ HTTP/1.1" 200 519
+INFO 2024-12-06 05:59:09,497 basehttp "POST /admin/issue/vote/add/ HTTP/1.1" 302 0
+INFO 2024-12-06 05:59:09,529 basehttp "GET /admin/issue/vote/ HTTP/1.1" 200 13070
+INFO 2024-12-06 05:59:09,560 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-06 05:59:20,115 basehttp "GET /admin/issue/vote/18/change/ HTTP/1.1" 200 14662
+INFO 2024-12-06 05:59:20,142 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-06 05:59:28,154 basehttp "POST /issuewithtag/ HTTP/1.1" 200 519
+INFO 2024-12-06 06:01:28,876 basehttp "POST /issuewithtag/ HTTP/1.1" 200 519
+INFO 2024-12-06 06:10:32,706 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 06:10:33,732 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 06:10:36,765 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 06:10:37,497 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 06:12:51,362 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 06:12:52,308 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 06:13:06,942 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 06:13:07,697 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 06:14:01,645 autoreload D:\janamat\Janamat\Janamat\backend\issue\urls.py changed, reloading.
+INFO 2024-12-06 06:14:02,582 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 06:14:29,430 basehttp "POST /issuewithtag/ HTTP/1.1" 200 513
+INFO 2024-12-06 06:14:44,762 basehttp "POST /upvote/ HTTP/1.1" 200 89
+INFO 2024-12-06 06:14:46,033 basehttp "POST /upvote/ HTTP/1.1" 200 89
+INFO 2024-12-06 06:14:49,357 basehttp "POST /downvote/ HTTP/1.1" 200 89
+INFO 2024-12-06 06:14:50,025 basehttp "POST /downvote/ HTTP/1.1" 200 89
+INFO 2024-12-06 06:14:50,918 basehttp "POST /upvote/ HTTP/1.1" 200 89
+INFO 2024-12-06 06:14:51,407 basehttp "POST /upvote/ HTTP/1.1" 200 89
+INFO 2024-12-06 06:14:52,025 basehttp "POST /downvote/ HTTP/1.1" 200 89
+INFO 2024-12-06 06:14:52,509 basehttp "POST /downvote/ HTTP/1.1" 200 89
+INFO 2024-12-06 06:14:53,826 basehttp "POST /downvote/ HTTP/1.1" 200 89
+INFO 2024-12-06 06:14:56,868 basehttp "POST /issuewithtag/ HTTP/1.1" 200 512
+INFO 2024-12-06 06:14:59,709 basehttp "POST /downvote/ HTTP/1.1" 200 89
+INFO 2024-12-06 06:15:02,355 basehttp "POST /issuewithtag/ HTTP/1.1" 200 512
+INFO 2024-12-06 06:19:09,134 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 06:19:10,007 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 06:19:15,411 basehttp "POST /issuewithtag/ HTTP/1.1" 200 512
+INFO 2024-12-06 06:19:48,359 basehttp "POST /issuewithtag/ HTTP/1.1" 200 519
+INFO 2024-12-06 06:20:34,635 basehttp "POST /issuewithtag/ HTTP/1.1" 200 512
+INFO 2024-12-06 06:20:36,993 basehttp "POST /issuewithtag/ HTTP/1.1" 200 519
+INFO 2024-12-06 06:28:03,894 basehttp "POST /issuewithtag/ HTTP/1.1" 200 512
+INFO 2024-12-06 06:28:06,721 basehttp "POST /issuewithtag/ HTTP/1.1" 200 519
+INFO 2024-12-06 06:28:10,675 basehttp "POST /issuewithtag/ HTTP/1.1" 200 512
+INFO 2024-12-06 06:28:26,701 basehttp "POST /issuewithtag/ HTTP/1.1" 200 512
+INFO 2024-12-06 06:28:59,166 basehttp "POST /issuewithtag/ HTTP/1.1" 200 519
+INFO 2024-12-06 06:29:36,425 basehttp "POST /upvote/ HTTP/1.1" 200 89
+INFO 2024-12-06 06:29:41,741 basehttp "POST /issuewithtag/ HTTP/1.1" 200 519
+INFO 2024-12-06 06:29:55,599 basehttp "POST /issuewithtag/ HTTP/1.1" 200 519
+INFO 2024-12-06 06:29:59,188 basehttp "POST /upvote/ HTTP/1.1" 200 89
+INFO 2024-12-06 06:30:05,278 basehttp "POST /issuewithtag/ HTTP/1.1" 200 520
+INFO 2024-12-06 06:30:08,572 basehttp "POST /issuewithtag/ HTTP/1.1" 200 512
+INFO 2024-12-06 06:30:18,396 basehttp "POST /issuewithtag/ HTTP/1.1" 200 520
+INFO 2024-12-06 06:30:24,736 basehttp "GET /leaderboard/ HTTP/1.1" 200 6073
+INFO 2024-12-06 06:30:24,861 basehttp "GET /leaderboard/ HTTP/1.1" 200 6073
+INFO 2024-12-06 06:33:24,805 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 06:33:25,807 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 06:34:15,752 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
+INFO 2024-12-06 06:34:16,488 autoreload Watching for file changes with StatReloader

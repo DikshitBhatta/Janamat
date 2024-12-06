@@ -12,7 +12,7 @@ class NotificationPage extends StatelessWidget {
         title: const Center(child: Text('Notifications')),
       ),
       body: FutureBuilder(
-        future: Provider.of<VotingProvider>(context, listen: false).fetchNotification(),
+        future: Provider.of<VotingProvider>(context, listen: false).fetchActivityHistory(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(child: CircularProgressIndicator());
@@ -39,6 +39,12 @@ class NotificationPage extends StatelessWidget {
                 itemCount: notifications.length,
                 itemBuilder: (context, index) {
                   final notification = notifications[index];
+                  final type = notification['type'] ?? 'Unknown Type';
+                  final details = notification['details'] ?? {};
+                  final title = details['title'] ?? details['issue_title'] ?? 'No Title';
+                  final description = details['description'] ?? 'No Description';
+                  final timestamp = details['timestamp']?.toString() ?? 'Unknown Time';
+
                   return Card(
                     elevation: 3,
                     margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
@@ -47,15 +53,25 @@ class NotificationPage extends StatelessWidget {
                         Icons.notifications,
                         color: Colors.blueAccent,
                       ),
-                      title: Text(notification['issue_title']),
-                      subtitle: Text('${notification['activity']} on ${notification['timestamp']}'),
+                      title: Text(title),
+                      subtitle: Text(
+                        '$type: $description\nTime: $timestamp',
+                        style: TextStyle(fontSize: 14),
+                      ),
                       onTap: () {
-                        // Navigate or handle notification tap
                         showDialog(
                           context: context,
                           builder: (context) => AlertDialog(
-                            title: Text(notification['issue_title']),
-                            content: Text(notification['activity']),
+                            title: Text(type),
+                            content: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('Title: $title'),
+                                Text('Description: $description'),
+                                Text('Timestamp: $timestamp'),
+                              ],
+                            ),
                             actions: [
                               TextButton(
                                 onPressed: () => Navigator.pop(context),

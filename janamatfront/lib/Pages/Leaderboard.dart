@@ -11,7 +11,8 @@ class Leaderboard extends StatelessWidget {
         title: Text('Leaderboard'),
       ),
       body: FutureBuilder(
-        future: Provider.of<VotingProvider>(context, listen: false).fetchLeaderboard(),
+        future: Provider.of<VotingProvider>(context, listen: false)
+            .fetchLeaderboard(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return Center(
@@ -36,13 +37,26 @@ class Leaderboard extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                           builder: (context) => IssueDisplayPage(
-                            issueId: issue['id'].toString(), // Ensure issueId is a String
-                            date: issue['date']?.toString() ?? 'Unknown Date', // Ensure date is a String
-                            location: issue['location']?.toString() ?? 'Unknown Location', // Ensure location is a String
-                            title: issue['title']?.toString() ?? 'No Title', // Ensure title is a String
-                            imageUrl: issue['imageUrl']?.toString() ?? 'https://via.placeholder.com/150', // Ensure imageUrl is a String
-                            description: issue['description']?.toString() ?? 'No Description', // Ensure description is a String
-                            initialVoteCount: issue['vote_count'] ?? 0, // Ensure initialVoteCount is an int
+                            issueId: issue['id']
+                                .toString(), 
+                            date: issue['created_at']?.toString() ??
+                                'Unknown Date', 
+                            location: issue['location']?.toString() ??
+                                'Unknown Location', 
+                            title: issue['title']?.toString() ??
+                                'No Title', 
+                            imageUrl: "http://192.168.1.74:8000${issue['imageUrl']}" ??
+                                'https://via.placeholder.com/150', 
+                            description: issue['description']?.toString() ??
+                                'No Description', 
+                            upvote_count: issue['upvote_count'] ??
+                                0, 
+                            downvote_count: issue['downvote_count'] ??
+                                0, 
+                            isUpvoted: issue['isUpvoted'] ??
+                                false, 
+                            isDownvoted: issue['isDownvoted'] ??
+                                false, 
                           ),
                         ),
                       );
@@ -62,7 +76,7 @@ class Leaderboard extends StatelessWidget {
                               overflow: TextOverflow.ellipsis,
                             ),
                           ),
-                          Text('${issue['vote_count']}'),
+                          Text('${issue['upvote_count']}'),
                         ],
                       ),
                       trailing: Icon(

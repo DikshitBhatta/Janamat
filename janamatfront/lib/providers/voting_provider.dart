@@ -4,27 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 class VotingProvider with ChangeNotifier {
-  bool _isUpvoted = false;
-  bool _isDownvoted = false;
-  int _upvotes = 0;
-  int _downvotes = 0;
   List<Map<String, dynamic>> _tagIssues = []; // Store issues for a specific tag
   List<Map<String, dynamic>> _leaderboard = []; // Store leaderboard data
   List<Map<String, dynamic>> _notifications = []; // Store user activity notifications
 
-  bool get isUpvoted => _isUpvoted;
-  bool get isDownvoted => _isDownvoted;
-  int get upvotes => _upvotes;
-  int get downvotes => _downvotes;
   List<Map<String, dynamic>> get tagIssues => _tagIssues;
   List<Map<String, dynamic>> get leaderboard => _leaderboard;
   List<Map<String, dynamic>> get notifications => _notifications;
-
-  void setInitialVotes(int upvotes, int downvotes) {
-    _upvotes = upvotes;
-    _downvotes = downvotes;
-    notifyListeners();
-  }
 
   // Upvote method connecting to the backend
   Future<void> upvoteIssue(String issueId) async {
@@ -39,9 +25,7 @@ class VotingProvider with ChangeNotifier {
 
       if (response.statusCode == 200) {
         final responseData = json.decode(response.body);
-        _upvotes = responseData['new_vote_count'];
-        _isUpvoted = true;
-        _isDownvoted = false; 
+
         notifyListeners();
       } else {
         print("Failed to upvote: ${response.body}");
@@ -58,14 +42,12 @@ class VotingProvider with ChangeNotifier {
     try {
       final response = await http.post(
         url,
-        headers: {'Content-Type': 'application/json'},
+        headers: {'Content-Type': 'application/json' },
         body: json.encode({'issue_id': issueId}),
       );
 
       if (response.statusCode == 200) {
         final responseData = json.decode(response.body);
-        _upvotes = responseData['new_vote_count'];
-        _isUpvoted = false;
         notifyListeners();
       } else {
         print("Failed to remove upvote: ${response.body}");
@@ -88,9 +70,6 @@ class VotingProvider with ChangeNotifier {
       );
       if (response.statusCode == 200) {
         final responseData = json.decode(response.body);
-        _downvotes = responseData['new_vote_count'];
-        _isDownvoted = true;
-        _isUpvoted = false; // Reset upvote
         notifyListeners();
       } else {
         print("Failed to downvote: ${response.body}");
@@ -113,8 +92,6 @@ class VotingProvider with ChangeNotifier {
 
       if (response.statusCode == 200) {
         final responseData = json.decode(response.body);
-        _downvotes = responseData['new_vote_count'];
-        _isDownvoted = false;
         notifyListeners();
       } else {
         print("Failed to remove downvote: ${response.body}");
@@ -136,8 +113,6 @@ class VotingProvider with ChangeNotifier {
 
       if (response.statusCode == 200) {
         final responseData = json.decode(response.body);
-        _isUpvoted = responseData['is_upvoted'];
-        _isDownvoted = responseData['is_downvoted'];
         notifyListeners();
       } else {
         print("Failed to fetch vote status: ${response.body}");
@@ -162,6 +137,7 @@ class VotingProvider with ChangeNotifier {
         final responseData = json.decode(response.body);
         _tagIssues = List<Map<String, dynamic>>.from(
             responseData['issues']); // Decode JSON response
+
         notifyListeners(); // Notify listeners of state change
       } else {
         throw Exception('Failed to load issues for tag');
@@ -234,27 +210,33 @@ class VotingProvider with ChangeNotifier {
   }
 
 
-// Fetch user activity history from the backend
-  Future<void> fetchNotification() async {
+ // Fetch user activity history from the backend
+  Future<void> fetchActivityHistory() async {
     final url = Uri.parse('http://192.168.1.74:8000/activityhistory/'); // Update with the correct endpoint
 
     try {
-      final response = await http.post(
+      final response = await http.get(
         url,
         headers: {'Content-Type': 'application/json'},
       );
 
       if (response.statusCode == 200) {
         final responseData = json.decode(response.body);
-        _notifications = List<Map<String, dynamic>>.from(responseData['activities']);
-        notifyListeners(); // Notify listeners of state change
-        print("Notifications fetched successfully.");
+
+        // Extract the activities from the response
+        if (responseData != null && responseData['activities'] != null) {
+          _notifications = List<Map<String, dynamic>>.from(responseData['activities']);
+          notifyListeners(); // Notify listeners of state change
+          print("Activity history fetched successfully.");
+        } else {
+          print("No activity history found in the response.");
+        }
       } else {
-        print("Failed to fetch notifications: ${response.body}");
+        print("Failed to fetch activity history: ${response.body}");
       }
     } catch (e) {
-      print('Error fetching notifications: $e');
+      print('Error fetching activity history: $e');
     }
   }
-  
+
 }
