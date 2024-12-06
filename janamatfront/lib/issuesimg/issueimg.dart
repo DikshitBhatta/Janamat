@@ -13,6 +13,7 @@ List<String> issueImages = [
   'assets/issues/law.png',
   'assets/issues/human-rights.png',
   'assets/issues/animal-rights.png',
+  'assets/issues/others.png',
 ];
 
 List<String> issueLabels = [
