@@ -135,13 +135,16 @@ Future<void> requestLocationPermission() async {
     await provider.createIssue(
       title: _titleController.text,
       description: _descriptionController.text,
-      tags: _tags,
-      location: _location,
+      tags: [_selectedIssue], // Send selected issue type as a tag
+      location: _locationDetails.isNotEmpty
+          ? "${_locationDetails['street'] ?? ''}, ${_locationDetails['city'] ?? ''}, ${_locationDetails['province'] ?? ''}, ${_locationDetails['country'] ?? ''}"
+          : null,
       image: _image,
     );
 
     Navigator.pop(context); // Close the page after submission
   }
+
    @override
   void dispose() {
     _titleController.dispose();

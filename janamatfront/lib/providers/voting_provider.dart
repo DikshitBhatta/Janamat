@@ -209,6 +209,26 @@ class VotingProvider with ChangeNotifier {
     }
   }
 
+  Future<void> uploadProfilePicture(File image) async {
+    final url = Uri.parse('http://192.168.1.74:8000/uploadprofilepicture/');
+    try {
+      var request = http.MultipartRequest('POST', url);
+      request.headers['Content-Type'] = 'application/json';
+
+      request.files.add(await http.MultipartFile.fromPath('image', image.path));
+
+      final response = await request.send();
+
+      if (response.statusCode == 200) {
+        print("Profile picture uploaded successfully.");
+        notifyListeners();
+      } else {
+        print("Failed to upload profile picture: ${response.statusCode}");
+      }
+    } catch (e) {
+      print('Error uploading profile picture: $e');
+    }
+  }
 
  // Fetch user activity history from the backend
   Future<void> fetchActivityHistory() async {
