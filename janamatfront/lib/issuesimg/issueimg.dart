@@ -22,8 +22,6 @@ List<String> issueLabels = [
   'Health',
   'Environment',
   'Electricity',
-  'Education',
-  'Infrastructure',
   'Agriculture',
   'Sanitation',
   'Public Transport',
@@ -33,5 +31,4 @@ List<String> issueLabels = [
   'Law and Order',
   'Human Rights',
   'Animal Rights',  
-  'Others',
 ];
