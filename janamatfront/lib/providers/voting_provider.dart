@@ -10,10 +10,12 @@ class VotingProvider with ChangeNotifier {
   List<Map<String, dynamic>> _tagIssues = []; // Store issues for a specific tag
   List<Map<String, dynamic>> _leaderboard = []; // Store leaderboard data
   List<Map<String, dynamic>> _notifications = []; // Store user activity notifications
+  List<Map<String, dynamic>> _searchResults = []; // Store search results
 
   List<Map<String, dynamic>> get tagIssues => _tagIssues;
   List<Map<String, dynamic>> get leaderboard => _leaderboard;
   List<Map<String, dynamic>> get notifications => _notifications;
+  List<Map<String, dynamic>> get searchResults => _searchResults;
 
   // Upvote method connecting to the backend
   Future<void> upvoteIssue(String issueId) async {
@@ -272,4 +274,23 @@ class VotingProvider with ChangeNotifier {
     }
   }
 
+  Future<void> searchIssues(String query) async {
+    try {
+      // Ensure the leaderboard data is loaded
+      if (_leaderboard.isEmpty) {
+        await fetchLeaderboard();
+      }
+
+      // Filter the leaderboard data based on the search query
+      _searchResults = _leaderboard.where((issue) {
+        final title = issue['title']?.toString().toLowerCase() ?? '';
+        return title.contains(query.toLowerCase());
+      }).toList();
+
+      notifyListeners();
+    } catch (error) {
+      print('Error during search: $error');
+      throw error;
+    }
+  }
 }

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:janamatfront/widgets/issuetype.dart'; // Import the IssueTypeGrid
-
+import 'package:janamatfront/search/search.dart';
 class HomePageContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    TextEditingController searchController = TextEditingController();
+
     return Column(
       children: <Widget>[
         Padding(
@@ -28,15 +30,20 @@ class HomePageContent extends StatelessWidget {
                 const SizedBox(width: 8.0),
                 Expanded(
                   child: TextField(
+                    controller: searchController,
                     decoration: const InputDecoration(
                       hintText: 'Search',
                       border: InputBorder.none,
                     ),
+                    onSubmitted: (query) {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => SearchPage(query: query),
+                        ),
+                      );
+                    },
                   ),
-                ),
-                Icon(
-                  Icons.mic,
-                  color: Colors.black,
                 ),
               ],
             ),
