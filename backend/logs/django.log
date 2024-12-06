@@ -2991,3 +2991,16 @@ INFO 2024-12-06 06:50:13,540 autoreload D:\janamat\Janamat\Janamat\backend\issue
 INFO 2024-12-06 06:50:14,413 autoreload Watching for file changes with StatReloader
 INFO 2024-12-06 06:50:20,675 autoreload D:\janamat\Janamat\Janamat\backend\issue\views.py changed, reloading.
 INFO 2024-12-06 06:50:21,584 autoreload Watching for file changes with StatReloader
+INFO 2024-12-06 06:52:40,937 basehttp "POST /issuewithtag/ HTTP/1.1" 200 512
+INFO 2024-12-06 06:52:42,978 basehttp "GET /media/issue_images/Screenshot_2024-12-05_145254.png HTTP/1.1" 200 93004
+INFO 2024-12-06 06:52:53,237 basehttp "POST /downvote/ HTTP/1.1" 200 89
+INFO 2024-12-06 06:52:57,286 basehttp "POST /upvote/ HTTP/1.1" 200 89
+INFO 2024-12-06 06:53:03,337 basehttp "POST /issuewithtag/ HTTP/1.1" 200 512
+INFO 2024-12-06 06:53:13,152 basehttp "GET /leaderboard/ HTTP/1.1" 200 6320
+INFO 2024-12-06 06:53:13,280 basehttp "GET /leaderboard/ HTTP/1.1" 200 6320
+INFO 2024-12-06 06:53:17,384 basehttp "GET /activityhistory/ HTTP/1.1" 200 3341
+INFO 2024-12-06 06:54:15,420 basehttp "GET /activityhistory/ HTTP/1.1" 200 3341
+INFO 2024-12-06 06:54:32,916 basehttp "POST /issuewithtag/ HTTP/1.1" 200 512
+INFO 2024-12-06 06:54:42,551 basehttp "GET /activityhistory/ HTTP/1.1" 200 3341
+INFO 2024-12-06 06:58:06,790 basehttp "POST /issuewithtag/ HTTP/1.1" 200 512
+INFO 2024-12-06 07:39:50,782 basehttp "POST /issuewithtag/ HTTP/1.1" 200 512

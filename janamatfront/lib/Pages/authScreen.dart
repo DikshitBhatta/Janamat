@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:janamatfront/providers/authenticationProvider.dart';
 import 'package:janamatfront/ocr/ocr.dart'; // Import OCRPage
-
+import 'package:janamatfront/Pages/home.dart';
 class AuthScreen extends StatefulWidget {
   @override
   _AuthScreenState createState() => _AuthScreenState();
@@ -194,33 +194,39 @@ class _AuthScreenState extends State<AuthScreen> {
       ),
     );
   }
-
-  Future<void> _signUp(AuthenticationProvider authProvider) async {
-    try {
-      await authProvider.signUp(
-        _emailController.text,
-        _passwordController.text,
-      );
-    } catch (e) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(e.toString())),
-      );
-    }
+Future<void> _signIn(AuthenticationProvider authProvider) async {
+  try {
+    await authProvider.signIn(
+      _emailController.text,
+      _passwordController.text,
+    );
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => Home()),
+    );
+  } catch (e) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text(e.toString())),
+    );
   }
+}
 
-  Future<void> _signIn(AuthenticationProvider authProvider) async {
-    try {
-      await authProvider.signIn(
-        _emailController.text,
-        _passwordController.text,
-      );
-    } catch (e) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(e.toString())),
-      );
-    }
+Future<void> _signUp(AuthenticationProvider authProvider) async {
+  try {
+    await authProvider.signUp(
+      _emailController.text,
+      _passwordController.text,
+    );
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => Home()),
+    );
+  } catch (e) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text(e.toString())),
+    );
   }
-
+}
   Widget _buildInputField({
     required TextEditingController controller,
     required String hintText,

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:janamatfront/Pages/authScreen.dart';
+import 'package:janamatfront/Pages/onboarding.dart';
 import 'package:janamatfront/ocr/ocr.dart';
 import 'package:provider/provider.dart';
 import 'package:janamatfront/Pages/home.dart';
@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
           if (authProvider.user != null) {
             return Home();  // HomePage for authenticated users
           } else {
-            return AuthScreen();  // AuthScreen for authentication (sign in or sign up)
+            return OnboardingPage();  // AuthScreen for authentication (sign in or sign up)
           }
         },
       ),
