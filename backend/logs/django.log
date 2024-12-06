@@ -3004,3 +3004,56 @@ INFO 2024-12-06 06:54:32,916 basehttp "POST /issuewithtag/ HTTP/1.1" 200 512
 INFO 2024-12-06 06:54:42,551 basehttp "GET /activityhistory/ HTTP/1.1" 200 3341
 INFO 2024-12-06 06:58:06,790 basehttp "POST /issuewithtag/ HTTP/1.1" 200 512
 INFO 2024-12-06 07:39:50,782 basehttp "POST /issuewithtag/ HTTP/1.1" 200 512
+INFO 2024-12-06 07:49:09,948 basehttp "GET /leaderboard/ HTTP/1.1" 200 6320
+INFO 2024-12-06 07:49:10,185 basehttp "GET /leaderboard/ HTTP/1.1" 200 6320
+WARNING 2024-12-06 07:54:32,522 log Not Found: /issuewithtag/
+WARNING 2024-12-06 07:54:32,522 basehttp "POST /issuewithtag/ HTTP/1.1" 404 38
+INFO 2024-12-06 07:54:34,105 basehttp "POST /issuewithtag/ HTTP/1.1" 200 512
+INFO 2024-12-06 07:54:35,481 basehttp "POST /issuewithtag/ HTTP/1.1" 200 72
+INFO 2024-12-06 07:54:36,808 basehttp "POST /issuewithtag/ HTTP/1.1" 200 492
+WARNING 2024-12-06 07:56:06,594 log Not Found: /issuewithtag/
+WARNING 2024-12-06 07:56:06,594 basehttp "POST /issuewithtag/ HTTP/1.1" 404 38
+ERROR 2024-12-06 08:02:52,044 log Internal Server Error: /activityhistory/
+Traceback (most recent call last):
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\rest_framework\renderers.py", line 726, in render
+    template = loader.get_template(self.template)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\janamat\Janamat\Janamat\backend\env\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+ERROR 2024-12-06 08:02:52,053 basehttp "GET /activityhistory/ HTTP/1.1" 500 88100
+INFO 2024-12-06 08:13:40,653 basehttp "GET /activityhistory/ HTTP/1.1" 200 3341
+INFO 2024-12-06 08:13:44,634 basehttp "GET /activityhistory/ HTTP/1.1" 200 3341
+WARNING 2024-12-06 08:13:50,854 log Not Found: /issuewithtag/
+WARNING 2024-12-06 08:13:50,854 basehttp "POST /issuewithtag/ HTTP/1.1" 404 38
+INFO 2024-12-06 08:13:53,217 basehttp "POST /issuewithtag/ HTTP/1.1" 200 72
+INFO 2024-12-06 08:13:55,145 basehttp "POST /issuewithtag/ HTTP/1.1" 200 492
+INFO 2024-12-06 08:14:03,603 basehttp "GET /leaderboard/ HTTP/1.1" 200 6320
+INFO 2024-12-06 08:14:03,744 basehttp "GET /leaderboard/ HTTP/1.1" 200 6320
+INFO 2024-12-06 08:14:12,872 basehttp "GET /media/issue_images/1000010180.jpg HTTP/1.1" 200 76111
+INFO 2024-12-06 08:14:16,150 basehttp "GET /media/issue_images/67613749-c267-43e6-a3ab-81635ee0a20a3278435126227702643.jpg HTTP/1.1" 200 1975066
+INFO 2024-12-06 08:14:25,478 basehttp "POST /issuewithtag/ HTTP/1.1" 200 492
+INFO 2024-12-06 08:14:36,930 basehttp "POST /issuewithtag/ HTTP/1.1" 200 512
+INFO 2024-12-06 08:14:37,815 basehttp "GET /media/issue_images/Screenshot_2024-12-05_145254.png HTTP/1.1" 200 93004
+INFO 2024-12-06 08:14:39,184 basehttp "POST /upvote/ HTTP/1.1" 200 89
+INFO 2024-12-06 08:14:39,952 basehttp "POST /downvote/ HTTP/1.1" 200 89
+INFO 2024-12-06 08:14:41,452 basehttp "POST /downvote/ HTTP/1.1" 200 89
+INFO 2024-12-06 08:14:42,467 basehttp "POST /upvote/ HTTP/1.1" 200 89
+INFO 2024-12-06 08:14:43,161 basehttp "POST /upvote/ HTTP/1.1" 200 89
+INFO 2024-12-06 08:39:48,494 basehttp "GET /leaderboard/ HTTP/1.1" 200 6320
+INFO 2024-12-06 08:39:48,755 basehttp "GET /leaderboard/ HTTP/1.1" 200 6320
+INFO 2024-12-06 08:39:48,773 basehttp "GET /leaderboard/ HTTP/1.1" 200 6320
+INFO 2024-12-06 08:39:48,896 basehttp "GET /leaderboard/ HTTP/1.1" 200 6320
+INFO 2024-12-06 08:49:08,916 basehttp "GET /leaderboard/ HTTP/1.1" 200 6320
