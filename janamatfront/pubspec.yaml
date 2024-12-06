@@ -62,10 +62,6 @@ flutter:
 
   assets:
     - assets/issues/
-    - assets/issues/watersupply.jpg
-    - assets/issues/roadline.jpg
-    - assets/issues/health.png
-    - assets/issues/environment.png
     - assets/animations/community.json
     - assets/animations/meetings.json
 
