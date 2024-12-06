@@ -2,6 +2,9 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:janamatfront/providers/authenticationProvider.dart'; // Import AuthenticationProvider
+import 'package:provider/provider.dart'; // Import Provider
 
 class VotingProvider with ChangeNotifier {
   List<Map<String, dynamic>> _tagIssues = []; // Store issues for a specific tag
@@ -172,17 +175,28 @@ class VotingProvider with ChangeNotifier {
   }
 
   Future<void> createIssue({
+    required BuildContext context,
     required String title,
     required String description,
     required List<String> tags,
     String? location,
     File? image,
   }) async {
+    final authProvider = Provider.of<AuthenticationProvider>(context, listen: false);
+    final user = authProvider.user; // Fetch user from AuthenticationProvider
+
+    if (user == null) {
+      print("No user logged in.");
+      return;
+    }
+
     final url = Uri.parse('http://192.168.1.74:8000/createissue/');
+
     try {
       var request = http.MultipartRequest('POST', url);
       request.headers['Content-Type'] = 'application/json';
 
+      request.fields['uid'] = user.uid; // Add the UID to the request
       request.fields['title'] = title;
       request.fields['description'] = description;
       if (tags.isNotEmpty) {
@@ -192,8 +206,7 @@ class VotingProvider with ChangeNotifier {
         request.fields['location'] = location;
       }
       if (image != null) {
-        request.files
-            .add(await http.MultipartFile.fromPath('image', image.path));
+        request.files.add(await http.MultipartFile.fromPath('image', image.path));
       }
 
       final response = await request.send();
